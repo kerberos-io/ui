@@ -1,0 +1,78 @@
+.sidebar {
+    box-sizing: border-box;
+    width: 280px;
+    padding: size(2) size(2) size(3);
+    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+    background: var(--card);
+    position: absolute;
+    top: 0;
+    bottom: 0; // so that sidebar is stretched all the way to the bottom of content's height
+    z-index: 9999;
+    &.closed {
+        display: none;
+    }
+    @include break-from(800px) {
+        position: static; // reset absolute position so flex works
+        flex: 0 0 280px;
+        z-index: 1;
+        &.closed {
+            display: block; // overwrite so it's visible at all times on desktop
+        }
+    }
+}
+.sidebar-panel {
+    height: 100%;
+
+    .hamburger {
+        display: block;
+        padding-bottom: 10px;
+        position: relative;
+        top: -12px;
+
+        /*@include break-from(800px) {
+            display: none;
+        }*/
+
+        label {
+            display: flex;
+            flex-direction: column;
+            width: 30px;
+            cursor: pointer;
+            justify-content: center;
+            span {
+                background: var(--hub);
+                border-radius: 10px;
+                height: 3px;
+                margin: 3px 0;
+                transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+                &:nth-of-type(1) { width: 50%; }
+                &:nth-of-type(2) { width: 100%; }
+                &:nth-of-type(3) { width: 75%; }
+            }
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+    }
+
+    .brand-logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+            margin-right: 10px;
+        }
+        .name {
+            color: var(--text);
+            font-weight: 600;
+            font-size: 18px;
+            .version {
+                color: var(--text-light);
+                font-size: 10px;
+                font-weight: 400;
+                margin-left: 5px;
+            }
+        }
+
+    }
+}

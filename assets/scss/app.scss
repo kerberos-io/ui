@@ -1,0 +1,460 @@
+@import "app.variables";
+@import "fonts";
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif; // use regular Inter font by default..
+  @supports (font-variation-settings: normal) {
+    font-family: 'Inter var', sans-serif; // ..but if supported, use variable Inter font instead (all-in-one)
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--text);
+}
+
+p {
+  font-size: 15px;
+  line-height: size(2);
+  color: var(--text-muted);
+}
+b, strong { font-weight: 500; }
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--bg-muted);
+  margin: size(2) 0;
+  .--padded & { margin: size(2) size(-2); } // stretch to sides when in padded .block.body
+  &.--thick { border-width: 3px; }
+}
+
+
+// ----- UI ----- //
+
+// blocks, cards..
+// @TODO: ideally move to the component, if we can figure out how to apply styles there
+.block {
+  .block-header {
+    .icon {
+      opacity: 0.4;
+    }
+    h1 {
+      line-height: size(3);
+      font-size: 16px;
+      margin: 0 0 0 size(1);
+    }
+  }
+  .body {
+    .--padded { // modifier for inner padding in block-body
+      padding: size(2) size(2);
+      display: block;
+    }
+  }
+}
+
+
+/*
+  ----- BUTTONS -----
+
+  a) <ButtonField text="xxx" action="xxx" type="neutral"></ButtonField>
+  b) <input type="submit" class="input alert button" value="xxx">
+  c) <a class="neutral button"><span class="text">xxx</span></a>
+*/
+// default primary button in Hub color (purple)
+.button {
+  @extend %tfx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: size(3);
+  background: var(--hub);
+  border: 0;
+  border-bottom: 2px solid var(--hub-darker);
+  border-radius: var(--radius);
+  cursor: pointer;
+  outline: none;
+  padding: 0 size(1.25);
+  color: var(--bg-white);
+  font-weight: 600;
+  font-size: 14px;
+  .icon {
+    @extend %tfx;
+    display: flex;
+    opacity: 0.5;
+    position: relative;
+    & + .text { margin-left: 10px; }
+  }
+  .text {
+    @extend %tfx;
+    color: var(--card);
+    position: relative;
+  }
+  // make the button look pressed a bit (move icon and text down) + colorize the same color as button shadow
+  &.active { box-shadow: 0 3px 1px hsla(var(--text-hsl), 0.4) inset; }
+  &:hover, &.active {
+    background: var(--hub-darker);
+    text-decoration: none;
+    .icon { top: 1px; }
+    .text { top: 1px; }
+    &.input { padding-top: 2px; } // fix for input button since it can't have any nested elements inside of it (like the .text needed for the hover/active effect)
+  }
+  // draw semitransparent shadow around the button
+  &:focus {
+    box-shadow: 0 0 0 4px hsla(var(--hub-hsl), 0.25);
+  }
+  &.input { width: auto; } // fix for input buttons
+
+  // button variants
+  &.success { // green, success, OK buttons
+    background: var(--success);
+    border-color: var(--success-darker);
+    &:hover, &.active { background: var(--success-darker); }
+    &:focus { box-shadow: 0 0 0 4px hsla(var(--success-darker-hsl), 0.25); }
+  }
+
+  &.alert { // red, destructive buttons
+    background: var(--alert);
+    border-color: var(--alert-darker);
+    &:hover, &.active { background: var(--alert-darker); }
+    &:focus { box-shadow: 0 0 0 4px hsla(var(--alert-darker-hsl), 0.25); }
+  }
+
+  &.neutral { // secondary actions
+    --neutral-darker: hsl(0, 3%, 48%);
+    --neutral-darker-hsl: 0, 3%, 48%;
+    background: var(--text-light);
+    border-color: var(--neutral-darker);
+    &.active {
+      background: var(--neutral-darker);
+    }
+    &:hover { background: var(--neutral-darker); box-shadow: none; }
+    &:focus { box-shadow: 0 0 0 4px hsla(var(--neutral-darker-hsl), 0.25); }
+  }
+
+  // outlined button - transparent bg with only border
+  &.outlined {
+    $border: 1px;
+    border: $border solid var(--bg-muted);
+    border-radius: var(--radius);
+    background: transparent;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: size(3);
+    display: flex;
+    height: size(3);
+    padding: 0 (size(1) - $border);
+    .text { color: var(--text-muted); }
+    &.active { box-shadow: none; background: hsla(var(--text-light-hsl), 0.2); }
+    &:hover, &.active {
+      border-color: var(--text-light);
+      .icon { top: 0; }
+      .text { top: 0; }
+    }
+    &:focus {
+      box-shadow: 0 0 0 4px hsla(var(--bg-muted-hsl), 0.5);
+    }
+  }
+
+  &.transparent {
+    opacity: 0.3;
+  }
+
+}
+
+
+/*
+  ----- FORMS -----
+
+  <label>
+    Label title
+    <input type="text">
+  </label>
+*/
+label {
+  @extend %tfx;
+  font-size: size(1);
+  line-height: size(3);
+  color: var(--text-light);
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover { color: var(--text-muted); }
+  &:focus-within { // if any item within <label> is focused..
+    color: var(--hub); font-weight: 560; // ..colorize label's text
+  }
+  // Toggle buttons
+  &.toggle-button {
+    display: flex;
+    text-transform: none;
+    line-height: size(2);
+    margin: size(1) 0;
+    &:focus-within { font-weight: inherit; }
+    SliderField {
+      flex: auto;
+      margin: 4px 18px 0 0;
+    }
+    .text {
+      flex: 1 1 100%;
+      color: var(--text-muted);
+      strong {
+        font-size: 15px;
+        color: var(--text);
+        display: block;
+      }
+      small {
+        font-size: 13px;
+      }
+    }
+  }
+}
+input, textarea, select {
+  @extend %tfx;
+  box-sizing: border-box;
+  background: var(--card);
+  border: 1px solid var(--bg-muted);
+  border-radius: var(--radius);
+  outline: none;
+  width: 100%;
+  padding: size(1) size(2);
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: var(--text);
+  line-height: 24px;
+  &[type="checkbox"] {
+    width: auto;
+  }
+  &:not(.button) { // don't apply input status effects on buttons (ie. input[type="submit"])
+    &[disabled], &[readonly] {
+      color: var(--text-muted);
+    }
+    &:hover {
+      border: 1px solid var(--text-light);
+    }
+    &:focus {
+      border: 1px solid var(--hub);
+      box-shadow: 0px 0px 0px 3px hsla(var(--hub-hsl), 0.2);
+    }
+  }
+}
+
+
+// all-caps small header | used in: table>th, sidenav section headers
+.table-header {
+  font-size: size(1);
+  line-height: size(2);
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+
+
+// "How to" link to docs (with question icon)
+.howto-link {
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+  &::after {
+    content: " ->";
+  }
+}
+
+
+// ----- Layout ----- //
+
+// Control bar underneath page title for search, filtering and sorting
+.control-bar {
+  @extend %box-shadow-bigger;
+  background-color: var(--card-muted);
+  display: grid;
+  margin: 0 calc(-1 * var(--main-content-gutter)); // stretch all the way to the sides
+  padding: 0 var(--main-content-gutter);
+  @include break-from(800px) {
+    display: flex;
+  }
+  .filtering {
+    flex: 1 1;
+    align-self: flex-start;
+    display: flex;
+    & > * {
+      border-right: 1px solid var(--bg-muted);
+    }
+  }
+  .sorting {
+    flex: 0 1;
+    align-self: center;
+    display: flex;
+    & > * {
+      border-left: 1px solid var(--bg-muted);
+    }
+  }
+}
+
+// Item picker with sticky search and scrollable options
+// e.g. camera picker
+.picker-with-search {
+  --list-height: 320px;
+  background: var(--card);
+  border: 1px solid var(--bg-muted);
+  border-radius: var(--radius);
+  .search { // sticky item search
+    border-bottom: 1px solid var(--bg-muted);
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 size(2);
+    input {
+      border: none;
+      margin: 0;
+      box-shadow: none;
+    }
+    &:focus-within {
+      .icon * { fill: var(--hub); }
+    }
+  }
+  ul.items { // list of selectable items (scrollable)
+    padding: size(0.5);
+    margin: 0;
+    list-style: none;
+    font-size: 13px;
+    max-height: var(--list-height);
+    overflow: auto; // scrolls when overflowing
+    label { // clickable item
+      @extend %tfx;
+      line-height: size(2);
+      text-transform: none;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: size(0.5) size(1.5);
+      margin: 2px 0;
+      border-radius: var(--radius);
+      cursor: pointer;
+      &:hover { background: var(--card-muted); }
+      &.selected {
+        background: hsla(var(--hub-hsl), 0.1);
+        .name, .meta { color: var(--hub); }
+        &:hover { background: hsla(var(--hub-hsl), 0.15); }
+      }
+      .checkbox {
+        width: auto;
+        padding: 0;
+        margin: 0;
+        flex: 0;
+        &[disabled] { // gray-out labels for disabled checkboxes
+          & ~ .name { color: var(--text-muted); }
+          & ~ .meta { color: var(--text-light); }
+        }
+      }
+      .icon {
+        margin-left: size(1.5);
+      }
+      .name {
+        margin: 0 size(2) 0 size(1);
+        flex: 1 1;
+        color: var(--text);
+        font-weight: 600;
+      }
+      .meta {
+        font-weight: 400;
+        color: var(--text-muted);
+      }
+    }
+  }
+}
+
+// "not found" placeholder (e.g. Camera offline)
+section.not-found {
+  width: 100%;
+  border: 2px dashed var(--bg-muted);
+  padding: 48px 24px;
+  text-align: center;
+  h1 {
+    font-size: 18px;
+    line-height: size(3);
+    margin: 0;
+  }
+  p {
+    font-size: 15px;
+    line-height: size(2);
+    color: var(--text-muted);
+    margin: size(1) auto size(2);
+    max-width: 33rem;
+  }
+  .button {
+    display: inline-block;
+  }
+}
+
+// ----- Specific ----- //
+
+
+
+
+// ----- Plug-ins ----- //
+
+.mat-datepicker-content {
+  translate: -54px 6px; // move the datepicker dropdown manually & align with the control input
+}
+
+
+// ----- Temp/Dev Helpers ----- //
+/*
+.debug-responsivity {
+  .size {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.6em;
+    font-weight: 600;
+    padding: 0 3px;
+    display: none;
+  }
+  .none { display: inline-block; }
+  @include break(xs) {
+    .size { display: none; }
+    .xs { display: inline-block; }
+  }
+  @include break(s) {
+    .size { display: none; }
+    .s { display: inline-block; }
+  }
+  @include break(m) {
+    .size { display: none; }
+    .m { display: inline-block; }
+  }
+  @include break(t) {
+    .size { display: none; }
+    .t { display: inline-block; }
+  }
+  @include break(l) {
+    .size { display: none; }
+    .l { display: inline-block; }
+  }
+  @include break(xl) {
+    .size { display: none; }
+    .xl { display: inline-block; }
+  }
+  @include break(hd) {
+    .size { display: none; }
+    .hd { display: inline-block; }
+  }
+}
+*/
+.show-grid { // inspired by https://sassline.com
+  background-image: linear-gradient(to bottom, #0ff 0px, rgba(255, 255, 255, 0) 1px);
+  background-repeat: repeat-y;
+  background-size: 100% size(1);
+}
