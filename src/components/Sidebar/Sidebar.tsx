@@ -19,8 +19,8 @@ const Sidebar = ({
 
     return (
         <div className="sidebar ok">
-            <div className="sidebar-panel">
-               pk
+            <div className="sidebar-panel fff">
+               pk fff
             </div>
             {children}
         </div>);
