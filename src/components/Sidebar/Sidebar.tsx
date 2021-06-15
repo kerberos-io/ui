@@ -20,7 +20,7 @@ const Sidebar = ({
             <div className="sidebar-panel">
                 <div className="brand">
                     { mobile && <div className="hamburger">
-                        <label for="close">
+                        <label htmlFor="close">
                             <input type="checkbox" id="close"/>
                             <span></span>
                             <span></span>
