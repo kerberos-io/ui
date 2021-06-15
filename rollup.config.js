@@ -4,7 +4,6 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import postcss from "rollup-plugin-postcss";
 import scss from "rollup-plugin-scss";
-
 const packageJson = require("./package.json");
 
 export default {
@@ -28,10 +27,6 @@ export default {
         resolve(),
         commonjs(),
         typescript({ useTsconfigDeclarationDir: true }),
-        scss({
-            output: "./build/css/style.css",
-            failOnError: true,
-            runtime: require("sass"),
-        }),
+        scss(),
     ]
 };

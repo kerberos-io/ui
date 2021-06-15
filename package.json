@@ -1,6 +1,6 @@
 {
   "name": "@kerberos-io/ui",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "main": "lib/index.js",
   "repository": "https://github.com/kerberos-io/ui",
   "author": "cedricve <cedric@verstraeten.io>",
@@ -27,8 +27,8 @@
     "typescript": "^4.3.2"
   },
   "scripts": {
-    "storybook": "start-storybook -s ./public -p 9001",
-    "build-storybook": "build-storybook -s ./public -o docs-build",
+    "storybook": "start-storybook --no-manager-cache -s ./public -p 9001",
+    "build-storybook": "build-storybook --no-manager-cache -s ./public -o docs-build",
     "build": "rollup -c"
   },
   "module": "lib/index.esm.js",
@@ -38,6 +38,7 @@
   ],
   "dependencies": {
     "node-sass": "^6.0.0",
+    "rollup-plugin-import-css": "^2.0.1",
     "rollup-plugin-scss": "^2.6.1",
     "sass": "^1.35.0",
     "sass-loader": "^10"
