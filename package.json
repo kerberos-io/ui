@@ -28,7 +28,7 @@
   },
   "scripts": {
     "storybook": "start-storybook --no-manager-cache -s ./public -p 9001",
-    "build-storybook": "build-storybook --no-manager-cache -s ./public -o docs-build",
+    "build-storybook": "build-storybook -s ./public -o docs-build",
     "build": "rollup -c"
   },
   "module": "lib/index.esm.js",
