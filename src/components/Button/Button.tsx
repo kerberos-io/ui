@@ -44,7 +44,11 @@ const Button = ({
             type="button"
             onClick={onClick}
         >
+            <div className={"yolo"}>ok</div>
             {label}
+            <span>
+                <div>ok</div>
+            </span>
         </button>
     );
 };
