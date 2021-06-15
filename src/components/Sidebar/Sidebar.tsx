@@ -18,26 +18,9 @@ const Sidebar = ({
                 }: SidebarProps) => {
 
     return (
-        <div className="sidebar">
+        <div className="sidebar ok">
             <div className="sidebar-panel">
-                <div className="brand">
-                    { mobile && <div className="hamburger">
-                        <label htmlFor="close">
-                            <input type="checkbox" id="close"/>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </label>
-                    </div> }
-
-                    <a className="brand-logo">
-                        <img src={logo}/>
-                        <div className="name">
-                            {title}
-                            <span className="version">{version}</span>
-                        </div>
-                    </a>
-                </div>
+               pk
             </div>
             {children}
         </div>);
