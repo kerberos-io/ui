@@ -31,9 +31,9 @@
         position: relative;
         top: -12px;
 
-        /*@include break-from(800px) {
+        @include break-from(800px) {
             display: none;
-        }*/
+        }
 
         label {
             display: flex;

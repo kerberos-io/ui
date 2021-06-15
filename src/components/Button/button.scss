@@ -1,1 +1,6 @@
 @import "../../app.scss";
+
+button {
+  padding: size(2);
+  background: var(--hub);
+}

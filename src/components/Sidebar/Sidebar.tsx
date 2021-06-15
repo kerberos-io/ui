@@ -2,10 +2,11 @@ import React from "react";
 import "./sidebar.scss";
 
 export interface SidebarProps  {
-    logo: string;
-    title: string;
-    version: string;
-    mobile: boolean;
+    logo?: string;
+    title?: string;
+    version?: string;
+    mobile?: boolean;
+    children?:any;
 };
 
 const Sidebar = ({
@@ -13,6 +14,7 @@ const Sidebar = ({
                     title = "Kerberos.io",
                     version = "v1.0",
                     mobile = false,
+                    children,
                 }: SidebarProps) => {
 
     return (
@@ -37,6 +39,7 @@ const Sidebar = ({
                     </a>
                 </div>
             </div>
+            {children}
         </div>);
 };
 
