@@ -1,6 +1,6 @@
 {
   "name": "@kerberos-io/ui",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "main": "lib/index.js",
   "repository": "https://github.com/kerberos-io/ui",
   "author": "cedricve <cedric@verstraeten.io>",
@@ -38,6 +38,8 @@
   ],
   "dependencies": {
     "node-sass": "^6.0.0",
+    "rollup-plugin-scss": "^2.6.1",
+    "sass": "^1.35.0",
     "sass-loader": "^10"
   }
 }

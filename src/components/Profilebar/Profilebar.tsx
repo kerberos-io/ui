@@ -1,5 +1,5 @@
 import React from "react";
-import "./profilebar.css";
+import "./profilebar.scss";
 
 export interface SidebarProps  {
     logo: string;

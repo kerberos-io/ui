@@ -20,22 +20,8 @@ module.exports = {
       use: [
         'style-loader',
         'css-loader',
-        {
-          // Compiles Sass to CSS
-          loader: "sass-loader",
-          options: {
-            additionalData: `@import "./assets/scss/app.scss";`,
-            sassOptions: {
-              includePaths: [__dirname, "./assets/**/*"],
-            }
-          },
-      }],
-      resolve: {
-        alias: {
-          "@": path.resolve(__dirname, "assets"),
-          "~": path.resolve(__dirname, "assets"),  // point these to where you need it to go
-        },
-      },
+        'sass-loader'
+      ],
     });
 
     // Return the altered config
