@@ -17,7 +17,7 @@ export const NavigationWithItems = () => <Navigation>
     <NavigationGroup>
         <NavigationItem title={"Dashboard"} icon={"dashboard"} active={true}/>
         <NavigationItem title={"Latest events"} icon={"activity"}/>
-        <NavigationItem title={"Livestreams"} icon={"play"}/>
+        <NavigationItem title={"Livestreams"} icon={"livestream"}/>
         <NavigationItem title={"Media"} icon={"media"}/>
     </NavigationGroup>
     <NavigationSection title={"analysis"}/>
@@ -31,7 +31,7 @@ export const NavigationWithItems = () => <Navigation>
     </NavigationGroup>
     <NavigationSection title={"management"}/>
     <NavigationGroup>
-        <NavigationItem title={"Cameras"} icon={"camera"}/>
+        <NavigationItem title={"Cameras"} icon={"cameras"}/>
         <NavigationItem title={"Sites"} icon={"sites"}/>
         <NavigationItem title={"Accounts"} icon={"accounts"}/>
         <NavigationItem title={"Plans & integrations"} icon={"subscription"}/>
