@@ -3,6 +3,7 @@ import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import Sidebar, { SidebarProps } from "./Sidebar";
 import Button from "../Button";
+import Profilebar from "../Profilebar";
 
 export default {
     title: "Components/Sidebar",
@@ -19,6 +20,20 @@ Default.args = { title: "Kerberos.io", version: "v1.0" };
 export const Version = Template.bind({});
 Version.args = { ...Default.args, version: "v2.0" };
 
-export const WithButton = () => <Sidebar title="Kerberos.io" version="v3.0">
-    <Button label={"press me"}></Button>
+export const WithProfileBar = () => <Sidebar title="Kerberos.io" version="v3.0">
+    <Profilebar
+        username={"cedricve"}
+        email={"cedric@kerberos.io"}
+        role={"owner"}
+    />
+</Sidebar>
+
+
+export const WithActiveProfileBar = () => <Sidebar title="Kerberos.io" version="v3.0">
+    <Profilebar
+        username={"cedricve"}
+        email={"cedric@kerberos.io"}
+        role={"owner"}
+        active={true}
+    />
 </Sidebar>

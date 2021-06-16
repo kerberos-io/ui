@@ -1,0 +1,107 @@
+@import "../../app.scss";
+
+ul.nav {
+  margin: 8px 0 -6px;
+  padding: 0;
+  list-style: none;
+
+  .text-light {
+    color: var(--text-light);
+  }
+
+  > li.dropdown {
+    padding: 0;
+  }
+
+  .ellipsis {
+    padding: 0;
+
+    a {
+      justify-content: center;
+    }
+  }
+
+  // menu link
+  a {
+    padding: 0 10px;
+    margin: 2px 0 0;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 34px; // size(2) + 2× 5px
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: var(--radius);
+    span {
+      flex: 1;
+      padding-left: 10px;
+      color: var(--text);
+    }
+    &:hover, &:focus {
+      background: hsla(var(--text-hsl), 0.05);
+    }
+    &.is-active {
+      font-weight: 600;
+      background: hsla(var(--hub-hsl), 0.1);
+      span {
+        color: var(--hub);
+      }
+      .icon * {
+        fill: var(--hub);
+      }
+      .badge {
+        color: var(--hub);
+        font-weight: 400;
+        box-shadow: 0 0 0 1px hsla(var(--hub-hsl), 0.5) inset;
+      }
+    }
+    .menu-caret {
+      flex: 0;
+      display: flex;
+      cursor: pointer;
+      * { fill: var(--text-light); }
+      &.open {
+        transform: rotate(180deg);
+        * { fill: var(--hub); }
+      }
+    }
+    .badge {
+      flex: 0;
+      box-shadow: 0 0 0 1px var(--bg-muted) inset;
+      border-radius: var(--radius);
+      font-size: size(1);
+      line-height: size(2);
+      color: var(--text-light);
+      padding: 0 size(0.5);
+    }
+  }
+
+  Submenu {
+    display: block;
+  }
+  ul.sub-menu {
+    padding: 6px size(2);
+    margin: 6px 0;
+    list-style: none;
+    background: var(--card-muted);
+    box-shadow: inset 4px 0px 0px var(--bg-muted), inset 0px 1px 0px var(--bg-muted), inset 0px -1px 0px var(--bg-muted);
+    li {
+      margin: 2px 0 0;
+    }
+  }
+
+  .media-buffer {
+    padding: 18px 0 6px;
+    .information {
+      text-align: center;
+      width: 100%;
+      font-size: 11px;
+      line-height: size(3);
+      color: var(--text-light);
+      span.percentage {
+        color: var(--text-muted);
+      }
+    }
+  }
+
+}

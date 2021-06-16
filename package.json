@@ -1,6 +1,6 @@
 {
   "name": "@kerberos-io/ui",
-  "version": "1.20.0",
+  "version": "1.22.0",
   "main": "lib/index.js",
   "repository": "https://github.com/kerberos-io/ui",
   "author": "cedricve <cedric@verstraeten.io>",
@@ -37,10 +37,13 @@
     "/lib"
   ],
   "dependencies": {
+    "@svgr/webpack": "^5.5.0",
+    "md5": "^2.3.0",
     "node-sass": "^6.0.0",
     "rollup-plugin-import-css": "^2.0.1",
     "rollup-plugin-scss": "^2.6.1",
     "sass": "^1.35.0",
-    "sass-loader": "^10"
+    "sass-loader": "^10",
+    "svg-react-loader": "^0.4.6"
   }
 }
