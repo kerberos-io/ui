@@ -4,6 +4,7 @@ import { Story } from "@storybook/react";
 import Sidebar, { SidebarProps } from "./Sidebar";
 import Button from "../Button";
 import Profilebar from "../Profilebar";
+import { Navigation, NavigationGroup, NavigationItem, NavigationSection } from "../Navigation";
 
 export default {
     title: "Components/Sidebar",
@@ -36,4 +37,39 @@ export const WithActiveProfileBar = () => <Sidebar title="Kerberos.io" version="
         role={"owner"}
         active={true}
     />
+</Sidebar>
+
+
+export const WithNavigation = () => <Sidebar title="Kerberos.io" version="v3.0">
+    <Profilebar
+        username={"cedricve"}
+        email={"cedric@kerberos.io"}
+        role={"owner"}
+        active={true}
+    />
+    <Navigation>
+        <NavigationSection title={"monitoring"}/>
+        <NavigationGroup>
+            <NavigationItem title={"Dashboard"} icon={"dashboard"} active={true}/>
+            <NavigationItem title={"Latest events"} icon={"activity"}/>
+            <NavigationItem title={"Livestreams"} icon={"livestream"}/>
+            <NavigationItem title={"Media"} icon={"media"}/>
+        </NavigationGroup>
+        <NavigationSection title={"analysis"}/>
+        <NavigationGroup>
+            <NavigationItem title={"Tasks"} icon={"tasks"}/>
+        </NavigationGroup>
+        <NavigationSection title={"integrations"}/>
+        <NavigationGroup>
+            <NavigationItem title={"Alerts"} icon={"alerts"}/>
+            <NavigationItem title={"Channels"} icon={"channels"}/>
+        </NavigationGroup>
+        <NavigationSection title={"management"}/>
+        <NavigationGroup>
+            <NavigationItem title={"Cameras"} icon={"cameras"}/>
+            <NavigationItem title={"Sites"} icon={"sites"}/>
+            <NavigationItem title={"Accounts"} icon={"accounts"}/>
+            <NavigationItem title={"Plans & integrations"} icon={"subscription"}/>
+        </NavigationGroup>
+    </Navigation>
 </Sidebar>
