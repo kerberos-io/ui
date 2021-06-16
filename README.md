@@ -1,6 +1,6 @@
 # Kerberos.io UI
 
-Reusable components and widgets that are used inside the Kerberos ecosystem.
+Reusable components and widgets that are used inside the Kerberos.io ecosystem. All our components can be reviewed here: https://ui.kerberos.io/.
 
 ## Start storybook
 
