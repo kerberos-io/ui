@@ -8,6 +8,10 @@ We are using Storybook to visualise and interact with the reusable components.
 
     yarn storybook
 
+## Building with rollup
+
+    yarn build
+
 ## Publish to npm
 
     npm publish --access public
