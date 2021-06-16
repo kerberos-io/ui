@@ -16,7 +16,7 @@ const Profilebar = ({
                 }: ProfilebarProps) => {
 
     return (
-        <div className="sidebar-panel">
+        <div className="profilebar">
 
         </div>);
 };
