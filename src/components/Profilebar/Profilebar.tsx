@@ -1,7 +1,7 @@
 import React from "react";
 import "./profilebar.scss";
 
-export interface SidebarProps  {
+export interface ProfilebarProps  {
     logo: string;
     title: string;
     version: string;
@@ -13,7 +13,7 @@ const Profilebar = ({
                     title = "Kerberos.io",
                     version = "v1.0",
                     mobile = false,
-                }: SidebarProps) => {
+                }: ProfilebarProps) => {
 
     return (
         <div className="sidebar-panel">
