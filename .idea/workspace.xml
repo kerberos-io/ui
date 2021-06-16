@@ -36,6 +36,7 @@
       <change beforePath="$PROJECT_DIR$/src/components/Profilebar/Profilebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profilebar/Profilebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profilebar/profilebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profilebar/profilebar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +116,7 @@
       <updated>1623745144109</updated>
       <workItem from="1623745150446" duration="11110000" />
       <workItem from="1623769470980" duration="15168000" />
-      <workItem from="1623832734909" duration="11273000" />
+      <workItem from="1623832734909" duration="11382000" />
     </task>
     <servers />
   </component>
