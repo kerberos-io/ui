@@ -1,0 +1,75 @@
+@import "../../app.scss";
+
+header.breadcrumb {
+  padding: size(3) size(2);
+  margin: 0 calc(-1 * var(--main-content-gutter));
+  @include break-from(800px) {
+    padding: size(4) var(--main-content-gutter) size(2);
+    margin: 0 calc(-1 * var(--main-content-gutter));
+  }
+
+  .row { // splits page title + primary action buttons
+    display: flex;
+    flex-direction: column;
+    @include break-from(800px) {
+      flex-direction: row;
+    }
+  }
+
+  .page-title {
+    flex: 1;
+
+    h1 {
+      font-size: 28px;
+      line-height: size(3);
+      margin: 0;
+    }
+
+    .submenu { // breadcrumbs
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      line-height: size(2);
+      @include break-from(800px) {
+        line-height: size(3);
+      }
+
+      a {
+        color: var(--text-muted);
+
+        &:focus, &:hover {
+          color: var(--hub);
+        }
+      }
+
+      .item { // breadcrumb items
+        margin: 0 size(1) 0 0;
+
+        &.active {
+          color: var(--hub);
+        }
+
+        &::after {
+          content: "->"; // draw arrows between items
+          margin-left: size(1);
+        }
+
+        &:last-child::after {
+          content: "";
+        }
+      }
+
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    flex: auto;
+    margin-top: size(2);
+    @include break-from(800px) {
+      justify-content: flex-end;
+      margin-top: 0;
+    }
+  }
+}

@@ -5,6 +5,10 @@ html {
   box-sizing: border-box;
 }
 
+#page-root {
+  display: flex;
+}
+
 body {
   box-sizing: border-box;
   background: var(--bg);

@@ -2,7 +2,6 @@ import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import Sidebar, { SidebarProps } from "./Sidebar";
-import Button from "../Button";
 import Profilebar from "../Profilebar";
 import { Navigation, NavigationGroup, NavigationItem, NavigationSection } from "../Navigation";
 
