@@ -26,7 +26,6 @@ const Template: Story<NavigationItemProps> = (args) => <NavigationGroup>
 export const NavigationItemActive = Template.bind({});
 NavigationItemActive.args = { icon: "dashboard", title: "dashboard", active: true };
 
-
 export const NavigationWithItems = () => <Navigation>
     <NavigationSection title={"monitoring"}/>
     <NavigationGroup>
