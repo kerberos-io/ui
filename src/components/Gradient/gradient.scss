@@ -1,0 +1,8 @@
+@import "../../app.scss";
+
+div.gradient {
+  height: 6px;
+  width: 100%;
+  background: var(--upper-gradient);
+  box-shadow: none;
+}
