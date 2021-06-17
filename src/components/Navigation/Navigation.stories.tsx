@@ -10,7 +10,22 @@ import Button from "../Button";
 export default {
     title: "Components/Navigation",
     component: Navigation,
+    argTypes: {
+        active: {
+            control: { type: 'boolean' }
+        }
+    }
 } as Meta;
+
+// Create a master template for mapping args to render the Button component
+const Template: Story<NavigationItemProps> = (args) => <NavigationGroup>
+    <NavigationItem {...args} />
+</NavigationGroup>;
+
+// Reuse that template for creating different stories
+export const NavigationItemActive = Template.bind({});
+NavigationItemActive.args = { icon: "dashboard", title: "dashboard", active: true };
+
 
 export const NavigationWithItems = () => <Navigation>
     <NavigationSection title={"monitoring"}/>
