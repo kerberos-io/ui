@@ -1,54 +1,26 @@
 import React from "react";
+import Icon from "../Icon";
 import "./button.scss";
 
 export interface ButtonProps  {
-    /**
-     * Is this the principal call to action on the page?
-     */
-    primary?: boolean;
-    /**
-     * What background color to use
-     */
-    backgroundColor?: string;
-    /**
-     * How large should the button be?
-     */
-    size?: "small" | "medium" | "large";
-    /**
-     * Button contents
-     */
     label: string;
-    /**
-     * Optional click handler
-     */
+    icon: string;
+    type: string;
     onClick?: (
         event: React.MouseEvent<HTMLButtonElement, MouseEvent>
     ) => void;
 };
 
-/**
- * Primary UI component for user interaction
- */
 const Button = ({
-                    primary = true,
-                    backgroundColor,
-                    size = "medium",
-                    onClick,
-                    label,
-                }: ButtonProps) => {
-    const mode = primary
-        ? "storybook-button--primary"
-        : "storybook-button--secondary";
+                onClick,
+                label,
+                type,
+                icon,
+            }: ButtonProps) => {
     return (
-        <button
-            type="button"
-            onClick={onClick}
-        >
-            <div className={"yolo"}>ok</div>
-            {label}
-            <span>
-                <div>ok</div>
-            </span>
+        <button className={`button ${type}`}>
+            <Icon label={icon}/>
+            <span className="text">{label}</span>
         </button>
     );
 };

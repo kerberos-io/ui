@@ -6,6 +6,7 @@ import Sidebar from "../Sidebar";
 import Profilebar from "../Profilebar";
 import Gradient from "../Gradient";
 import Breadcrumb from "../Breadcrumb";
+import Button from "../Button";
 import { Navigation, NavigationGroup, NavigationItem, NavigationSection } from "../Navigation";
 
 export default {
@@ -50,7 +51,9 @@ export const Fullpage = () =>
         <Main>
             <Gradient/>
             <MainBody>
-                <Breadcrumb title={"Dashboard"} level1={"Get an overview"} level2={"All sites"} />
+                <Breadcrumb title={"Dashboard"} level1={"Get an overview"} level2={"All sites"}>
+                    <Button label={"Create media"} icon={"media"}/>
+                </Breadcrumb>
             </MainBody>
         </Main>
     </div>

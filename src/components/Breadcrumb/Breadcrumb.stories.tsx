@@ -2,6 +2,7 @@ import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import Breadcrumb, { BreadcrumbProps } from "./Breadcrumb";
+import Button from "../Button";
 
 export default {
     title: "Components/Breadcrumb",
@@ -31,4 +32,6 @@ WithTwoLevelDeep.args = {
     level2: "17:08"
 };
 
-
+export const WithButton = () => <Breadcrumb title={"Media"} level1={"12-09-2035"}>
+    <Button label={"Create media"} icon={"media"}/>
+</Breadcrumb>
