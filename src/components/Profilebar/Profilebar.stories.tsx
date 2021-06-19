@@ -12,3 +12,6 @@ const Template: Story<ProfilebarProps> = (args) => <Profilebar {...args} />;
 
 export const Default = Template.bind({});
 Default.args = { };
+
+export const Active = Template.bind({});
+Active.args = { active: true };
