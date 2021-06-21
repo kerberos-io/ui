@@ -1,6 +1,9 @@
 const path = require('path');
 
 module.exports = {
+  refs: {
+    'design-system': { disable: true }
+  },
   "stories": [
     "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"

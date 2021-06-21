@@ -18,7 +18,7 @@ const Button = ({
                 icon,
             }: ButtonProps) => {
     return (
-        <button className={`button ${type}`}>
+        <button onClick={onClick} className={`button ${type}`}>
             <Icon label={icon}/>
             <span className="text">{label}</span>
         </button>

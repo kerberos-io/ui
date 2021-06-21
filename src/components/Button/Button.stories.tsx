@@ -6,9 +6,7 @@ import Button, { ButtonProps } from "./Button";
 export default {
     title: "Components/Button",
     component: Button,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+    argTypes: { onClick: { action: 'clicked' } },
 } as Meta;
 
 // Create a master template for mapping args to render the Button component
