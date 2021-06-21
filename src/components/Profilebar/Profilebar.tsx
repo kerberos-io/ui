@@ -21,7 +21,6 @@ const Profilebar = ({
                 }: ProfilebarProps) => {
 
     const gravatar: string = 'https://www.gravatar.com/avatar/' + md5(email) + '?s=' + gravatarSize + '&d=mm';
-
     return (
         <div className={"profile-bar"}>
             <p className="table-header">Profile</p>
