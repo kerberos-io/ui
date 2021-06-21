@@ -1,25 +1,28 @@
 import React from "react";
 import Icon from "../Icon/Icon";
 import "./navigation.scss";
+import { Link } from 'react-router-dom';
 
 export interface NavigationItemProps  {
     title:string;
     icon:string;
+    link?:string;
     active?:boolean;
 };
 
 const NavigationItem = ({
                         title,
                         icon,
+                        link,
                         active = false,
                     }: NavigationItemProps) => {
 
     return (
         <li>
-            <a className={`${active ? 'is-active' : ''}`}>
+            <Link to={link} activeClassName="is-active">
                 <Icon label={icon}/>
                 <span>{title}</span>
-            </a>
+            </Link>
         </li>);
 };
 

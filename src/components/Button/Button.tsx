@@ -5,7 +5,7 @@ import "./button.scss";
 export interface ButtonProps  {
     label: string;
     icon: string;
-    type: string;
+    type?: string;
     onClick?: (
         event: React.MouseEvent<HTMLButtonElement, MouseEvent>
     ) => void;
@@ -14,7 +14,7 @@ export interface ButtonProps  {
 const Button = ({
                 onClick,
                 label,
-                type,
+                type = "neutral",
                 icon,
             }: ButtonProps) => {
     return (
