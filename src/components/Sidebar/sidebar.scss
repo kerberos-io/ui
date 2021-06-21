@@ -23,6 +23,8 @@
     }
 }
 .sidebar-panel {
+    min-height: 100vh;
+
     .hamburger {
         display: block;
         padding-bottom: 10px;

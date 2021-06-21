@@ -35,3 +35,9 @@ WithTwoLevelDeep.args = {
 export const WithButton = () => <Breadcrumb title={"Media"} level1={"12-09-2035"}>
     <Button label={"Create media"} icon={"media"}/>
 </Breadcrumb>
+
+
+export const WithTwoButton = () => <Breadcrumb title={"Media"} level1={"12-09-2035"}>
+    <Button label={"Create media"} icon={"media"} type={"default"}/>
+    <Button label={"Refresh media"} icon={"media"}/>
+</Breadcrumb>
