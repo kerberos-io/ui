@@ -16,7 +16,6 @@ const NavigationItem = ({
                         link,
                         active = false,
                     }: NavigationItemProps) => {
-
     return (
         <li>
             <NavLink to={link} activeClassName="is-active">
