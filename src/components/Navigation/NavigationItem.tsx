@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 export interface NavigationItemProps  {
     title:string;
     icon:string;
-    link?:string;
+    link?:any;
     active?:boolean;
 };
 
@@ -17,10 +17,9 @@ const NavigationItem = ({
                         active = false,
                     }: NavigationItemProps) => {
 
-    // @ts-ignore
     return (
         <li>
-            <NavLink to={"link"} activeClassName="is-active" >
+            <NavLink to={link} activeClassName="is-active">
                 <Icon label={icon}/>
                 <span>{title}</span>
             </NavLink>
