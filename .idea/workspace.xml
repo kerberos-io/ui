@@ -5,15 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.storybook/preview.js" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/preview.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Breadcrumb/Breadcrumb.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Breadcrumb/Breadcrumb.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Breadcrumb/breadcrumb.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Breadcrumb/breadcrumb.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profilebar/Profilebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profilebar/Profilebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/sidebar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +85,7 @@
       <workItem from="1623745150446" duration="11110000" />
       <workItem from="1623769470980" duration="15168000" />
       <workItem from="1623832734909" duration="26082000" />
-      <workItem from="1624126126185" duration="25893000" />
+      <workItem from="1624126126185" duration="26458000" />
     </task>
     <servers />
   </component>

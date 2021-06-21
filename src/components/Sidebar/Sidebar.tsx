@@ -38,8 +38,8 @@ const Sidebar = ({
                         </div>
                     </a>
                 </div>
+                {children}
             </div>
-            {children}
         </div>);
 };
 
