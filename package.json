@@ -29,7 +29,7 @@
   "scripts": {
     "storybook": "start-storybook --no-manager-cache -s ./public -p 9001",
     "build-storybook": "build-storybook -s ./public -o docs-build",
-    "build": "rollup -c"
+    "build": "rollup -c && ls -al"
   },
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",

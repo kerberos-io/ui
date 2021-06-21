@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/src/components/Button/Button.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/Main.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profilebar/Profilebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profilebar/Profilebar.tsx" afterDir="false" />
     </list>
@@ -89,7 +90,7 @@
       <workItem from="1623745150446" duration="11110000" />
       <workItem from="1623769470980" duration="15168000" />
       <workItem from="1623832734909" duration="26082000" />
-      <workItem from="1624126126185" duration="23071000" />
+      <workItem from="1624126126185" duration="23438000" />
     </task>
     <servers />
   </component>
