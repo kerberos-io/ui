@@ -25,7 +25,7 @@ export const Fullpage = () =>
             <Navigation>
                 <NavigationSection title={"monitoring"}/>
                 <NavigationGroup>
-                    <NavigationItem title={"Dashboard"} icon={"dashboard"} link={"yolo"} active={true}/>
+                    <NavigationItem title={"Dashboard"} icon={"dashboard"} active={true}/>
                     <NavigationItem title={"Latest events"} icon={"activity"}/>
                     <NavigationItem title={"Livestreams"} icon={"livestream"}/>
                     <NavigationItem title={"Media"} icon={"media"}/>

@@ -40,6 +40,7 @@
   ],
   "dependencies": {
     "@svgr/webpack": "^5.5.0",
+    "@types/react-router-dom": "^5.1.7",
     "md5": "^2.3.0",
     "node-sass": "^6.0.0",
     "react-router-dom": "^5.2.0",
