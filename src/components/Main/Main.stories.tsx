@@ -58,6 +58,3 @@ export const Fullpage = () =>
             </MainBody>
         </Main>
     </div>
-
-
-
