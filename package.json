@@ -29,7 +29,8 @@
   "scripts": {
     "storybook": "start-storybook --no-manager-cache -s ./public -p 9001",
     "build-storybook": "build-storybook -s ./public -o docs-build",
-    "build": "rollup -c && cp -r lib/* /Users/I353408/Projects/go/src/gitlab.com/kerberos-io/vault/frontend/node_modules/@kerberos-io/ui/lib/"
+    "build": "rollup -c",
+    "build-local": "rollup -c && cp -r lib/* /Users/I353408/Projects/go/src/gitlab.com/kerberos-io/vault/frontend/node_modules/@kerberos-io/ui/lib/"
   },
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
