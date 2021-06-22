@@ -16,13 +16,17 @@ export const Activity = () => <Icon label={"activity"}/>
 export const Alerts = () => <Icon label={"alerts"}/>
 export const Camera = () => <Icon label={"cameras"}/>
 export const Channels = () => <Icon label={"channels"}/>
+export const Cloud = () => <Icon label={"cloud"}/>
 export const Counting = () => <Icon label={"counting"}/>
 export const Dashboard = () => <Icon label={"dashboard"}/>
+export const Forward = () => <Icon label={"forward"}/>
 export const Logout = () => <Icon label={"logout"}/>
 export const Media = () => <Icon label={"media"}/>
 export const Livestream = () => <Icon label={"livestream"}/>
+export const Refresh = () => <Icon label={"refresh"}/>
 export const Share = () => <Icon label={"share"}/>
 export const Sites = () => <Icon label={"sites"}/>
 export const Subscription = () => <Icon label={"subscription"}/>
 export const Tasks = () => <Icon label={"tasks"}/>
+export const User = () => <Icon label={"user"}/>
 export const Watch = () => <Icon label={"watch"}/>

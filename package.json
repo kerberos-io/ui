@@ -1,6 +1,6 @@
 {
   "name": "@kerberos-io/ui",
-  "version": "1.35.0",
+  "version": "1.36.0",
   "main": "lib/index.js",
   "repository": "https://github.com/kerberos-io/ui",
   "author": "cedricve <cedric@verstraeten.io>",
@@ -29,7 +29,7 @@
   "scripts": {
     "storybook": "start-storybook --no-manager-cache -s ./public -p 9001",
     "build-storybook": "build-storybook -s ./public -o docs-build",
-    "build": "rollup -c && ls -al"
+    "build": "rollup -c && cp -r lib/* /Users/I353408/Projects/go/src/gitlab.com/kerberos-io/vault/frontend/node_modules/@kerberos-io/ui/lib/"
   },
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",

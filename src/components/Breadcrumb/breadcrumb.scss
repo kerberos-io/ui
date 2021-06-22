@@ -68,7 +68,7 @@ header.breadcrumb {
     flex: auto;
     margin-top: size(2);
 
-    Button {
+    > * {
       margin-right: size(1);
 
       &:last-child {
