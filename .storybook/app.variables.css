@@ -54,4 +54,7 @@
     --bg-muted-hsl: 0, 4%, 89%;
     --bg-white: hsl(0, 0%, 100%);
     --bg-white-hsl: 0, 0%, 100%;
+
+    --upper-gradient: linear-gradient(90deg, var(--hub) 0%, #b255b4 58.33%, var(--oss) 100%);
+    --upper-gradient-mobile: linear-gradient(90deg, var(--hub) 0%, #b255b4 100%);
 }
