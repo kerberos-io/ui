@@ -1,12 +1,9 @@
 @import "app.variables";
 @import "fonts";
 
+
 html {
   box-sizing: border-box;
-}
-
-#page-root {
-  display: flex;
 }
 
 body {
@@ -67,6 +64,118 @@ hr {
     }
   }
 }
+
+
+/*
+  ----- BUTTONS -----
+
+  a) <ButtonField text="xxx" action="xxx" type="neutral"></ButtonField>
+  b) <input type="submit" class="input alert button" value="xxx">
+  c) <a class="neutral button"><span class="text">xxx</span></a>
+*/
+// default primary button in Hub color (purple)
+.button {
+  @extend %tfx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: size(3);
+  background: var(--hub);
+  border: 0;
+  border-bottom: 2px solid var(--hub-darker);
+  border-radius: var(--radius);
+  cursor: pointer;
+  outline: none;
+  padding: 0 size(1.25);
+  color: var(--bg-white);
+  font-weight: 600;
+  font-size: 14px;
+  .icon {
+    @extend %tfx;
+    display: flex;
+    opacity: 0.5;
+    position: relative;
+    & + .text { margin-left: 10px; }
+  }
+  .text {
+    @extend %tfx;
+    color: var(--card);
+    position: relative;
+  }
+  // make the button look pressed a bit (move icon and text down) + colorize the same color as button shadow
+  &.active { box-shadow: 0 3px 1px hsla(var(--text-hsl), 0.4) inset; }
+  &:hover, &.active {
+    background: var(--hub-darker);
+    text-decoration: none;
+    .icon { top: 1px; }
+    .text { top: 1px; }
+    &.input { padding-top: 2px; } // fix for input button since it can't have any nested elements inside of it (like the .text needed for the hover/active effect)
+  }
+  // draw semitransparent shadow around the button
+  &:focus {
+    box-shadow: 0 0 0 4px hsla(var(--hub-hsl), 0.25);
+  }
+  &.input { width: auto; } // fix for input buttons
+
+  // button variants
+  &.success { // green, success, OK buttons
+    background: var(--success);
+    border-color: var(--success-darker);
+    &:hover, &.active { background: var(--success-darker); }
+    &:focus { box-shadow: 0 0 0 4px hsla(var(--success-darker-hsl), 0.25); }
+  }
+
+  &.alert { // red, destructive buttons
+    background: var(--alert);
+    border-color: var(--alert-darker);
+    &:hover, &.active { background: var(--alert-darker); }
+    &:focus { box-shadow: 0 0 0 4px hsla(var(--alert-darker-hsl), 0.25); }
+  }
+
+  &.neutral { // secondary actions
+    --neutral-darker: hsl(0, 3%, 48%);
+    --neutral-darker-hsl: 0, 3%, 48%;
+    background: var(--text-light);
+    border-color: var(--neutral-darker);
+    &.active {
+      background: var(--neutral-darker);
+    }
+    &:hover { background: var(--neutral-darker); box-shadow: none; }
+    &:focus { box-shadow: 0 0 0 4px hsla(var(--neutral-darker-hsl), 0.25); }
+  }
+
+  // outlined button - transparent bg with only border
+  &.outlined {
+    $border: 1px;
+    border: $border solid var(--bg-muted);
+    border-radius: var(--radius);
+    background: transparent;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: size(3);
+    display: flex;
+    height: size(3);
+    padding: 0 (size(1) - $border);
+    .text { color: var(--text-muted); }
+    &.active { box-shadow: none; background: hsla(var(--text-light-hsl), 0.2); }
+    &:hover, &.active {
+      border-color: var(--text-light);
+      .icon { top: 0; }
+      .text { top: 0; }
+    }
+    &:focus {
+      box-shadow: 0 0 0 4px hsla(var(--bg-muted-hsl), 0.5);
+    }
+  }
+
+  &.transparent {
+    opacity: 0.3;
+  }
+
+}
+
 
 /*
   ----- FORMS -----
@@ -165,33 +274,73 @@ input, textarea, select {
 
 // ----- Layout ----- //
 
+
+// Grids
+.grid-container {
+  --columns: 1;
+  --gapH: #{size(1)};
+  --gapV: 0;
+  display: grid;
+  column-gap: var(--gapH);
+  row-gap: var(--gapV);
+  grid-template-columns: repeat(var(--columns), 1fr); // "fr" and fraction of free space, ie. equal spacing
+  @include break(t) { --gapH: #{size(2)}; }
+
+  &.--two-columns {
+    --gapH: #{size(2)};
+    @include break(w) { --columns: 2; }
+  }
+
+  &.--four-columns {
+    @include break(t) { --columns: 2; --gapV: #{size(2)}; }
+    @include break(w) { --columns: 4; }
+  }
+
+} // < .grid-container
+
+
 // Control bar underneath page title for search, filtering and sorting
 .control-bar {
   @extend %box-shadow-bigger;
   background-color: var(--card-muted);
-  display: grid;
-  margin: 0 calc(-1 * var(--main-content-gutter)); // stretch all the way to the sides
-  padding: 0 var(--main-content-gutter);
-  @include break-from(800px) {
+  margin: 0 calc(-1 * var(--main-content-gutter)) size(2); // stretch all the way to the sides
+  padding: 0;
+  @include break(w) {
+    padding: 0 var(--main-content-gutter);
     display: flex;
   }
-  .filtering {
-    flex: 1 1;
-    align-self: flex-start;
+  .filtering, .sorting { // shared styles
     display: flex;
+    flex-direction: column; // on mobile, stack vertically..
+    @include break-from(500px) {
+      flex-direction: row; // ..on larger displays, show next to each other
+      flex-wrap: wrap;
+    }
     & > * {
-      border-right: 1px solid var(--bg-muted);
+      border-bottom: 1px solid var(--bg-muted);
+      @include break-from(500px) { flex: 1 1 50%; }
+      @include break-from(1000px) { flex: 1 1 33.3%; }
+      @include break-from(1150px) { flex: 1 1 25%; }
+      @include break(w) {
+        border: 0;
+      }
+      @include break-from(1400px) { flex: 0 1 200px; }
+    }
+  }
+  .filtering {
+    @include break(w) { flex: 1 1; align-self: flex-start; }
+    & > * {
+      @include break(w) { border-right: 1px solid var(--bg-muted); }
     }
   }
   .sorting {
-    flex: 0 1;
-    align-self: center;
-    display: flex;
+    @include break(w) { flex: 0 1; align-self: center; }
     & > * {
-      border-left: 1px solid var(--bg-muted);
+      @include break(w) { border-left: 1px solid var(--bg-muted); }
     }
   }
 }
+
 
 // Item picker with sticky search and scrollable options
 // e.g. camera picker
@@ -271,6 +420,11 @@ section.not-found {
   border: 2px dashed var(--bg-muted);
   padding: 48px 24px;
   text-align: center;
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   h1 {
     font-size: 18px;
     line-height: size(3);
@@ -282,9 +436,6 @@ section.not-found {
     color: var(--text-muted);
     margin: size(1) auto size(2);
     max-width: 33rem;
-  }
-  .button {
-    display: inline-block;
   }
 }
 
@@ -299,14 +450,93 @@ section.not-found {
   translate: -54px 6px; // move the datepicker dropdown manually & align with the control input
 }
 
+// Address autocomplete
+ngxgeo-autocomplete {
+  #search_places {
+    background: var(--card);
+    border: 1px solid var(--bg-muted);
+    padding: 14px 25px;
+    outline: none;
+    //width: 100%;
+  }
+  .custom-autocomplete__dropdown {
+    @extend %modal-shadow;
+    background: var(--card) !important;
+    border-radius: var(--radius);
+    border: none !important;
+    font-weight: 400;
+    ul {
+      padding: 0 7px;
+    }
+    .currentlocation a { // "use current location" button
+      box-sizing: border-box;
+      padding: 6px 24px !important;
+      text-transform: capitalize;
+      letter-spacing: 0;
+      font-size: 13px !important;
+    }
+    a { // selectable location item
+      @extend %tfx;
+      text-transform: none;
+      padding: 6px 24px !important;
+      box-sizing: border-box;
+      line-height: 24px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      &:hover, &:focus {
+        background: var(--card-muted);
+      }
+    }
+    .main-text { // name of the place
+      font-weight: 500 !important;
+      font-size: 13px;
+    }
+    .secondary_text { // address of place
+      color: var(--text-muted);
+    }
+    .active { // hover effect
+      background-color: var(--card-muted) !important;
+      color: var(--text-muted) !important;
+      display: flex;
+      a {
+        background: transparent !important;
+      }
+      .secondary_text {
+        color: var(--text-muted) !important;
+      }
+    }
+  }
+  .heading {
+    padding: 0 0 0 24px !important;
+    box-sizing: border-box;
+    overflow: hidden;
+    .line-recent {
+      left: 170px !important;
+      top: 17px !important;
+      width: calc(100% - 170px) !important;
+    }
+    .line-location {
+      left: 116px !important;
+      top: 18px !important;
+      width: calc(100% - 116px) !important;
+    }
+  }
+
+  .custom-autocomplete__dropdown .currentlocation .location-icon,
+  .custom-autocomplete__dropdown .custom-icon {
+    display: none !important;
+  }
+}
 
 // ----- Temp/Dev Helpers ----- //
-/*
+
 .debug-responsivity {
   .size {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 100;
     background: var(--text);
     color: var(--bg);
     font-size: 0.6em;
@@ -315,36 +545,24 @@ section.not-found {
     display: none;
   }
   .none { display: inline-block; }
-  @include break(xs) {
-    .size { display: none; }
-    .xs { display: inline-block; }
-  }
-  @include break(s) {
-    .size { display: none; }
-    .s { display: inline-block; }
-  }
-  @include break(m) {
-    .size { display: none; }
-    .m { display: inline-block; }
-  }
   @include break(t) {
     .size { display: none; }
     .t { display: inline-block; }
   }
-  @include break(l) {
+  @include break(d) {
     .size { display: none; }
-    .l { display: inline-block; }
+    .d { display: inline-block; }
   }
-  @include break(xl) {
+  @include break(w) {
     .size { display: none; }
-    .xl { display: inline-block; }
+    .w { display: inline-block; }
   }
-  @include break(hd) {
+  @include break(f) {
     .size { display: none; }
-    .hd { display: inline-block; }
+    .f { display: inline-block; }
   }
 }
-*/
+
 .show-grid { // inspired by https://sassline.com
   background-image: linear-gradient(to bottom, #0ff 0px, rgba(255, 255, 255, 0) 1px);
   background-repeat: repeat-y;

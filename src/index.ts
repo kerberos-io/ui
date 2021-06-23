@@ -6,6 +6,7 @@ import {Main, MainBody} from "./components/Main";
 import Icon from "./components/Icon";
 import Breadcrumb from "./components/Breadcrumb";
 import Gradient from "./components/Gradient";
+import KPI from "./components/KPI";
 
 export {
     Button,
@@ -19,5 +20,6 @@ export {
     Main,
     MainBody,
     Breadcrumb,
-    Gradient
+    Gradient,
+    KPI,
 };

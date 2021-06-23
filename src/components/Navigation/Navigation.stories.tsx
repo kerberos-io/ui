@@ -17,7 +17,7 @@ export default {
     }
 } as Meta;
 
-export const NavigationWithItems = () =><Navigation>
+export const NavigationWithItems = () => <Navigation>
     <NavigationSection title={"monitoring"}/>
     <NavigationGroup>
         <NavigationItem link={"dashboard"} title={"Dashboard"} icon={"dashboard"} active={true}/>

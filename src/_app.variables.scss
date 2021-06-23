@@ -16,6 +16,29 @@
   @return $multiplier * 12px;
 }
 
+// Bulma breakpoints
+$gap: 32px;
+$tablet: 769px;
+$desktop:	960px + (2 * $gap);
+$widescreen:	1152px + (2 * $gap);
+$fullhd: 1344px + (2 * $gap);
+
+// Responsive mixin (Bulma's)
+@mixin break($media) {
+  @if $media == t {
+    @media only screen and (min-width: $tablet) { @content; }
+  }
+  @else if $media == d {
+    @media only screen and (min-width: $desktop) { @content; }
+  }
+  @else if $media == w {
+    @media only screen and (min-width: $widescreen) { @content; }
+  }
+  @else if $media == f {
+    @media only screen and (min-width: $fullhd) { @content; }
+  }
+}
+
 /*
   Responsivity mixin for custom min-width styles
     Examples:
@@ -25,25 +48,22 @@
   @media only screen and (min-width: $size) { @content; }
 }
 
+
 // ========== VARIABLES ========== //
 
 :root {
-
-  --upper-gradient: linear-gradient(90deg, var(--hub) 0%, #b255b4 58.33%, var(--oss) 100%);
-  --upper-gradient-mobile: linear-gradient(90deg, var(--hub) 0%, #b255b4 100%);
 
   // ---------- UI ---------- //
 
   --radius: 4px;
 
   --main-content-gutter: 24px; // margins between main content and sidebar/viewport
-  @include break-from(800px) {
+  @include break(t) {
     --main-content-gutter: 36px;
   }
-  @include break-from(1200px) {
+  @include break(w) {
     --main-content-gutter: 48px;
   }
-
 }
 
 
