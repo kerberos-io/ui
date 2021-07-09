@@ -1,0 +1,54 @@
+@import "../../app.scss";
+
+.video-card {
+    height: 320px;
+    width: 480px;
+    background-color: #FAFAFA;
+    border-radius: 4px;
+    .video-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      padding:0px 18px;
+    }
+    .video-box {
+      height: fit-content;
+      width: fit-content;
+      box-sizing: border-box;
+      .video-tools {
+        display: flex;
+        margin-bottom: -50px;
+        justify-content: space-between;
+        position: relative;
+        padding:12px 18px;
+
+        .switcher{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          height: 24px;        
+          font-size: 11px; 
+          span:first-of-type{
+              margin-right: 2px;
+              border-radius: 18px 0px 0px 18px;
+              padding: 4px 8px 4px 12px;
+              background-color: var(--bg);
+
+          }
+          span:last-of-type{
+            margin-right: 2px;
+            border-radius: 0px 18px 18px 0px;   
+            padding: 4px 12px 4px 8px;
+            background-color:var(--bg);
+          }
+        }
+       
+      }
+      video {
+        height: 269px;
+        width: 480px;
+      }
+    }
+  }

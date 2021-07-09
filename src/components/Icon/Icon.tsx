@@ -15,7 +15,12 @@ export function Accounts(){
 }
 
 export function Activity(){
-    return (<></>)
+    return (
+        <svg className={"icon"} width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.29445 6.02998C2.81864 6.66746 3.56762 7.48473 4.49387 8.21451C5.77466 9.22361 7.31052 10 9 10C10.6895 10 12.2253 9.22361 13.5061 8.21451C14.4324 7.48473 15.1814 6.66746 15.7056 6.02998C15.1284 5.36327 14.376 4.53145 13.4378 3.78087C12.1769 2.77214 10.6847 2 9 2C7.31533 2 5.8231 2.77214 4.5622 3.78087C3.62398 4.53145 2.87162 5.36327 2.29445 6.02998ZM3.31281 2.21913C4.76023 1.06119 6.68467 0 9 0C11.3153 0 13.2398 1.06119 14.6872 2.21913C15.9277 3.21153 16.8946 4.34108 17.4915 5.03844C17.5884 5.15166 17.6756 5.25349 17.7526 5.3415C18.0637 5.69711 18.0835 6.22198 17.8 6.6C17.2791 7.29447 16.2185 8.6237 14.7439 9.78549C13.2747 10.9431 11.3105 12 9 12C6.68949 12 4.72534 10.9431 3.25613 9.78549C1.78156 8.6237 0.720858 7.29447 0.200002 6.6C-0.0835117 6.22198 -0.0637332 5.69711 0.247426 5.3415C0.324428 5.25349 0.411595 5.15166 0.508515 5.03843C1.10545 4.34107 2.07232 3.21152 3.31281 2.21913Z" fill="#A69D9D"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 5C8.44772 5 8 5.44772 8 6C8 6.55228 8.44772 7 9 7C9.55228 7 10 6.55228 10 6C10 5.44772 9.55228 5 9 5ZM6 6C6 4.34315 7.34315 3 9 3C10.6569 3 12 4.34315 12 6C12 7.65685 10.6569 9 9 9C7.34315 9 6 7.65685 6 6Z" fill="#A69D9D"/>
+        </svg>
+    )
 }
 
 export function Alerts(){
@@ -199,6 +204,89 @@ export function Forward(){
     )
 }
 
+export function ToggleOff(){
+    return(
+        <svg className={"icon"} width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect opacity="0.2" width="32" height="18" rx="9" fill="#6D6666"/>
+            <circle cx="9" cy="9" r="5" fill="#6D6666"/>
+        </svg>
+    )
+}
+
+export function AlertsNotify() {
+    return(
+        <svg className={"icon"} width="94" height="104" viewBox="0 0 94 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_dd)">
+            <circle cx="52" cy="48" r="18" fill="#FBFBFB"/>
+            </g>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M52 43C49.7909 43 48 44.7909 48 47V51H56V47C56 44.7909 54.2091 43 52 43ZM46 47C46 43.6863 48.6863 41 52 41C55.3137 41 58 43.6863 58 47V53H46V47Z" fill="#6D6666"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M54.2321 54.1339C54.7104 54.41 54.8743 55.0216 54.5981 55.4999C54.3348 55.956 53.9561 56.3347 53.5 56.598C53.044 56.8613 52.5267 56.9999 52 56.9999C51.4734 56.9999 50.9561 56.8613 50.5 56.598C50.044 56.3347 49.6653 55.956 49.402 55.4999C49.1258 55.0216 49.2897 54.41 49.768 54.1339C50.2463 53.8578 50.8579 54.0216 51.134 54.4999C51.2218 54.6519 51.348 54.7782 51.5 54.8659C51.6521 54.9537 51.8245 54.9999 52 54.9999C52.1756 54.9999 52.348 54.9537 52.5 54.8659C52.6521 54.7782 52.7783 54.6519 52.8661 54.4999C53.1422 54.0216 53.7538 53.8578 54.2321 54.1339Z" fill="#6D6666"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M45 52C45 51.4477 45.4477 51 46 51H58C58.5523 51 59 51.4477 59 52C59 52.5523 58.5523 53 58 53H46C45.4477 53 45 52.5523 45 52Z" fill="#6D6666"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M52 39C52.5523 39 53 39.4477 53 40V41C53 41.5523 52.5523 42 52 42C51.4477 42 51 41.5523 51 41V40C51 39.4477 51.4477 39 52 39Z" fill="#6D6666"/>
+            <circle cx="65" cy="34" r="4" fill="#84559F"/>
+            <circle opacity="0.14" cx="65" cy="34" r="7" stroke="#84559F" stroke-width="2"/>
+            <defs>
+            <filter id="filter0_dd" x="0" y="0" width="104" height="104" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="17"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0"/>
+            <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape"/>
+            </filter>
+            </defs>
+        </svg>
+    )
+}
+
+export function  Bookmark() {
+    return(
+        <svg className={"icon"} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H7C7.26522 0 7.51957 0.105357 7.70711 0.292893L17.7071 10.2929C18.0976 10.6834 18.0976 11.3166 17.7071 11.7071L11.7071 17.7071C11.3166 18.0976 10.6834 18.0976 10.2929 17.7071L0.292893 7.70711C0.105357 7.51957 0 7.26522 0 7V1ZM2 2V6.58579L11 15.5858L15.5858 11L6.58579 2H2Z" fill="#A69D9D"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 5C4.77614 5 5 4.77614 5 4.5C5 4.22386 4.77614 4 4.5 4C4.22386 4 4 4.22386 4 4.5C4 4.77614 4.22386 5 4.5 5ZM4.5 6C5.32843 6 6 5.32843 6 4.5C6 3.67157 5.32843 3 4.5 3C3.67157 3 3 3.67157 3 4.5C3 5.32843 3.67157 6 4.5 6Z" fill="#A69D9D"/>
+        </svg>
+    )
+    
+}
+
+export function Star() {
+    return(
+        <svg className={"icon"} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M8.12698 1.96867C8.48439 1.19379 9.58568 1.19379 9.94309 1.96866L11.4809 5.30259C11.6266 5.6184 11.9258 5.83584 12.2712 5.87679L15.9172 6.30908C16.7646 6.40955 17.1049 7.45693 16.4784 8.0363L13.7828 10.5291C13.5275 10.7652 13.4132 11.117 13.4809 11.4581L14.1965 15.0592C14.3628 15.8962 13.4718 16.5435 12.7272 16.1267L9.52348 14.3334C9.22001 14.1635 8.85007 14.1635 8.54659 14.3334L5.34286 16.1267C4.59825 16.5435 3.70729 15.8962 3.8736 15.0592L4.58913 11.4581C4.65691 11.117 4.54259 10.7652 4.28726 10.5291L1.59171 8.0363C0.965207 7.45693 1.30552 6.40955 2.15292 6.30908L5.79887 5.87679C6.14424 5.83584 6.44352 5.6184 6.58919 5.30259L8.12698 1.96867Z" stroke="#A69D9D" stroke-width="2"/>
+        </svg>
+    )    
+}
+
+export function  Checkbox() {
+    return(
+        <svg className={"icon"} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect opacity="0.5" x="1" y="1" width="12" height="12" rx="1" stroke="#84559F" stroke-width="2"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.29289 6.29289C3.68342 5.90237 4.31658 5.90237 4.70711 6.29289L6 7.58579L9.29289 4.29289C9.68342 3.90237 10.3166 3.90237 10.7071 4.29289C11.0976 4.68342 11.0976 5.31658 10.7071 5.70711L6.70711 9.70711C6.31658 10.0976 5.68342 10.0976 5.29289 9.70711L3.29289 7.70711C2.90237 7.31658 2.90237 6.68342 3.29289 6.29289Z" fill="#84559F"/>
+        </svg>
+
+    )
+    
+}
+
+export function Sort() {
+    return(
+        <svg className={"icon"} width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="18" height="2" rx="1" fill="#A69D9D"/>
+            <rect x="4" y="4" width="14" height="2" rx="1" fill="#A69D9D"/>
+            <rect x="8" y="8" width="10" height="2" rx="1" fill="#A69D9D"/>
+            <rect x="12" y="12" width="6" height="2" rx="1" fill="#A69D9D"/>
+        </svg>
+    )
+    
+}
+
+
 const Icon = ({
                   label,
               }: IconProps) => {
@@ -241,6 +329,18 @@ const Icon = ({
             return <User />
         case "watch":
             return <Watch />
+        case "toggle-off":
+            return <ToggleOff />
+        case "alerts-notify":
+            return <AlertsNotify/>
+        case "bookmark":
+            return <Bookmark/>
+        case "star":
+            return <Star/>
+        case "checkbox":
+            return <Checkbox/>
+        case "sort":
+            return <Sort/>
     }
     return <span></span>;
 };

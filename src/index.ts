@@ -7,6 +7,8 @@ import Icon from "./components/Icon";
 import Breadcrumb from "./components/Breadcrumb";
 import Gradient from "./components/Gradient";
 import KPI from "./components/KPI";
+import VideoCard from "./components/VideoCard";
+import StatusWithBadge from "./components/StatusWithBadge";
 
 export {
     Button,
@@ -22,4 +24,6 @@ export {
     Breadcrumb,
     Gradient,
     KPI,
+    VideoCard,
+    StatusWithBadge
 };
