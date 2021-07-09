@@ -1,5 +1,6 @@
 import React from "react";
 import StatusWithBadge from "../StatusWithBadge";
+import Button from "../Button"
 import "./videocard.scss";
 
 export interface VideoCardProps {
@@ -17,6 +18,16 @@ export interface VideoCardProps {
           <h3>{label}</h3>
           <StatusWithBadge status={headerStatus} />
         </div>
+        {
+          headerStatus==="offline"?
+          <div className="offline-box">
+             <div className="info">
+                 <h3 >Camera offline</h3>
+                 <p className="item">Camera is not powered or not connected to the network.Check your camera to re-enable live stream and event recording.</p>
+            </div>
+            <Button icon="cameras" label="Manage Cameras" type="default" />
+          </div>
+          :
         <div className="video-box">
           <div className="video-tools">
             <StatusWithBadge status={videoStatus}/>
@@ -27,6 +38,7 @@ export interface VideoCardProps {
           </div>
           <video poster={videoSource}></video>
         </div>
+        }
       </div>
     );
   };
