@@ -1,5 +1,7 @@
 @import "../../app.scss";
 
+$commonWidthDesktop: 34vw;
+$commonWidthBreak: 66vw;
 .video-card {
   // height: 320px;
   // width: 480px;
@@ -8,10 +10,10 @@
   background-color: #fafafa;
   border-radius: 4px;
   height: auto;
-  width: 34vw;
+  width: $commonWidthDesktop;
   box-sizing: border-box;
   @media only screen and (max-width: 1215px) {
-    width: 66vw;
+    width: $commonWidthBreak;
   }
 
   .video-header {
@@ -34,11 +36,13 @@
   .video-box {
     // height: fit-content;
     // width: fit-content;
+    display: flex;
+    flex-direction: column;
     height: auto;
-    width: 34vw;
+    width: $commonWidthDesktop;
     box-sizing: border-box;
     @media only screen and (max-width: 1215px) {
-      width: 66vw;
+      width: $commonWidthBreak;
     }
     .video-tools {
       display: flex;
@@ -46,55 +50,77 @@
       justify-content: space-between;
       position: relative;
       padding: 12px 18px;
+      align-items: center;
 
-      .switcher {
+      .left-tools {
         display: flex;
         flex-direction: row;
-        justify-content: center;
         align-items: center;
-        height: 24px;
-        font-size: 11px;
-        z-index: 5;
-        color: #262424;
-        text-transform: uppercase;
-        font-family: Inter;
-        font-size: 11px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 24px;
-        letter-spacing: 0em;
-        text-align: left;
-        button {
-          cursor: pointer;
 
-          &:first-of-type {
-            margin-right: 2px;
-            border-radius: 18px 0px 0px 18px;
-            padding: 4px 8px 4px 12px;
-            background-color: #fff;
-            border: none;
+        // look again
+        p {
+          color: #fff;
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+      .right-tools {
+        p {
+          color: #fff;
+          font-size: 14px;
+          span {
+            color: var(--text);
           }
-          &:last-of-type {
-            margin-right: 2px;
-            border-radius: 0px 18px 18px 0px;
-            padding: 4px 12px 4px 8px;
-            background-color: #fff;
-            border: none;
-          }
+        }
+        .switcher {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          height: 24px;
+          font-size: 11px;
+          z-index: 5;
+          color: #262424;
+          text-transform: uppercase;
+          font-family: Inter;
+          font-size: 11px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0em;
+          text-align: left;
+          button {
+            cursor: pointer;
 
-          &:focus {
-            background-color: hsla(0, 5%, 93%, 0.8);
-            color: var(--text-muted);
-            cursor: text;
+            &:first-of-type {
+              margin-right: 2px;
+              border-radius: 18px 0px 0px 18px;
+              padding: 4px 8px 4px 12px;
+              background-color: #fff;
+              border: none;
+            }
+            &:last-of-type {
+              margin-right: 2px;
+              border-radius: 0px 18px 18px 0px;
+              padding: 4px 12px 4px 8px;
+              background-color: #fff;
+              border: none;
+            }
+
+            &:focus {
+              background-color: hsla(0, 5%, 93%, 0.8);
+              color: var(--text-muted);
+              cursor: text;
+            }
           }
         }
       }
     }
     video {
       height: auto;
-      width: 34vw;
+      width: $commonWidthDesktop;
       @media screen and (max-width: 1215px) {
-        width: 66vw;
+        width: $commonWidthBreak;
       }
     }
   }
