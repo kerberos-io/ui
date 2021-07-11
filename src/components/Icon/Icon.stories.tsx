@@ -36,4 +36,5 @@ export const Bookmark = () => <Icon label={"bookmark"}/>
 export const Star = () => <Icon label={"star"} />
 export const Checkbox = () => <Icon label={"checkbox"} />
 export const Sort = () => <Icon label={"sort"} />
+export const Plus = () => <Icon label={"plus-circle"} />
 

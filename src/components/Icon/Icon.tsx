@@ -286,6 +286,17 @@ export function Sort() {
     
 }
 
+export function Plus() {
+    return(
+        <svg className={"icon"} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.5">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 16C5.13401 16 2 12.866 2 9C2 5.13401 5.13401 2 9 2C12.866 2 16 5.13401 16 9C16 12.866 12.866 16 9 16ZM0 9C0 13.9706 4.02944 18 9 18C13.9706 18 18 13.9706 18 9C18 4.02944 13.9706 0 9 0C4.02944 0 0 4.02944 0 9Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 13C9.55228 13 10 12.5523 10 12V6C10 5.44772 9.55228 5 9 5C8.44772 5 8 5.44772 8 6V12C8 12.5523 8.44772 13 9 13Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13 9C13 8.44772 12.5523 8 12 8L6 8C5.44772 8 5 8.44772 5 9C5 9.55229 5.44772 10 6 10L12 10C12.5523 10 13 9.55228 13 9Z" fill="white"/>
+            </g>
+        </svg>
+    )    
+}
 
 const Icon = ({
                   label,
@@ -341,6 +352,8 @@ const Icon = ({
             return <Checkbox/>
         case "sort":
             return <Sort/>
+        case "plus-circle":
+            return <Plus/>
     }
     return <span></span>;
 };
