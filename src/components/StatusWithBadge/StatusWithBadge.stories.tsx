@@ -25,3 +25,11 @@ export const Recording = Template.bind({})
 Recording.args={
     status:"recording"
 }
+export const Active = Template.bind({})
+Active.args={
+    status:"active"
+}
+export const Update = Template.bind({})
+Update.args={
+    status:"update"
+}

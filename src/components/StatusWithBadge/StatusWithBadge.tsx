@@ -36,7 +36,21 @@ export interface StatusWithBadgeProps {
                   backgroundColor: "hsla(2, 48%, 39%, 0.2)",
                   title:"EVENT DETECTED",
                   fontSize:"13px"
-              }                
+              }
+            case "active":
+              return {
+                fill:"#5EAB6C",
+                backgroundColor:"hsla(123, 54%, 74%, 0.2)",
+                title:"ACTIVE",
+                fontSize:"13px"
+              }    
+            case "update":
+              return {
+                fill:"#DFB211",
+                backgroundColor:"hsla(47, 86%, 47%, 0.2)",
+                title:"UPDATE",
+                fontSize:"13px"
+              }            
             default:
               return <span></span>
             }

@@ -37,4 +37,16 @@ export const Star = () => <Icon label={"star"} />
 export const Checkbox = () => <Icon label={"checkbox"} />
 export const Sort = () => <Icon label={"sort"} />
 export const Plus = () => <Icon label={"plus-circle"} />
+export const Search = () => <Icon label={"search"} />
+export const CircleCheckBig = () => <Icon label={"circle-check-big"} />
+export const CircleCrossBig = () => <Icon label={"circle-cross-big"} />
+export const LockedBigBig = () => <Icon label={"locked-big"} />
+export const UnlockedBig = () => <Icon label={"unlocked-big"} />
+export const ArrowDownFullSm = () => <Icon label={"arrow-down-full-sm"} />
+export const EnterpriseSm = () => <Icon label={"enterprise-sm"} />
+export const OpensorceSm = () => <Icon label={"opensource-sm"} />
+export const NoteSm = () => <Icon label={"note-sm"} />
+export const FavoriteSm = () => <Icon label={"favorite-sm"} />
+export const PlaySm = () => <Icon label={"play-sm"} />
+export const TagSm = () => <Icon label={"tag-sm"} />
 
