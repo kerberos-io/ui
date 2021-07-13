@@ -9,6 +9,7 @@ import Gradient from "./components/Gradient";
 import KPI from "./components/KPI";
 import VideoCard from "./components/VideoCard";
 import StatusWithBadge from "./components/StatusWithBadge";
+import { Block,BlockHeader,BlockBody,BlockFooter } from "./components/Block";
 
 export {
     Button,
@@ -25,5 +26,9 @@ export {
     Gradient,
     KPI,
     VideoCard,
-    StatusWithBadge
+    StatusWithBadge,
+    Block,
+    BlockHeader,
+    BlockBody,
+    BlockFooter
 };
