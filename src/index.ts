@@ -10,6 +10,7 @@ import KPI from "./components/KPI";
 import VideoCard from "./components/VideoCard";
 import StatusWithBadge from "./components/StatusWithBadge";
 import { Block,BlockHeader,BlockBody,BlockFooter } from "./components/Block";
+import Footer from "./components/Footer";
 
 export {
     Button,
@@ -30,5 +31,6 @@ export {
     Block,
     BlockHeader,
     BlockBody,
-    BlockFooter
+    BlockFooter,
+    Footer
 };
