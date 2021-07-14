@@ -4,7 +4,7 @@ on:
     branches-ignore:
       - main
 jobs:
-  build-and-deploy-storybook:
+  build-storybook:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
