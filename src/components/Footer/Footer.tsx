@@ -19,6 +19,7 @@ const Footer = ({
             }: FooterProps) => {
     return (
         <button onClick={onClick} className={`button ${type}`}>
+            Hey recep
             <Icon label={icon}/>
             <span className="text">{label}</span>
         </button>
