@@ -44,9 +44,10 @@ export const LockedBigBig = () => <Icon label={"locked-big"} />
 export const UnlockedBig = () => <Icon label={"unlocked-big"} />
 export const ArrowDownFullSm = () => <Icon label={"arrow-down-full-sm"} />
 export const EnterpriseSm = () => <Icon label={"enterprise-sm"} />
-export const OpensorceSm = () => <Icon label={"opensource-sm"} />
+export const OpensourceSm = () => <Icon label={"opensource-sm"} />
 export const NoteSm = () => <Icon label={"note-sm"} />
 export const FavoriteSm = () => <Icon label={"favorite-sm"} />
 export const PlaySm = () => <Icon label={"play-sm"} />
 export const TagSm = () => <Icon label={"tag-sm"} />
+export const Login = () => <Icon label={"login"} />
 

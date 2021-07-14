@@ -24,17 +24,13 @@ const VideoCard = ({
   handleClickSD,
   ...videoProps
 }: VideoCardProps) => {
-  const videoWallWidth = "50vw";
-  const widthEmbedded = "";
   return (
     <div
-      className="video-card"
-      style={{ width: isVideoWall ? videoWallWidth : widthEmbedded }}
+      className={
+        "video-card" + ` ${isVideoWall ? "is-video-wall" : "no-video-wall"}`
+      }
     >
-      <div
-        className="video-header"
-        style={{ display: isVideoWall ? "none" : "flex" }}
-      >
+      <div className="video-header">
         <h3>{label}</h3>
         <StatusWithBadge status={headerStatus} />
       </div>
@@ -50,37 +46,15 @@ const VideoCard = ({
           <Button icon="cameras" label="Manage Cameras" type="default" />
         </div>
       ) : (
-        <div
-          className="video-box"
-          style={{
-            flexDirection: isVideoWall ? "column-reverse" : "column",
-            width: isVideoWall ? videoWallWidth : widthEmbedded,
-          }}
-        >
-          <div
-            className="video-tools"
-            style={{
-              marginBottom: isVideoWall ? "0" : "-50px",
-              position: isVideoWall ? "absolute" : "relative",
-              padding: isVideoWall ? "0px 12px" : "12px 18px",
-              width: isVideoWall ? "-webkit-fill-available" : "initial",
-            }}
-          >
+        <div className="video-box">
+          <div className="video-tools">
             <div className="left-tools">
               <StatusWithBadge status={videoStatus} />
-              <p
-                style={{ display: isVideoWall ? "block" : "none" }}
-                className="item"
-              >
-                Camera 12
-              </p>
+              <p className="item">Camera 12</p>
             </div>
 
             <div className="right-tools">
-              <div
-                className="switcher"
-                style={{ display: isVideoWall ? "none" : "flex" }}
-              >
+              <div className="switcher">
                 <button onClick={handleClickSD} id="switch-to-sd">
                   SD
                 </button>
@@ -88,15 +62,12 @@ const VideoCard = ({
                   HD
                 </button>
               </div>
-              <p style={{ display: isVideoWall ? "block" : "none" }}>
+              <p>
                 Open Source <span>Docker</span>
               </p>
             </div>
           </div>
-          <video
-            {...videoProps}
-            style={{ width: isVideoWall ? videoWallWidth : widthEmbedded }}
-          ></video>
+          <video {...videoProps}></video>
         </div>
       )}
     </div>

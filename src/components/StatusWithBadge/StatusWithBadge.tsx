@@ -10,55 +10,42 @@ export interface StatusWithBadgeProps {
         switch (status) {
             case "live":                
                 return {
-                    fill:"#5EAB6C",
-                    backgroundColor:"hsla(123, 54%, 74%, 0.2)",
+                    className:"swb-live",
                     title:"LIVE",
-                    fontSize:"13px"
               };
             case "recording":
                 return {
-                    fill:"#943734",
-                    animation: "1s blink ease infinite",
+                    className:"swb-recording",
                     title:"LIVE",
-                    backgroundColor:"#FFFFFF",
-                    fontSize:"11px"
                 }
             case "offline":
                 return {
-                  fill:"#6D6666",
+                  className:"swb-offline",
                   title:"OFFLINE",
-                  backgroundColor:"hsla(0, 3%, 41%, 0.2)",
-                  fontSize:"13px"
                 }
             case "event-detected":
               return {
-                  fill:"#943734",
-                  backgroundColor: "hsla(2, 48%, 39%, 0.2)",
+                  className:"swb-event-detected",
                   title:"EVENT DETECTED",
-                  fontSize:"13px"
               }
             case "active":
               return {
-                fill:"#5EAB6C",
-                backgroundColor:"hsla(123, 54%, 74%, 0.2)",
+                className:"swb-active",
                 title:"ACTIVE",
-                fontSize:"13px"
               }    
             case "update":
               return {
-                fill:"#DFB211",
-                backgroundColor:"hsla(47, 86%, 47%, 0.2)",
+                className:"swb-update",
                 title:"UPDATE",
-                fontSize:"13px"
               }            
             default:
               return <span></span>
             }
     })()
     return(
-        <div className="status" style={{backgroundColor:state.backgroundColor,fontSize:state.fontSize}}>
+        <div className={"status"+` ${state.className}`} >
               <svg  width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="4" cy="4" r="4" style={{animation:state.animation,fill:state.fill}} />
+                <circle cx="4" cy="4" r="4"  />
             </svg>
             <span>{state.title}</span>
         </div>

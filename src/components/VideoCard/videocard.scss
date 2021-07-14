@@ -1,7 +1,5 @@
 @import "../../app.scss";
 
-$commonWidthDesktop: 34vw;
-$commonWidthBreak: 66vw;
 .video-card {
   // height: 320px;
   // width: 480px;
@@ -10,10 +8,10 @@ $commonWidthBreak: 66vw;
   background-color: #fafafa;
   border-radius: 4px;
   height: auto;
-  width: $commonWidthDesktop;
+  width: $videocard-desktop;
   box-sizing: border-box;
-  @media only screen and (max-width: 1215px) {
-    width: $commonWidthBreak;
+  @include break(w){
+    width: $videocard-widesreen;
   }
 
   .video-header {
@@ -34,15 +32,13 @@ $commonWidthBreak: 66vw;
     }
   }
   .video-box {
-    // height: fit-content;
-    // width: fit-content;
     display: flex;
     flex-direction: column;
     height: auto;
-    width: $commonWidthDesktop;
+    width: $videocard-desktop;
     box-sizing: border-box;
-    @media only screen and (max-width: 1215px) {
-      width: $commonWidthBreak;
+    @include break(w){
+      width: $videocard-widesreen;
     }
     .video-tools {
       display: flex;
@@ -57,7 +53,6 @@ $commonWidthBreak: 66vw;
         flex-direction: row;
         align-items: center;
 
-        // look again
         p {
           color: #fff;
           font-size: 14px;
@@ -118,10 +113,78 @@ $commonWidthBreak: 66vw;
     }
     video {
       height: auto;
-      width: $commonWidthDesktop;
-      @media screen and (max-width: 1215px) {
-        width: $commonWidthBreak;
+      width:$videocard-desktop;
+      @include break(w){
+        width: $videocard-widesreen;
       }
     }
+  }
+}
+
+.is-video-wall{
+  width: $videocard-wall;
+  .video-header{
+    display: none;
+  }
+
+  .video-box{
+    flex-direction: column-reverse;
+    width: $videocard-wall;
+    .video-tools{
+      margin-bottom: 0px;
+      position: absolute;
+      padding:0px 12px;
+      width: -webkit-fill-available;
+      .left-tools{
+        p{
+          display: block;
+        }
+      }
+      .right-tools{
+       .switcher{
+        display: none;
+       }
+       p{
+         display: block;
+       }
+      }
+    }
+    video{
+      width: $videocard-wall;
+    }
+  }
+}
+
+.no-video-wall{
+  // width: auto;
+  .video-header{
+    display: flex;
+  }
+
+  .video-box{
+    flex-direction: column;
+    // width: auto;
+    .video-tools{
+      margin-bottom: -50px;
+      position: relative;
+      padding:12px 18px;
+      width: initial;
+      .left-tools{
+        p{
+          display: none;
+        }
+      }
+      .right-tools{
+       .switcher{
+        display: flex;
+       }
+       p{
+         display: none;
+       }
+      }
+    }
+    // video{
+    //   width: auto;
+    // }
   }
 }

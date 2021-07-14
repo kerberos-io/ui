@@ -13,6 +13,65 @@
     }
 }
 
+.swb-live{
+    background-color:hsla(123, 54%, 74%, 0.2);
+    font-size:13px;
+    svg{
+        circle{
+            fill:#5EAB6C,
+        }
+    }
+}
+
+.swb-recording{
+    background-color:#FFFFFF;
+    font-size:11px;
+    svg{
+        circle{
+            fill:#943734;
+            animation: 1s blink ease infinite,
+        }
+    }
+}
+
+.swb-offline{
+    background-color:hsla(0, 3%, 41%, 0.2);
+    font-size:13px;
+    svg{
+        circle{
+            fill:#6D6666,
+        }
+    }
+}
+.swb-event-detected{
+    background-color: hsla(2, 48%, 39%, 0.2);
+    font-size:13px;
+    svg{
+        circle{
+            fill:#943734;
+        }
+    }
+}
+.swb-active{
+    background-color:hsla(123, 54%, 74%, 0.2);
+    font-size:13px;
+    svg{
+        circle{
+            fill:#5EAB6C;
+        }
+    }
+}
+
+.swb-update{
+    background-color:hsla(47, 86%, 47%, 0.2);
+    font-size:13px;
+    svg{
+        circle{
+            fill:#DFB211;
+
+        }
+    }
+}
 @keyframes blink {
     0%{opacity: 0;}
     100%{opacity: 1;}
