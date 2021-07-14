@@ -2,7 +2,7 @@ import React from "react";
 import "./block.scss"
 
 export interface BlockHeaderProps{
-    children:any
+    children?:any
 }
 
 const BlockHeader =({children}:BlockHeaderProps)=>{

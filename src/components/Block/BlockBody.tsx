@@ -2,7 +2,7 @@ import React from "react";
 import "./block.scss"
 
 export interface BlockBodyProps{
-    children:any
+    children?:any
 }
 
 const BlockBody =({children}:BlockBodyProps)=>{

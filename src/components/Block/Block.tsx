@@ -2,7 +2,7 @@ import React from "react";
 import "./block.scss"
 
 export interface BlockProps{
-    children:any
+    children?:any
 }
 
 const Block =({children}:BlockProps)=>{
