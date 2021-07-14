@@ -1,0 +1,190 @@
+@import "../../app.scss";
+
+.video-card {
+  // height: 320px;
+  // width: 480px;
+  // height: fit-content;
+  // width: fit-content;
+  background-color: #fafafa;
+  border-radius: 4px;
+  height: auto;
+  width: $videocard-desktop;
+  box-sizing: border-box;
+  @include break(w){
+    width: $videocard-widesreen;
+  }
+
+  .video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0px 18px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.07);
+  }
+  .offline-box {
+    margin: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .info {
+      text-align: center;
+    }
+  }
+  .video-box {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: $videocard-desktop;
+    box-sizing: border-box;
+    @include break(w){
+      width: $videocard-widesreen;
+    }
+    .video-tools {
+      display: flex;
+      margin-bottom: -50px;
+      justify-content: space-between;
+      position: relative;
+      padding: 12px 18px;
+      align-items: center;
+
+      .left-tools {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        p {
+          color: #fff;
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+      .right-tools {
+        p {
+          color: #fff;
+          font-size: 14px;
+          span {
+            color: var(--text);
+          }
+        }
+        .switcher {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          height: 24px;
+          font-size: 11px;
+          z-index: 5;
+          color: #262424;
+          text-transform: uppercase;
+          font-family: Inter;
+          font-size: 11px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0em;
+          text-align: left;
+          button {
+            cursor: pointer;
+
+            &:first-of-type {
+              margin-right: 2px;
+              border-radius: 18px 0px 0px 18px;
+              padding: 4px 8px 4px 12px;
+              background-color: #fff;
+              border: none;
+            }
+            &:last-of-type {
+              margin-right: 2px;
+              border-radius: 0px 18px 18px 0px;
+              padding: 4px 12px 4px 8px;
+              background-color: #fff;
+              border: none;
+            }
+
+            &:focus {
+              background-color: hsla(0, 5%, 93%, 0.8);
+              color: var(--text-muted);
+              cursor: text;
+            }
+          }
+        }
+      }
+    }
+    video {
+      height: auto;
+      width:$videocard-desktop;
+      @include break(w){
+        width: $videocard-widesreen;
+      }
+    }
+  }
+}
+
+.is-video-wall{
+  width: $videocard-wall;
+  .video-header{
+    display: none;
+  }
+
+  .video-box{
+    flex-direction: column-reverse;
+    width: $videocard-wall;
+    .video-tools{
+      margin-bottom: 0px;
+      position: absolute;
+      padding:0px 12px;
+      width: -webkit-fill-available;
+      .left-tools{
+        p{
+          display: block;
+        }
+      }
+      .right-tools{
+       .switcher{
+        display: none;
+       }
+       p{
+         display: block;
+       }
+      }
+    }
+    video{
+      width: $videocard-wall;
+    }
+  }
+}
+
+.no-video-wall{
+  // width: auto;
+  .video-header{
+    display: flex;
+  }
+
+  .video-box{
+    flex-direction: column;
+    // width: auto;
+    .video-tools{
+      margin-bottom: -50px;
+      position: relative;
+      padding:12px 18px;
+      width: initial;
+      .left-tools{
+        p{
+          display: none;
+        }
+      }
+      .right-tools{
+       .switcher{
+        display: flex;
+       }
+       p{
+         display: none;
+       }
+      }
+    }
+    // video{
+    //   width: auto;
+    // }
+  }
+}
