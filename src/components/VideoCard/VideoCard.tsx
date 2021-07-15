@@ -1,5 +1,5 @@
 import React from "react";
-import StatusWithBadge from "../StatusWithBadge";
+import Badge from "../Badge";
 import Button from "../Button"
 import "./videocard.scss";
 export interface VideoCardProps {
@@ -32,7 +32,7 @@ const VideoCard = ({
     >
       <div className="video-header">
         <h3>{label}</h3>
-        <StatusWithBadge status={headerStatus} />
+        <Badge status={headerStatus} />
       </div>
       {headerStatus === "offline" ? (
         <div className="offline-box">
@@ -49,7 +49,7 @@ const VideoCard = ({
         <div className="video-box">
           <div className="video-tools">
             <div className="left-tools">
-              <StatusWithBadge status={videoStatus} />
+              <Badge status={videoStatus} />
               <p className="item">Camera 12</p>
             </div>
 

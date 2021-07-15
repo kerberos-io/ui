@@ -2,28 +2,97 @@ import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import Footer, { FooterProps } from "./Footer";
+import FooterCopyright from "./FooterCopyright";
+import FooterList from "./FooterList";
+import SocialList  from "../SocialList";
 
 export default {
     title: "Components/Footer",
-    component: Footer,
-    argTypes: { onClick: { action: 'clicked' } },
+    component: Footer
 } as Meta;
 
-// Create a master template for mapping args to render the Footer component
-const Template: Story<FooterProps> = (args) => <Footer {...args} />;
+const Copyright = {
+    title: "Kerberos.io",
+    description: "© 2021 Verstraeten.io",
+    description2: "All rights reserved.",
+    socials:[
+        {
+            label:"twitter",
+            href:""
+        },
+        {
+            label:"reddit",
+            href:""
+        },
+        {
+            label:"youtube",
+            href:""
+        },
+        {
+            label:"github",
+            href:""
+        }
+    ]
+};
 
-// Reuse that template for creating different stories
-export const Default = Template.bind({});
-Default.args = { label: "Default Footer", icon: "dashboard", type: "" };
+const Column2 = [
+    {
+        item:"Opensource Agent",
+        href:""
+    },
+    {
+        item:"Enterprise Agent",
+        href:""
+    },
+    {
+        item:"Kerberos Hub",
+        href:""
+    }
+];
 
-export const Neutral = Template.bind({});
-Neutral.args = { ...Default.args, label: "Neutral Footer", icon: "livestream", type: "neutral" };
+const Column3 = [
+    {
+        item:"Opensource Agent",
+        href:""
+    },
+    {
+        item:"Enterprise Agent",
+        href:""
+    },
+    {
+        item:"Kerberos Hub",
+        href:""
+    }
+];
 
-export const Success = Template.bind({});
-Success.args = { ...Default.args, label: "Success Footer", icon: "media", type: "success" };
+const Column4 = [
+    {
+        item:"Opensource Agent",
+        href:""
+    },
+    {
+        item:"Enterprise Agent",
+        href:""
+    },
+    {
+        item:"Kerberos Hub",
+        href:""
+    }
+];
 
-export const Alert = Template.bind({});
-Alert.args = { ...Default.args, label: "Alert Footer", icon: "alerts", type: "alert" };
+export const Default = () => <Footer>
+    <FooterCopyright {...Copyright} />
+    <FooterList
+        title="Products"
+        items={Column2}
+    />
+    <FooterList
+        title="Support"
+        items={Column3}
+    />
+    <FooterList
+        title="Company"
+        items={Column4}
+    />
+</Footer>
 
-export const Outlined = Template.bind({});
-Outlined.args = { ...Default.args, label: "Outlined Footer", icon: "cameras", type: "outlined" };

@@ -1,35 +1,43 @@
 import React from "react";
 import {Meta} from "@storybook/react/types-6-0";
 import {Story} from "@storybook/react"
-import StatusWithBadge,{StatusWithBadgeProps} from "./StatusWithBadge";
+import Badge,{BadgeProps} from "./Badge";
 
 export default {
-    title:"Components/StatusWithBadge",
-    component:StatusWithBadge,
+    title:"Components/Badge",
+    component:Badge,
 } as Meta;
 
-const Template : Story<StatusWithBadgeProps> = (args) => <StatusWithBadge {...args} />
+const Template : Story<BadgeProps> = (args) => <Badge {...args} />
 export const Live = Template.bind({})
 Live.args = {
-    status:"live"
+    status:"success",
+    title:"Live"
 }
 export const Offline = Template.bind({})
 Offline.args={
-    status:"offline"
+    status:"secondary",
+    title:"offline"
+
 }
 export const EventDetected = Template.bind({})
 EventDetected.args={
-    status:"event-detected"
+    status:"alert",
+    title:"event detected"
 }
 export const Recording = Template.bind({})
 Recording.args={
-    status:"recording"
+    status:"recording",
+    title:"live",
+    blink:true
 }
 export const Active = Template.bind({})
 Active.args={
-    status:"active"
+    status:"success",
+    title:"active"
 }
 export const Update = Template.bind({})
 Update.args={
-    status:"update"
+    status:"warning",
+    title:"update"
 }

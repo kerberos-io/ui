@@ -1,6 +1,37 @@
+@import "../../app.scss";
+
+#page-root {
+    display: flex;
+    width: 100%;
+}
+
+#login-page {
+    header {
+        padding: size(5) 0;
+        h1 {
+            font-size: 28px;
+            text-align: center;
+
+            span.version {
+                font-size: 14px;
+                color: var(--text-light);
+            }
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .login-body {
+        display: flex;
+        justify-content: center;
+        padding: 0 0 size(5) 0;
+    }
+}
+
 .main {
     flex: 1;
-
     .main-body {
         margin: 0 var(--main-content-gutter) 60px;
     }

@@ -1,0 +1,26 @@
+@import "../../app.scss";
+
+.badge{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    height: 24px;         
+    border-radius: 18px;
+    padding: 0px 12px 0px 8px;
+    width: fit-content;
+
+    span{
+        text-transform: uppercase;
+        margin-left: 5px;
+        font-size:13px;
+    }
+}
+
+
+.badge-recording{
+    background-color:var(--card);
+    span{
+        font-size:11px;
+    }
+}
+

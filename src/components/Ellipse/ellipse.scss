@@ -1,0 +1,19 @@
+.ellipse-container{
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+  .ellipse{
+    border: 2px solid transparent;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    padding: 2px;
+    margin: 2px;
+  }
+}
+  @keyframes blink {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }

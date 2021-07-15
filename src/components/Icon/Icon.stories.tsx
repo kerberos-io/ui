@@ -50,4 +50,9 @@ export const FavoriteSm = () => <Icon label={"favorite-sm"} />
 export const PlaySm = () => <Icon label={"play-sm"} />
 export const TagSm = () => <Icon label={"tag-sm"} />
 export const Login = () => <Icon label={"login"} />
+export const Info = () => <Icon label="info" />
+export const Cross = () => <Icon label="cross" />
+
+
+
 

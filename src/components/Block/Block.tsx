@@ -6,11 +6,8 @@ export interface BlockProps{
 }
 
 const Block =({children}:BlockProps)=>{
-        return(
-            <div className="block-generic">
-              {children}
-          </div>
-          
-        )
+    return <div className="block-generic">
+          {children}
+      </div>
 }
 export default Block

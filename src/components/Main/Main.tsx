@@ -6,9 +6,8 @@ export interface MainProps  {
 };
 
 const Main = ({
-                     children,
-                 }: MainProps) => {
-
+             children,
+         }: MainProps) => {
     return ( <div className="main">
             {children}
         </div>);
