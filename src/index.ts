@@ -15,6 +15,7 @@ import FooterList from "./components/Footer/FooterList";
 import Ellipse from "./components/Ellipse";
 import AlertMessage from "./components/AlertMessage";
 import InputBox from "./components/InputBox";
+import SocialList from "./components/SocialList/SocialList";
 
 export {
     Button,
@@ -40,5 +41,6 @@ export {
     FooterList,
     Ellipse,
     AlertMessage,
-    InputBox
+    InputBox,
+    SocialList
 };

@@ -1,10 +1,13 @@
 import React from "react";
 // import Icon from "../Icon";
 import "./footer.scss";
+import SocialList  from "../SocialList";
 export interface FooterProps {
   title: string;
   items: {
-    item: string;
+    isSocial?:boolean,
+    socialList?:any,
+    item?: string;
     href?: string;
   }[];
 }
@@ -16,12 +19,13 @@ const FooterList = ({ title, items }: FooterProps) => {
         <li>
             <h3>{title}</h3>
         </li>
-        {items.map(({ item, href }) => (
-          <li>
-            <a href={href}  target="_self">
-              <p>{item}</p>
-            </a>
-          </li>
+        {items.map(({ item, href,isSocial=false,socialList }) => (
+            isSocial ? <SocialList list={socialList} /> :
+            <li>
+              <a href={href}  target="_self">
+                <p>{item}</p>
+              </a>
+            </li>
         ))}
       </ul>
     </div>

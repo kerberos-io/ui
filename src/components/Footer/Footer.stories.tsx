@@ -3,6 +3,7 @@ import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import Footer, { FooterProps } from "./Footer";
 import FooterList from "./FooterList";
+import  SocialList  from "../SocialList";
 export default {
     title: "Components/Footer",
     component: Footer
@@ -11,7 +12,8 @@ export default {
 export const Default = () =><Footer>
    <FooterList 
         title="Kerberos.io"
-        items={[
+        items={
+            [
             {
                 item:"Opensource Agent",
                 href:""
@@ -23,9 +25,30 @@ export const Default = () =><Footer>
             {
                 item:"Kerberos Hub",
                 href:""
+            },
+            {
+                isSocial:true,
+                socialList:[
+                    {
+                        label:"twitter",
+                        href:""
+                    },
+                    {
+                        label:"reddit",
+                        href:""
+                    },
+                    {
+                        label:"youtube",
+                        href:""
+                    },
+                    {
+                        label:"github",
+                        href:""
+                    }
+                ]
             }
-        ]}
-    />
+        ]
+    }/>
     <FooterList 
         title="Products"
         items={[
