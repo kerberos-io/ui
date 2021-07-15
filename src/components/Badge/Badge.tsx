@@ -3,59 +3,41 @@ import "./badge.scss";
 import Ellipse from "../Ellipse";
 
 export interface BadgeProps {
-    status:String    
+    status:string, //must be a variable defined app.variables.scss or should be defined below
+    title:string ,
+    blink?:boolean,
+    aura?:boolean
   }
 
-  const Badge=({status}:BadgeProps)=>{
+  const Badge=({
+    status="success",
+    title="active",
+    blink=false,
+    aura=false
+  }:BadgeProps)=>{
     const state=(():any=>{
         switch (status) {
-            case "live":                
-                return {
-                    className:"swb-live",
-                    color:"#5EAB6C",
-                    title:"LIVE",
-              };
             case "recording":
                 return {
-                    className:"swb-recording",
-                    color:"#943734",
+                    className:"badge-recording",
                     title:"LIVE",
-                    blink:true
+                    blink:blink,
+                    status:"alert"
                 }
-            case "offline":
-                return {
-                  className:"swb-offline",
-                  color:"#6D6666",
-                  title:"OFFLINE",
-                }
-            case "event-detected":
-              return {
-                  className:"swb-event-detected",
-                  color:"#943734",
-                  title:"EVENT DETECTED",
-              }
-            case "active":
-              return {
-                className:"swb-active",
-                color:"#5EAB6C",
-                title:"ACTIVE",
-              }    
-            case "update":
-              return {
-                className:"swb-update",
-                color:"#DFB211",
-                title:"UPDATE",
-              }            
             default:
-              return <span></span>
+              return {
+                backgroundColor:`hsla(var(--${status}-hsl), 0.2)`,
+                title:title,
+                blink:blink,
+                aura:aura,
+                status:status,
+                className:""
+              }
             }
     })()
     return(
-        <div className={"status"+` ${state.className}`} >
-          <Ellipse color={state.color} blink={state.blink} />
-              {/* <svg  width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="4" cy="4" r="4"  />
-            </svg> */}
+        <div className={`badge ${state.className}`} style={{backgroundColor:state.backgroundColor}} >
+          <Ellipse status={state.status} blink={state.blink} aura={state.aura}/>             
             <span>{state.title}</span>
         </div>
     )

@@ -5,7 +5,7 @@ export interface FooterProps {
   title: string;
   items: {
     item: string;
-    itemhref?: string;
+    href?: string;
   }[];
 }
 
@@ -16,9 +16,9 @@ const FooterList = ({ title, items }: FooterProps) => {
         <li>
             <h3>{title}</h3>
         </li>
-        {items.map(({ item, itemhref }) => (
+        {items.map(({ item, href }) => (
           <li>
-            <a href={itemhref}  target="_self">
+            <a href={href}  target="_self">
               <p>{item}</p>
             </a>
           </li>

@@ -14,15 +14,15 @@ export const Default = () =><Footer>
         items={[
             {
                 item:"Opensource Agent",
-                itemhref:""
+                href:""
             },
             {
                 item:"Enterprise Agent",
-                itemhref:""
+                href:""
             },
             {
                 item:"Kerberos Hub",
-                itemhref:""
+                href:""
             }
         ]}
     />
@@ -31,15 +31,15 @@ export const Default = () =><Footer>
         items={[
             {
                 item:"Opensource Agent",
-                itemhref:""
+                href:""
             },
             {
                 item:"Enterprise Agent",
-                itemhref:""
+                href:""
             },
             {
                 item:"Kerberos Hub",
-                itemhref:""
+                href:""
             }
         ]}
     />
@@ -48,15 +48,15 @@ export const Default = () =><Footer>
         items={[
             {
                 item:"Opensource Agent",
-                itemhref:""
+                href:""
             },
             {
                 item:"Enterprise Agent",
-                itemhref:""
+                href:""
             },
             {
                 item:"Kerberos Hub",
-                itemhref:""
+                href:""
             }
         ]}
     />
@@ -65,15 +65,15 @@ export const Default = () =><Footer>
         items={[
             {
                 item:"Opensource Agent",
-                itemhref:""
+                href:""
             },
             {
                 item:"Enterprise Agent",
-                itemhref:""
+                href:""
             },
             {
                 item:"Kerberos Hub",
-                itemhref:""
+                href:""
             }
         ]}
     />

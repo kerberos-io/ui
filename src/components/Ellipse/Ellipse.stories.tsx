@@ -12,14 +12,19 @@ export default {
 const Template: Story<EllipseProps>=(args)=><Ellipse {...args} />
 export const Default = Template.bind({})
 Default.args={
-    color:"hsla(278, 30%, 48%, 1)"
+
+}
+export const WithSuccessStatus = Template.bind({})
+WithSuccessStatus.args={
+    status:"success",
     
 }
-export const WithAllProps = Template.bind({})
+export const WithAlertStatus = Template.bind({})
+WithAlertStatus.args={
+    status:"alert",
+}
 
-WithAllProps.args={
-    color:"hsla(278, 30%, 48%, 1)",
-    halo:"hsla(278, 30%, 48%, 1)",
-    blink:true
-    
+export const WithWarningStatus = Template.bind({})
+WithWarningStatus.args={
+    status:"warning",
 }

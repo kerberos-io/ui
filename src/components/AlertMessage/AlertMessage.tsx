@@ -1,6 +1,7 @@
 
 import React from "react";
 import "./alertmessage.scss"
+import Icon from "../Icon";
 export interface AlertMessageProps{
     message:string
 }
@@ -8,9 +9,9 @@ export interface AlertMessageProps{
 const AlertMessage = ({message}:AlertMessageProps)=>{
         return(
             <div className="alert-message">
-                <span className="info-circle">!</span>
+                <Icon label="info" />
                 <span>{message}</span>
-                <span className="cross-sign">X</span>
+                <Icon label="cross" />
           </div>
         )
 }
