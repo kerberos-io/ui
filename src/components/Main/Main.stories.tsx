@@ -1,8 +1,8 @@
 import React from 'react';
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import { MainPage } from './stories/MainPage';
-import { LoginPage } from './stories/LoginPage';
+import { MainPage } from './MainPage';
+import { LoginPage } from './LoginPage';
 
 export default {
     title: "Components/Main",
