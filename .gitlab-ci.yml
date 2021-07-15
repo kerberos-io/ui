@@ -43,7 +43,7 @@ kubernetes-staging:
   script:
     - kubectl patch deployment kerberos-ui --patch="{\"spec\":{\"template\":{\"spec\":{\"containers\":[{\"name\":\"kerberos-ui\",\"image\":\"${REGISTRY}:${CI_VERSION}\"}]}}}}" -n kerberos-ecosystem
   except:
-    - master
+    - main
 
 kubernetes-production:
   image: registry.cn-hangzhou.aliyuncs.com/haoshuwei24/kubectl:1.16.6
@@ -53,5 +53,5 @@ kubernetes-production:
   script:
     - kubectl patch deployment kerberos-ui --patch="{\"spec\":{\"template\":{\"spec\":{\"containers\":[{\"name\":\"kerberos-ui\",\"image\":\"${REGISTRY}:${CI_VERSION}\"}]}}}}" -n kerberos-ecosystem
   only:
-    - master
+    - main
 
