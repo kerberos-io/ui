@@ -8,9 +8,11 @@ import Breadcrumb from "./components/Breadcrumb";
 import Gradient from "./components/Gradient";
 import KPI from "./components/KPI";
 import VideoCard from "./components/VideoCard";
-import StatusWithBadge from "./components/StatusWithBadge";
+import Badge from "./components/Badge";
 import { Block,BlockHeader,BlockBody,BlockFooter } from "./components/Block";
 import Footer from "./components/Footer";
+import FooterList from "./components/Footer/FooterList";
+import Ellipse from "./components/Ellipse";
 
 export {
     Button,
@@ -27,10 +29,12 @@ export {
     Gradient,
     KPI,
     VideoCard,
-    StatusWithBadge,
+    Badge,
     Block,
     BlockHeader,
     BlockBody,
     BlockFooter,
-    Footer
+    Footer,
+    FooterList,
+    Ellipse
 };

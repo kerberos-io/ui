@@ -1,14 +1,14 @@
 import React from "react";
 import {Meta} from "@storybook/react/types-6-0";
 import {Story} from "@storybook/react"
-import StatusWithBadge,{StatusWithBadgeProps} from "./StatusWithBadge";
+import Badge,{BadgeProps} from "./Badge";
 
 export default {
-    title:"Components/StatusWithBadge",
-    component:StatusWithBadge,
+    title:"Components/Badge",
+    component:Badge,
 } as Meta;
 
-const Template : Story<StatusWithBadgeProps> = (args) => <StatusWithBadge {...args} />
+const Template : Story<BadgeProps> = (args) => <Badge {...args} />
 export const Live = Template.bind({})
 Live.args = {
     status:"live"
