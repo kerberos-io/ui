@@ -23,7 +23,7 @@ build:
     - npm run build-storybook
   artifacts:
     paths:
-      - public
+      - docs
 
 docker:
   image: docker:stable
