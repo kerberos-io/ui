@@ -6,9 +6,9 @@ export interface FooterProps {
 
 const Footer = ({ children }: FooterProps) => {
   return (
-    <div className="footer-container">
+    <footer>
       {children}
-    </div>
+    </footer>
   );
 }
 

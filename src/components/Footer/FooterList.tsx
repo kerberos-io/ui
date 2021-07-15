@@ -1,12 +1,9 @@
 import React from "react";
-// import Icon from "../Icon";
 import "./footer.scss";
 import SocialList  from "../SocialList";
 export interface FooterProps {
   title: string;
   items: {
-    isSocial?:boolean,
-    socialList?:any,
     item?: string;
     href?: string;
   }[];
@@ -15,18 +12,15 @@ export interface FooterProps {
 const FooterList = ({ title, items }: FooterProps) => {
   return (
     <div className="footer-list">
+      <h3>{title}</h3>
       <ul>
-        <li>
-            <h3>{title}</h3>
-        </li>
-        {items.map(({ item, href,isSocial=false,socialList }) => (
-            isSocial ? <SocialList list={socialList} /> :
+        { items.map(({ item, href }) => (
             <li>
-              <a href={href}  target="_self">
+              <a href={href}>
                 <p>{item}</p>
               </a>
             </li>
-        ))}
+        )) }
       </ul>
     </div>
   );

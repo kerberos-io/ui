@@ -2,47 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7874eca-d48e-4f8e-9104-f922ae587379" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer/FooterCopyright.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SocialList/social-list.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/0.1f2670d53fe04ec9b776.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/0.f8b950b7.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/4.5fb60d31.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/4.5fb60d31.iframe.bundle.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/4.5fb60d31.iframe.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/4.b68058d57c163a7324de.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/4.b68058d57c163a7324de.manager.bundle.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/5.060eb6a9.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/5.92daf7f46a124650d195.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/6.8d33a415eee7832bda36.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/6.8d33a415eee7832bda36.manager.bundle.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/6.e9a52287.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/6.e9a52287.iframe.bundle.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/6.e9a52287.iframe.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/7.5124dcde.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/7.f294cb9a6b1c664f4a3b.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/8.0b1b33ad48ca441c7be8.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/CNAME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/fonts/Inter/Inter-Medium.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/fonts/Inter/Inter-Medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/fonts/Inter/Inter-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/fonts/Inter/Inter-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/fonts/Inter/Inter-SemiBold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/fonts/Inter/Inter-SemiBold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/fonts/Inter/Inter-roman.var.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/iframe.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/header-minimal-logo-36x36.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main.a5cb8ffaf510c2965015.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main.cc8d4414.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/runtime~main.601f7918.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/runtime~main.94fe54ea245c87c28ce3.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vendors~main.6763f65c.iframe.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vendors~main.6763f65c.iframe.bundle.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vendors~main.6763f65c.iframe.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vendors~main.e3acfca2eb0c0f08f566.manager.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vendors~main.e3acfca2eb0c0f08f566.manager.bundle.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_app.variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/_app.variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Block/Block.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Block/Block.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Block/block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Block/block.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/FooterList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/FooterList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SocialList/SocialList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SocialList/SocialList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SocialList/sociallist.scss" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Main/stories" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -87,11 +62,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Main/stories" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/components/Card" />
       <recent name="$PROJECT_DIR$/src/components/Main" />
       <recent name="$PROJECT_DIR$/src/components/Gradient" />
-      <recent name="$PROJECT_DIR$/.github/workflows" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/images" />
