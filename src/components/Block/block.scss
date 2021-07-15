@@ -1,8 +1,8 @@
 
   .block-generic {
-    min-width: 432px;
-    left: 443px;
-    top: 253px;
+    // min-width: 432px;
+    width: fit-content;
+    height: fit-content;
     border-radius: 4px;
     display: flex;
     background: #fbfbfb;
@@ -36,6 +36,8 @@
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
     background-color: var(--card-muted);
     height: inherit;
     margin-top: 5px;
@@ -57,3 +59,6 @@
     border-radius: 4px 4px 0px 0px;
   }
 
+.expand{
+  width: 45px;
+}

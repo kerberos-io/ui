@@ -13,6 +13,8 @@ import { Block,BlockHeader,BlockBody,BlockFooter } from "./components/Block";
 import Footer from "./components/Footer";
 import FooterList from "./components/Footer/FooterList";
 import Ellipse from "./components/Ellipse";
+import AlertMessage from "./components/AlertMessage";
+import InputBox from "./components/InputBox";
 
 export {
     Button,
@@ -36,5 +38,7 @@ export {
     BlockFooter,
     Footer,
     FooterList,
-    Ellipse
+    Ellipse,
+    AlertMessage,
+    InputBox
 };

@@ -10,6 +10,6 @@ const Footer = ({ children }: FooterProps) => {
       {children}
     </div>
   );
-};
+}
 
-export default Footer;
+export default Footer

@@ -2,12 +2,12 @@ import React from "react";
 import "./block.scss"
 
 export interface BlockFooterProps{
-    children:any
+    children?:any
 }
 
 const BlockFooter =({children}:BlockFooterProps)=>{
         return(
-            <div className="block-header">
+            <div className="block-footer">
             {children}
           </div>
           
