@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7874eca-d48e-4f8e-9104-f922ae587379" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Footer/FooterCopyright.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SocialList/social-list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_app.variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/_app.variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Block/Block.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Block/Block.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Block/block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Block/block.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/FooterList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/FooterList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SocialList/SocialList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SocialList/SocialList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SocialList/sociallist.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Badge/Badge.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Badge/Badge.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

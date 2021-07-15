@@ -10,8 +10,7 @@ import KPI from "./components/KPI";
 import VideoCard from "./components/VideoCard";
 import Badge from "./components/Badge";
 import { Block,BlockHeader,BlockBody,BlockFooter } from "./components/Block";
-import Footer from "./components/Footer";
-import FooterList from "./components/Footer/FooterList";
+import { Footer, FooterList, FooterCopyright } from "./components/Footer";
 import Ellipse from "./components/Ellipse";
 import AlertMessage from "./components/AlertMessage";
 import InputBox from "./components/InputBox";
@@ -39,6 +38,7 @@ export {
     BlockFooter,
     Footer,
     FooterList,
+    FooterCopyright,
     Ellipse,
     AlertMessage,
     InputBox,

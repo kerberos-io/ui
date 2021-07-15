@@ -4,7 +4,7 @@ import Ellipse from "../Ellipse";
 
 export interface BadgeProps {
     status:string, //must be a variable defined app.variables.scss or should be defined below
-    title:string ,
+    title?:string ,
     blink?:boolean,
     aura?:boolean
   }
