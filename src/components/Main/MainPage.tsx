@@ -6,7 +6,7 @@ import Gradient from "../Gradient";
 import { Navigation, NavigationGroup, NavigationItem, NavigationSection } from "../Navigation";
 import Profilebar from "../Profilebar";
 import Sidebar from "../Sidebar";
-import "../main.scss";
+import "./main.scss";
 
 export const MainPage = () =>
     <div id={"page-root"}>

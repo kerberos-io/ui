@@ -10,7 +10,7 @@ import InputBox from "../InputBox";
 import { Navigation, NavigationGroup, NavigationItem, NavigationSection } from "../Navigation";
 import Profilebar from "../Profilebar";
 import Sidebar from "../Sidebar";
-import "../main.scss";
+import "./main.scss";
 
 const Copyright = {
     title: "Kerberos.io",
