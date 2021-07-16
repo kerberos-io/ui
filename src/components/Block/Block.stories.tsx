@@ -7,7 +7,7 @@ import BlockBody, {BlockBodyProps} from "./BlockBody";
 import BlockFooter, {BlockFooterProps} from "./BlockFooter"
 import Button from "../Button";
 import Icon from "../Icon";
-import InputBox from "../InputBox";
+import Input from "../Input";
 import AlertMessage from "../AlertMessage";
 export default {
     title:"Components/Block",
@@ -18,20 +18,24 @@ export default {
 export const BlockWithLogin= () => <Block>
     <BlockHeader>
         <Button icon="login" label="login" type="outlined" />
-        <div >En</div>
+        <div>En</div>
     </BlockHeader>
     <BlockBody>
     <AlertMessage message="Wrong password, please try again!" />
-    <InputBox
+    <Input
+        label={"username or email"}
+        placeholder={"Your username/email"}
+
         titleleft="Username or email"
         iconleft="accounts"
-        placeholder="Your username/email"
         />
-    <InputBox
+    <Input
+        label={"password"}
+        placeholder={"Your password"}
+
         titleleft="Password"
         hint="Forgotten password?"
         iconleft="accounts"
-        placeholder="Your password"
         iconright="activity"
         seperate
         />         

@@ -13,7 +13,7 @@ import { Block,BlockHeader,BlockBody,BlockFooter } from "./components/Block";
 import { Footer, FooterList, FooterCopyright } from "./components/Footer";
 import Ellipse from "./components/Ellipse";
 import AlertMessage from "./components/AlertMessage";
-import InputBox from "./components/InputBox";
+import Input from "./components/Input";
 import SocialList from "./components/SocialList/SocialList";
 import {LandingLayout}  from "./components/Main/LandingLayout";
 import TermsOfUse from "./components/TermsOfUse";
@@ -44,7 +44,7 @@ export {
     FooterCopyright,
     Ellipse,
     AlertMessage,
-    InputBox,
+    Input,
     SocialList,
     LandingLayout,
     LoginCard,
