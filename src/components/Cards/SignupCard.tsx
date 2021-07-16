@@ -2,8 +2,15 @@ import React from "react";
 import { Block, BlockBody, BlockFooter, BlockHeader } from "../Block";
 import Button from "../Button";
 import InputBox from "../InputBox";
+import TermsOfUse from "../TermsOfUse";
 import "./loginsignup.scss";
 
+const termsofuse={
+    text:`We at Kerberos.io are committed to keeping your data private and protected.
+    Due to the changes in the legal environment in the European Union and as a
+    part of our continuing effort to improve our service, we have updated our `,
+    href:""
+}
 
 export const SignupCard = () =>
     
@@ -39,12 +46,7 @@ export const SignupCard = () =>
                         seperate
                     />
 
-                    <p style={{width:"316px"}}>
-                        We at Kerberos.io are committed to keeping your data private and protected.
-                        Due to the changes in the legal environment in the European Union and as a
-                        part of our continuing effort to improve our service, we have updated our
-                        <a style={{color:"var(--hub)",textDecoration:"underline"}}>Terms of Use.</a>
-                    </p>
+                    <TermsOfUse {...termsofuse}/>
                 </BlockBody>
                 <BlockFooter>
                     <Button icon="verify" type="outlined" label="Sign-up" />
