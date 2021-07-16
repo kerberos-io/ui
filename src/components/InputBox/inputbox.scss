@@ -10,7 +10,7 @@
         text-transform: uppercase;
       }
       p:last-of-type {
-        color: hsla(278, 30%, 48%, 1);
+        color: var(--hub);
         cursor: pointer;
       }
     }
