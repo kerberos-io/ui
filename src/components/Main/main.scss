@@ -5,7 +5,11 @@
     width: 100%;
 }
 
-#login-page {
+#landing-layout {
+    padding: 0 initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     header {
         padding: size(5) 0;
         h1 {
@@ -21,12 +25,6 @@
         p {
             text-align: center;
         }
-    }
-
-    .login-body {
-        display: flex;
-        justify-content: center;
-        padding: 0 0 size(5) 0;
     }
 }
 

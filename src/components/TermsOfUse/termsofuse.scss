@@ -1,0 +1,26 @@
+@import "../../app.scss";
+
+.termsofuse{
+    width: 316px;
+    .terms-text{
+        p{
+            a{
+                color: var(--hub);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .terms-checkbox{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        input{
+            margin-top: 14px;
+        }
+        b{
+            font-size: 13px;
+            margin-left: 8px;
+        }
+    }
+}
