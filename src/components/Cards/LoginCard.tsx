@@ -1,21 +1,14 @@
 import React from "react";
-import { Main, MainBody } from ".";
 import AlertMessage from "../AlertMessage";
 import { Block, BlockBody, BlockFooter, BlockHeader } from "../Block";
-import Breadcrumb from "../Breadcrumb";
 import Button from "../Button";
-import { Footer, FooterList, FooterCopyright } from "../Footer";
-import Gradient from "../Gradient";
 import InputBox from "../InputBox";
-import { Navigation, NavigationGroup, NavigationItem, NavigationSection } from "../Navigation";
-import Profilebar from "../Profilebar";
-import Sidebar from "../Sidebar";
-import "./main.scss";
+import "./loginsignup.scss";
 
 
 export const LoginCard= () =>
     
-        <section className="login-body">
+        <section className="login-signup-body">
             <Block>
                 <BlockHeader>
                     <Button icon="login" label="login" type="outlined" />
