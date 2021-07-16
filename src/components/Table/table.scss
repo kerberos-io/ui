@@ -1,0 +1,59 @@
+@import "../../app.scss";
+.table{
+    table{ 
+      border-collapse:separate;
+      border-spacing:0 size(1);
+      width: 100%;
+    }
+}
+
+.td-box{
+    /* align-content: space-around; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    p,b,span{
+      font-size: 13px;
+      margin: auto 4px;
+    }
+    svg{
+    color: var(--text-muted);
+    }
+}
+
+.table-row{
+  &:nth-child(n+3){
+     @extend %box-shadow;
+   }
+    th{
+      padding: 0 size(2);     
+      .th-box{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        p{
+          font-weight: normal;  
+          font-size: 12px;   
+          text-transform: uppercase;
+          margin-bottom: 0;
+        }
+      } 
+      }
+    td{
+      padding: size(1/2) size(1/2);    
+      background-color: var(--card-muted);
+      font-size: 13px;
+      @include break(t){
+        padding: size(1) size(2);   
+      }
+      @include break-from(610px){
+      padding: size(1) size(1);    
+
+      }
+      &:first-of-type,&:last-of-type{
+        border-radius: var(--radius);
+      }
+ }
+}
