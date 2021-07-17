@@ -1,59 +1,74 @@
 @import "../../app.scss";
-.table{
-    table{ 
-      border-collapse:separate;
-      border-spacing:0 size(1);
-      width: 100%;
-    }
-}
+.table-container {
+  table {
+    border-spacing: 0 size(1);
+    width: 100%;
+    text-align: justify;
 
-.td-box{
-    /* align-content: space-around; */
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    p,b,span{
-      font-size: 13px;
-      margin: auto 4px;
-    }
-    svg{
-    color: var(--text-muted);
-    }
-}
+    thead.table-header {
+      .table-row {
+        th {
+          &:first-of-type {
+            padding-left: size(2);
+          }
+          &:last-of-type {
+            padding-right: size(2);
 
-.table-row{
-  &:nth-child(n+3){
-     @extend %box-shadow;
-   }
-    th{
-      padding: 0 size(2);     
-      .th-box{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-
-        p{
-          font-weight: normal;  
-          font-size: 12px;   
-          text-transform: uppercase;
-          margin-bottom: 0;
+            float: right;
+          }
+          .table-cell {
+            p {
+              font-weight: normal;
+              font-size: 12px;
+              text-transform: uppercase;
+            }
+          }
         }
-      } 
       }
-    td{
-      padding: size(1/2) size(1/2);    
+    }
+    tbody.table-body {
       background-color: var(--card-muted);
-      font-size: 13px;
-      @include break(t){
-        padding: size(1) size(2);   
-      }
-      @include break-from(610px){
-      padding: size(1) size(1);    
 
+      .table-row {
+        @extend %box-shadow;
+
+        td {
+          &:first-of-type {
+            border-top-left-radius: var(--radius);
+            border-bottom-left-radius: var(--radius);
+            padding-left: size(2);
+          }
+          &:last-of-type {
+            border-top-right-radius: var(--radius);
+            border-bottom-right-radius: var(--radius);
+            padding-right: size(2);
+            .table-cell {
+              justify-content: flex-end;
+            }
+          }
+          .table-cell {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: nowrap;
+
+            p,
+            b,
+            span {
+              font-size: 13px;
+              margin: size(1) size(0.5);
+            }
+            svg {
+              color: var(--text-muted);
+              margin-right:size(-0.5);
+            }
+            button:last-of-type {
+              margin-left: size(1);
+            }
+          }
+        }
       }
-      &:first-of-type,&:last-of-type{
-        border-radius: var(--radius);
-      }
- }
+    }
+  }
 }
+

@@ -1,12 +1,9 @@
-import React  from "react";
-import Badge from "../Badge";
-export interface TableCellProps{
-    children:any
+import React from "react";
+import "./table.scss"
+
+export interface TableCellProps {
+  children: any;
 }
-export const TableCell = ({children}:TableCellProps) =>{
-    return (
-        <div className="td-box">
-            {children}
-         </div>
-    )
-}
+export const TableCell = ({ children }: TableCellProps) => {
+  return <div className="table-cell">{children}</div>;
+};

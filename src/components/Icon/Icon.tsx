@@ -495,6 +495,16 @@ export function Locked(){
         </svg>
     )
 }
+
+export function Trush(){
+    return(
+        <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1 17V6H3V16H11V6H13V17C13 17.5523 12.5523 18 12 18H2C1.44772 18 1 17.5523 1 17Z" fill="#C13733"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3C0 2.44772 0.447715 2 1 2H13C13.5523 2 14 2.44772 14 3C14 3.55228 13.5523 4 13 4H1C0.447715 4 0 3.55228 0 3Z" fill="#C13733"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M5 1C5 0.447715 5.44772 0 6 0H8C8.55228 0 9 0.447715 9 1V3H5V1Z" fill="#C13733"/>
+        </svg>
+    )
+}
 const Icon = ({
                   label
               }: IconProps) => {
@@ -597,6 +607,8 @@ const Icon = ({
             return <Email/>
         case "locked":
             return <Locked/>
+        case "trush":
+            return <Trush/>
     }
     return <span></span>;
 };

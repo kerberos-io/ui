@@ -2,18 +2,33 @@ import React from "react";
 import "./table.scss";
 import { TableCell } from "./TableCell";
 
-export interface TableRowProps  {
-    cells:any[]
-};
+export interface TableRowProps {
+  headercells?: any[];
+  bodycells?: any[];
+}
 
-
-export const TableRow = ({
-    cells
-              }: TableRowProps) => {
-    return (
+export const TableRow = ({ headercells, bodycells }: TableRowProps) => {
+  return (
+    <>
+      {headercells ? (
         <tr className="table-row">
-            {cells.map(cell =><td><TableCell>{cell}</TableCell></td>)}
+          {headercells.map((cell) => (
+            <th>
+              <TableCell>{cell}</TableCell>
+            </th>
+          ))}
         </tr>
-    );
+      ) : null}
+      
+      {bodycells ? (
+        <tr className="table-row">
+          {bodycells.map((cell) => (
+            <td>
+              <TableCell>{cell}</TableCell>
+            </td>
+          ))}
+        </tr>
+      ) : null}
+    </>
+  );
 };
-
