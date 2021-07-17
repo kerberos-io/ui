@@ -31,7 +31,6 @@ export const Tasks = () => <Icon label={"tasks"}/>
 export const User = () => <Icon label={"user"}/>
 export const Watch = () => <Icon label={"watch"}/>
 export const ToggleOff = () => <Icon label={"toggle-off"}/>
-export const AlertsNotify = () => <Icon label={"alerts-notify"}/>
 export const Bookmark = () => <Icon label={"bookmark"}/>
 export const Star = () => <Icon label={"star"} />
 export const Checkbox = () => <Icon label={"checkbox"} />
