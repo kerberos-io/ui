@@ -18,7 +18,7 @@ import SocialList from "./components/SocialList/SocialList";
 import {LandingLayout}  from "./components/Main/LandingLayout";
 import TermsOfUse from "./components/TermsOfUse";
 import  {LoginCard, SignupCard}  from "./components/Cards";
-import { Table, TableRow, TableHeader, TableCell } from "./components/Table";
+import { Table, TableRow, TableHeader, TableCell,TableBody } from "./components/Table";
 
 export {
     Button,
@@ -54,5 +54,6 @@ export {
     Table,
     TableHeader,
     TableRow,
-    TableCell
+    TableCell,
+    TableBody
 };
