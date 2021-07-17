@@ -1,7 +1,7 @@
 import React from "react";
 import { Block, BlockBody, BlockFooter, BlockHeader } from "../Block";
 import Button from "../Button";
-import InputBox from "../InputBox";
+import Input from "../Input";
 import TermsOfUse from "../TermsOfUse";
 import "./loginsignup.scss";
 
@@ -21,24 +21,24 @@ export const SignupCard = () =>
                     <div>En</div>
                 </BlockHeader>
                 <BlockBody>
-                    <InputBox
+                    <Input
                         titleleft="Username"
                         iconleft="accounts"
                         placeholder="Your username"
                     />
-                    <InputBox
+                    <Input
                         titleleft="Email"
                         iconleft="email"
                         placeholder="Your email address"
                     />
-                    <InputBox
+                    <Input
                         titleleft="Password"
                         iconleft="locked"
                         placeholder="Your password"
                         iconright="activity"
                         seperate
                      />
-                    <InputBox
+                    <Input
                         titleleft="Confirm password"
                         iconleft="locked"
                         placeholder="Repeat your password"

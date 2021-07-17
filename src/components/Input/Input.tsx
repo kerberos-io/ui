@@ -1,24 +1,42 @@
 import React from "react";
 import Icon from "../Icon";
-import "./inputbox.scss";
-export interface InputBoxProps {
+import "./input.scss";
+
+export interface InputProps {
+  label: string;
+  placeholder: string;
+  value: string;
+  readonly: boolean;
+
   titleleft?: string;
   hint?: string;
   iconleft?: string;
   iconright?: string;
   seperate?: boolean;
-  placeholder?: string;
 }
 
-const InputBox = ({
-  titleleft,
-  hint,
-  iconleft,
-  iconright,
-  seperate,
-  placeholder,
-}: InputBoxProps) => {
-  return (
+const Input = ({
+                 label,
+                 placeholder,
+                 value,
+                 readonly = false,
+
+                 titleleft,
+                 hint,
+                 iconleft,
+                 iconright,
+                 seperate,
+}: InputProps) => {
+
+  return (<div class="input">
+        <label>
+            {label} {readonly ? "(readonly)" : ""}
+            <input type="text" disabled={readonly} class={{"readonly":readonly}} placeholder={placeholder} value={value} />
+        </label>
+      </div>
+  );
+
+  /*return (
     <div className="input-container">
       <div className="input-box">
         {titleleft || hint ? (
@@ -46,7 +64,7 @@ const InputBox = ({
         </div>
       </div>
     </div>
-  );
+  );*/
 };
 
-export default InputBox;
+export default Input;
