@@ -18,7 +18,7 @@ export default {
 const cellList1 = [
     <Badge title="live" status="success" />,
     <>
-      <Ellipse status="alert" /> <b>rh-first</b>
+      <Ellipse status="info" /> <b>rh-first</b>
     </>,
     <>
       <b>Prague</b>
@@ -33,7 +33,7 @@ const cellList1 = [
 const cellList2 = [
     <Badge status="alert" title="offline" />,
     <>
-      <Ellipse status="alert" /> <p>rh-first</p>
+      <Ellipse status="oss-darker" /> <p>rh-second</p>
     </>,
     <>
       <p>Český</p> <p> Krumlov Czechia</p>
@@ -50,16 +50,16 @@ const cellList2 = [
 const cellList3 = [
     <Badge status="warning" title="update" />,
     <>
-      <Ellipse status="warning" /> <p>rorschach-first</p>
+      <Ellipse status="success" /> <p>rorschach-first</p>
     </>,
     <>
       <b>Prague</b>
       <p>Czechia</p>
     </>,
     <p>304d 22h 48:04</p>,
-    <>
+    <div className="enterprise-version">
       <Icon label="enterprise-sm" /> <span className="version">2.8.0</span>
-    </>,
+    </div>,
     <Button type="outlined" icon="search" label="" />,
 ];
 

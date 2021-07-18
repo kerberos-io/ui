@@ -37,6 +37,10 @@
             border-top-left-radius: var(--radius);
             border-bottom-left-radius: var(--radius);
             padding-left: size(2);
+            padding-right: size(3);
+          }
+          &:nth-child(2) {           
+            padding-right: size(3);
           }
           &:last-of-type {
             border-top-right-radius: var(--radius);
@@ -60,10 +64,16 @@
             }
             svg {
               color: var(--text-muted);
-              margin-right:size(-0.5);
             }
             button:last-of-type {
               margin-left: size(1);
+            }
+            .enterprise-version{
+              color:var(--alert);
+              svg{
+                color:var(--alert);
+              
+              }
             }
           }
         }
