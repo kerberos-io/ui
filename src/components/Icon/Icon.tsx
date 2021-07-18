@@ -213,38 +213,6 @@ export function ToggleOff(){
     )
 }
 
-export function AlertsNotify() {
-    return(
-        <svg className={"icon"} width="94" height="104" viewBox="0 0 94 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_dd)">
-            <circle cx="52" cy="48" r="18" fill="#FBFBFB"/>
-            </g>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M52 43C49.7909 43 48 44.7909 48 47V51H56V47C56 44.7909 54.2091 43 52 43ZM46 47C46 43.6863 48.6863 41 52 41C55.3137 41 58 43.6863 58 47V53H46V47Z" fill="#6D6666"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M54.2321 54.1339C54.7104 54.41 54.8743 55.0216 54.5981 55.4999C54.3348 55.956 53.9561 56.3347 53.5 56.598C53.044 56.8613 52.5267 56.9999 52 56.9999C51.4734 56.9999 50.9561 56.8613 50.5 56.598C50.044 56.3347 49.6653 55.956 49.402 55.4999C49.1258 55.0216 49.2897 54.41 49.768 54.1339C50.2463 53.8578 50.8579 54.0216 51.134 54.4999C51.2218 54.6519 51.348 54.7782 51.5 54.8659C51.6521 54.9537 51.8245 54.9999 52 54.9999C52.1756 54.9999 52.348 54.9537 52.5 54.8659C52.6521 54.7782 52.7783 54.6519 52.8661 54.4999C53.1422 54.0216 53.7538 53.8578 54.2321 54.1339Z" fill="#6D6666"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M45 52C45 51.4477 45.4477 51 46 51H58C58.5523 51 59 51.4477 59 52C59 52.5523 58.5523 53 58 53H46C45.4477 53 45 52.5523 45 52Z" fill="#6D6666"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M52 39C52.5523 39 53 39.4477 53 40V41C53 41.5523 52.5523 42 52 42C51.4477 42 51 41.5523 51 41V40C51 39.4477 51.4477 39 52 39Z" fill="#6D6666"/>
-            <circle cx="65" cy="34" r="4" fill="#84559F"/>
-            <circle opacity="0.14" cx="65" cy="34" r="7" stroke="#84559F" stroke-width="2"/>
-            <defs>
-            <filter id="filter0_dd" x="0" y="0" width="104" height="104" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-            <feOffset dy="3"/>
-            <feGaussianBlur stdDeviation="2"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-            <feOffset dy="4"/>
-            <feGaussianBlur stdDeviation="17"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0"/>
-            <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape"/>
-            </filter>
-            </defs>
-        </svg>
-    )
-}
-
 export function  Bookmark() {
     return(
         <svg className={"icon"} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -498,7 +466,7 @@ export function Locked(){
 
 export function Trush(){
     return(
-        <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className={"locked"} width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M1 17V6H3V16H11V6H13V17C13 17.5523 12.5523 18 12 18H2C1.44772 18 1 17.5523 1 17Z" fill="#C13733"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3C0 2.44772 0.447715 2 1 2H13C13.5523 2 14 2.44772 14 3C14 3.55228 13.5523 4 13 4H1C0.447715 4 0 3.55228 0 3Z" fill="#C13733"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M5 1C5 0.447715 5.44772 0 6 0H8C8.55228 0 9 0.447715 9 1V3H5V1Z" fill="#C13733"/>
@@ -549,8 +517,6 @@ const Icon = ({
             return <Watch />
         case "toggle-off":
             return <ToggleOff />
-        case "alerts-notify":
-            return <AlertsNotify/>
         case "bookmark":
             return <Bookmark/>
         case "star":

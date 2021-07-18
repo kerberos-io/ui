@@ -19,6 +19,7 @@ import {LandingLayout}  from "./components/Main/LandingLayout";
 import TermsOfUse from "./components/TermsOfUse";
 import  {LoginCard, SignupCard}  from "./components/Cards";
 import { Table, TableRow, TableHeader, TableCell,TableBody } from "./components/Table";
+import Alert from "./components/Alert";
 
 export {
     Button,
@@ -55,5 +56,6 @@ export {
     TableHeader,
     TableRow,
     TableCell,
-    TableBody
+    TableBody,
+    Alert
 };
