@@ -1,45 +1,49 @@
-.input-container {
-  width: fit-content;
-  .input-box {
-    margin: 5px auto;
-    .input-title {
-      font-size: 12px;
+@import "../../app.scss";
+
+label{
+  .input-labels {
+
+    display: flex;
+    justify-content: space-between;
+    p{
+     color: var(--text-light);
+
+      text-transform: uppercase;
+      i{
+        text-transform: none;
+        }
+      }
+    .hint {
+      color: var(--hub);
+      cursor: pointer;
+      text-transform: none;
+
+    }
+  }
+
+  .input-bar {
+
       display: flex;
       justify-content: space-between;
-      p:first-of-type {
-        text-transform: uppercase;
-      }
-      p:last-of-type {
-        color: var(--hub);
-        cursor: pointer;
-      }
-    }
-    .input-bar {
-    width: fit-content;
+      align-items: center;
+      background:var(--card);
+      border: 1px solid var(--bg-muted);
+      border-radius: var(--radius);
+      padding: 0  size(1.5) 0 size(2)+2;
+      // .icon-left {
+      //   margin: 0 0 0 25px;
+      // }
+    
+    .input-box {
 
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      align-content: center;
-      background: #ffffff;
-      color: var(--text-muted);
-      border: 1px solid #e5e3e3;
-      box-sizing: border-box;
-      border-radius: 4px;
-    }
-
-    .input-icon-left {
-      margin: 0 0 0 25px;
-    }
-    .input-itself {
-
-      height: 48px;
+      align-items: flex-end;
       input {
 
         outline: none;
         border: none;
+        margin: 0;
+
         &:focus {
           outline: none;
           border: none;
@@ -47,17 +51,21 @@
         }
       }
     }
-    .input-icon-right {
-      padding: 0 10px;
-      width: fit-content;
+    .come-near{
+      margin-left: size(-2)-2;
     }
-    .seperate {
-      height: 48px;
-      padding: 0 10px;
-      border-left: 1px solid #e5e3e3;
-      margin: auto;
+    .icon-right {
+      height: size(4);
+      padding-left: size(1.5);
       display: flex;
       align-items: center;
+      border: none;     
+
+    }
+    .seperate {
+      border-left: 1px solid #e5e3e3;
     }
   }
+
+
 }
