@@ -1,4 +1,5 @@
 import React from "react";
+import "./input.scss";
 
 export interface FormProps{
     children:HTMLFieldSetElement|HTMLInputElement|any,

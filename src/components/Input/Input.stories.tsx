@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import Input, { InputProps } from "./Input";
+import { Input,InputProps } from "./Input";
 import { Form } from "./Form";
 import { FieldSet } from "./FieldSet";
 export default {
@@ -13,8 +13,8 @@ const Template: Story<InputProps> = (args) => <Input {...args} />;
 export const _Input = Template.bind({});
 _Input.args={
     label: "password",
-    readonly: true,
-    disabled:true,
+    readonly: false,
+    disabled:false,
     hint:"Forgotten password?",
     iconleft:"accounts",
     placeholder:"Your password",

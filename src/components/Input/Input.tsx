@@ -3,11 +3,11 @@ import Icon from "../Icon";
 import "./input.scss";
 
 export interface InputProps {
-  label: string;
-  placeholder: string;
-  value: string;
-  readonly: boolean;
-  disabled: boolean;
+  label?: string;
+  placeholder?: string;
+  value?: string;
+  readonly?: boolean;
+  disabled?: boolean;
 
   hint?: string;
   iconleft?: string;
@@ -17,7 +17,7 @@ export interface InputProps {
 
 }
 
-const Input = ({
+export const Input = ({
                  label,
                  placeholder,
                  value,
@@ -54,10 +54,9 @@ const Input = ({
                     <div className={`icon-right ${seperate ?"seperate":""}`}>
                       <Icon label={`${iconright}`} />
                     </div>
-                ) :null}
+                ) :<span className="expand"></span>}
           </div>
         </label>
   );
 };
 
-export default Input;

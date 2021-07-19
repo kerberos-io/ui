@@ -1,4 +1,5 @@
 import React from "react";
+import "./input.scss"
 
 export interface FieldSetProps{
     children:HTMLInputElement|any
