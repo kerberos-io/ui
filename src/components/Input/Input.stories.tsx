@@ -19,7 +19,8 @@ _Input.args={
     iconleft:"accounts",
     placeholder:"Your password",
     iconright:"activity",
-    seperate:true
+    seperate:true,
+    type:"password"
 }
 
 export const _Form = () =><Form>

@@ -22,16 +22,19 @@ export const SignupCard = () =>
                 </BlockHeader>
                 <BlockBody>
                     <Input
+                        label="username"
                         iconleft="accounts"
                         placeholder="Your username"
                         type="text"
                     />
                     <Input
+                        label="email"
                         iconleft="email"
                         placeholder="Your email address"
                         type="email"
                     />
                     <Input
+                        label="password"
                         iconleft="locked"
                         placeholder="Your password"
                         iconright="activity"
@@ -39,6 +42,7 @@ export const SignupCard = () =>
                         type="password"
                      />
                     <Input
+                        label="Confirm password"
                         iconleft="locked"
                         placeholder="Repeat your password"
                         iconright="activity"
