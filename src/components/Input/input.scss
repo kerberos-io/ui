@@ -68,8 +68,29 @@ label{
       align-items: center;
       border: none;
     }
+
     .seperate {
       border-left: 1px solid var(--bg-muted);
+    }
+    .button{
+      width: fit-content;
+      padding: 0;
+      border: none;
+      padding-left: 18px;
+      border-left: 1px solid var(--bg-muted);
+      height: 48px;
+      border-radius: 0;
+      &:focus{
+        box-shadow: none;
+      }
+      span{
+        display: none;
+      }
+      svg:hover{
+        path{
+          fill:var(--hub)
+        }
+      }
     }
   }
 

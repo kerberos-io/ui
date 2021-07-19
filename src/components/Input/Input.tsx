@@ -1,5 +1,6 @@
 import React from "react";
 import Icon from "../Icon";
+import Button from "../Button";
 import "./input.scss";
 
 export interface InputProps {
@@ -13,7 +14,10 @@ export interface InputProps {
   iconleft?: string;
   iconright?: string;
   seperate?: boolean;
-  type:string
+  type:string,
+  onChange?: (
+    event:React.FormEvent<HTMLInputElement> 
+) => void;
 
 }
 
@@ -28,10 +32,15 @@ export const Input = ({
                  iconright,
                  seperate,
                  type,
+                 onChange,
                  ...rest
 
 }: InputProps) => {
-
+  const inputRef = React.useRef() as any
+    const handlelickShowPassword=()=>{
+      const input = inputRef.current
+      input["type"]==="text" ? input["type"]="password" :input["type"]="text"
+    }
   return (
         <label>
           <div className="input-labels">
@@ -47,13 +56,15 @@ export const Input = ({
                       <Icon label={`${iconleft}`} />
                     </div>
                   ) : null}
-                  <input {...rest} type={type} className="input"  readOnly={readonly} disabled={disabled}  placeholder={placeholder} value={value} />
+                  <input ref={inputRef} {...rest} type={type} className="input"  readOnly={readonly} disabled={disabled}  placeholder={placeholder} value={value} onChange={onChange} />
                 </div>
             
                 {iconright ? (
+                   iconright==="activity"?<Button icon="activity" label="" type="outlined" onClick={handlelickShowPassword}/>:
                     <div className={`icon-right ${seperate ?"seperate":""}`}>
-                      <Icon label={`${iconright}`} />
+                     <Icon label={`${iconright}`} />
                     </div>
+                    
                 ) :<span className="expand"></span>}
           </div>
         </label>
