@@ -6,14 +6,18 @@ export interface BadgeProps {
     status:string, //must be a variable defined app.variables.scss or should be defined below
     title?:string ,
     blink?:boolean,
-    aura?:boolean
+    aura?:boolean,
+    devided?:number,
+    devisor?:number
   }
 
   const Badge=({
-    status="success",
-    title="active",
+    status,
+    title,
     blink=false,
-    aura=false
+    aura=false,
+    devided,
+    devisor
   }:BadgeProps)=>{
     const state=(():any=>{
         switch (status) {
@@ -31,14 +35,15 @@ export interface BadgeProps {
                 blink:blink,
                 aura:aura,
                 status:status,
-                className:""
+                className:"",            
               }
             }
     })()
     return(
         <div className={`badge ${state.className}`} style={{backgroundColor:state.backgroundColor}} >
           <Ellipse status={state.status} blink={state.blink} aura={state.aura}/>             
-            <span>{state.title}</span>
+            {state.title?<span>{state.title}</span>:null}
+            {!state.title&&(devided||devisor)?<><span className="devided">{devided}</span><span className="devisor">/ {devisor}</span></>:null}
         </div>
     )
 }

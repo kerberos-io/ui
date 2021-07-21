@@ -41,3 +41,10 @@ Update.args={
     status:"warning",
     title:"update"
 }
+
+export const WithNumbers= Template.bind({})
+WithNumbers.args={
+    status:"success",
+    devided:14,
+    devisor:5,
+}
