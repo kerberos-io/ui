@@ -20,6 +20,7 @@ import  {LoginCard, SignupCard}  from "./components/Cards";
 import {VideoCard, Video, VideoTools,VideoHeader,SetupBox} from "./components/VideoCard";
 import { Table, TableRow, TableHeader, TableCell,TableBody } from "./components/Table";
 import Alert from "./components/Alert";
+import { VideoWall,VWBody, VWHeader } from "./components/VideoWall";
 
 export {
     Button,
@@ -63,5 +64,8 @@ export {
     TableRow,
     TableCell,
     TableBody,
-    Alert
+    Alert,
+    VideoWall,
+    VWBody,
+    VWHeader
 };

@@ -66,12 +66,15 @@ video {
   width:$videocard-desktop;
   width: 100%;
   z-index: 0; //lower than .rightand .left-tools
-  @include break(w){
-    width: $videocard-widesreen;
-  }
+  // @include break(w){
+  //   width: $videocard-widesreen;
+  // }
 }
 
 .video-wall{
+  .block-generic{
+    width: auto;
+  }
   .block-header{
     display: none;
   }
@@ -81,6 +84,8 @@ video {
     margin: 0;
     flex-direction: column-reverse;
     .video-tools{
+     position: relative; 
+      margin-top: -53px;
       .right-tools{
         .duration{
           display: none;
@@ -114,6 +119,9 @@ video {
 }
 
 .embedded{  
+  .block-generic{
+    width: auto;
+  }
   .block-header {
     padding: 0;
     min-height: none;
@@ -144,6 +152,9 @@ video {
   }
 }
 .media-wall{
+  .block-generic{
+    width: auto;
+  }
   .block-header{
     display: none;
   }
