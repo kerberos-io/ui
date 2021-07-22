@@ -53,9 +53,6 @@ export {
     LandingLayout,
     LoginCard,
     SignupCard,
-<<<<<<< HEAD
-    TermsOfUse,    
-=======
     TermsOfUse,
     Table,
     TableHeader,
@@ -63,5 +60,4 @@ export {
     TableCell,
     TableBody,
     Alert
->>>>>>> develop
 };
