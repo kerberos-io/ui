@@ -1,0 +1,44 @@
+@import "../../app.scss";
+
+.vw-header {
+    background: #262424;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: size(4);
+    padding: 0px 0 0px size(2)-4;
+    box-sizing: border-box;
+    width: 100%;
+    @extend %card-header-shadow;
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      img {
+        margin: 0 size(1)-2 0 0px;
+      }
+      h4 {
+        color:var(--card);
+        // margin: 0;
+      }
+    }
+    .grid-list {
+      display: flex;
+      align-items: center;
+      .item{
+          color: var(--text-light);
+          font-size: 16px;
+      }
+      .numbers {
+        margin: size(0.5);
+        display: flex;
+      }
+    }
+  }
+
+
+  .video-wall{
+
+    .grid-container{
+        display: grid;
+    }
+  }
