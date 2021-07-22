@@ -1,5 +1,4 @@
 import React from "react";
-import Icon from "../Icon";
 import "./videowall.scss";
 
 export interface VideoWallProps  {
@@ -10,7 +9,7 @@ export const VideoWall = ({
         children
             }: VideoWallProps) => {
     return (
-        <div className="video-wall">
+        <div className="page-video-wall">
             {children}
         </div>
     );

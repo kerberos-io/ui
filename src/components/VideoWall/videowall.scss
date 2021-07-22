@@ -36,9 +36,23 @@
   }
 
 
-  .video-wall{
+  .page-video-wall{
 
     .grid-container{
         display: grid;
+        column-gap: unset;
+        row-gap: unset;
+        grid-template-columns: auto auto;
+    }
+
+    .grid-4{
+      grid-template-columns: auto auto;
+    }
+
+    .grid-9{
+      grid-template-columns: auto auto auto;
+    }
+    .grid-16{
+      grid-template-columns: auto auto auto auto;
     }
   }

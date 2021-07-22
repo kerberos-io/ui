@@ -1,18 +1,17 @@
 import React from "react";
-import Icon from "../Icon";
 import "./videowall.scss";
 
 export interface VWBodyProps  {
     children?:any,
-    grid?:number
+    cols?:number
 };
 
 export const VWBody = ({
-        grid,
+        cols,
         children
             }: VWBodyProps) => {
     return (
-            <div className="grid-container">
+            <div className={`grid-container grid-${cols}`}>
             {children}
             </div>
     );

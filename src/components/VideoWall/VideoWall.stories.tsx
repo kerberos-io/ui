@@ -4,6 +4,7 @@ import { Story } from "@storybook/react";
 import  {VWHeader } from "./VWHeader";
 import {VideoWall} from "./VideoWall";
 import { VWBody } from "./VWBody";
+import { VideoCard } from "../VideoCard";
 
 
 
@@ -13,22 +14,36 @@ export default {
     
 } as Meta;
 
-// Create a master template for mapping args to render the Button component
-// const Template: Story<VideoWallHeaderProps> = (args) => <VideoWallHeader {...args} />;
+export const _VideoWall4= ()=> <VideoWall>
+        <VWHeader grid={[4,9,16]}/>
+        <VWBody cols={4}>
+                {
+                    Array(16).fill(4).map(el =><VideoCard
+                        headerStatus=""
+                        headerStatusTitle=""
+                        camera="Camera 12-Outside"
+                        isVideoWall
+                        videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
+                        videoStatus="recording"
+                        videoStatusTitle="live"
+                        />)
+                }
+        </VWBody>
+</VideoWall>
 
-// // Reuse that template for creating different stories
-// export const Default = Template.bind({});
-// Default.args = {  };
-const videoProps = {
-    src: "https://www.w3schools.com/html/mov_bbb.mp4",
-    autoPlay: true,
-    poster: "",
-    preload: true,
-    muted: true,
-  }
-export const _VideoWall= ()=> <VideoWall>
-    <VWHeader grid={[4,9,16,32,45]}/>
-    <VWBody>
- 
-    </VWBody>
+export const _VideoWall9= ()=> <VideoWall>
+        <VWHeader grid={[4,9,16]}/>
+        <VWBody cols={9}>
+                {
+                    Array(16).fill(4).map(el =><VideoCard
+                        headerStatus=""
+                        headerStatusTitle=""
+                        camera="Camera 12-Outside"
+                        isVideoWall
+                        videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
+                        videoStatus="recording"
+                        videoStatusTitle="live"
+                        />)
+                }
+        </VWBody>
 </VideoWall>
