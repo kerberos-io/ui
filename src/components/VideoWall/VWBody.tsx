@@ -11,7 +11,7 @@ export const VWBody = ({
         children
             }: VWBodyProps) => {
     return (
-            <div className={`grid-container grid-${cols}`}>
+            <div className={`grid-container cols-${cols}`}>
             {children}
             </div>
     );

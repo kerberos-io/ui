@@ -16,9 +16,9 @@ export default {
 
 export const _VideoWall4= ()=> <VideoWall>
         <VWHeader grid={[4,9,16]}/>
-        <VWBody cols={4}>
+        <VWBody cols={2}>
                 {
-                    Array(16).fill(4).map(el =><VideoCard
+                    Array(4).fill(4).map(el =><VideoCard
                         headerStatus=""
                         headerStatusTitle=""
                         camera="Camera 12-Outside"
@@ -33,9 +33,9 @@ export const _VideoWall4= ()=> <VideoWall>
 
 export const _VideoWall9= ()=> <VideoWall>
         <VWHeader grid={[4,9,16]}/>
-        <VWBody cols={9}>
+        <VWBody cols={3}>
                 {
-                    Array(16).fill(4).map(el =><VideoCard
+                    Array(9).fill(4).map(el =><VideoCard
                         headerStatus=""
                         headerStatusTitle=""
                         camera="Camera 12-Outside"
