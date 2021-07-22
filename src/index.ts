@@ -13,11 +13,13 @@ import { Block,BlockHeader,BlockBody,BlockFooter } from "./components/Block";
 import { Footer, FooterList, FooterCopyright } from "./components/Footer";
 import Ellipse from "./components/Ellipse";
 import AlertMessage from "./components/AlertMessage";
-import Input from "./components/Input";
+import {Input,FieldSet,Form} from "./components/Input";
 import SocialList from "./components/SocialList/SocialList";
 import {LandingLayout}  from "./components/Main/LandingLayout";
 import TermsOfUse from "./components/TermsOfUse";
 import  {LoginCard, SignupCard}  from "./components/Cards";
+import { Table, TableRow, TableHeader, TableCell,TableBody } from "./components/Table";
+import Alert from "./components/Alert";
 
 export {
     Button,
@@ -45,9 +47,17 @@ export {
     Ellipse,
     AlertMessage,
     Input,
+    FieldSet,
+    Form,
     SocialList,
     LandingLayout,
     LoginCard,
     SignupCard,
-    TermsOfUse
+    TermsOfUse,
+    Table,
+    TableHeader,
+    TableRow,
+    TableCell,
+    TableBody,
+    Alert
 };
