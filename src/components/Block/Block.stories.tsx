@@ -7,7 +7,7 @@ import BlockBody, {BlockBodyProps} from "./BlockBody";
 import BlockFooter, {BlockFooterProps} from "./BlockFooter"
 import Button from "../Button";
 import Icon from "../Icon";
-import Input from "../Input";
+import {Input} from "../Input";
 import AlertMessage from "../AlertMessage";
 export default {
     title:"Components/Block",
@@ -25,20 +25,25 @@ export const BlockWithLogin= () => <Block>
     <Input
         label={"username or email"}
         placeholder={"Your username/email"}
-
-        titleleft="Username or email"
+        readonly={false}
+        disabled={false}
+        type="text"
+        value=""
         iconleft="accounts"
+        iconright=""
         />
-    <Input
-        label={"password"}
-        placeholder={"Your password"}
-
-        titleleft="Password"
-        hint="Forgotten password?"
-        iconleft="accounts"
-        iconright="activity"
-        seperate
-        />         
+        <Input
+            label={"password"}
+            placeholder={"Your password"}
+            value=""
+            readonly={false}
+            disabled={false}
+            type="password"
+            hint="Forgotten password?"
+            iconleft="accounts"
+            iconright="activity"
+            seperate
+            />         
     </BlockBody>
     <BlockFooter>
         <Button icon="" type="outlined" label="Sign-up" />
