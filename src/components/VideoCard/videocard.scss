@@ -1,190 +1,196 @@
 @import "../../app.scss";
 
-.video-card {
-  // height: 320px;
-  // width: 480px;
-  // height: fit-content;
-  // width: fit-content;
-  background-color: #fafafa;
-  border-radius: 4px;
+.video-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 size(1.5);
+}
+.video-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  position: absolute;
+  margin: 0;
+  .duration{
+    display: none;
+  }
+  .left-tools {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1; // higher than video
+
+    p {
+      color: var(--text );
+      font-size: 14px;
+      margin-left: size(1)-2;
+    }
+  }
+ 
+  .right-tools {
+    z-index: 1;    //higher than video
+    .switcher {
+      button {
+        cursor: pointer;
+
+        &:first-of-type {
+          margin-right: 2px;
+          border-radius: size(1.5) 0px 0px size(1.5);
+          padding: 4px 8px 4px size(1);
+          background-color: #fff;
+          border: none;
+        }
+        &:last-of-type {
+          margin-right: 2px;
+          border-radius: 0px size(1.5) size(1.5) 0px;
+          padding: 4px size(1) 4px 8px;
+          background-color: #fff;
+          border: none;
+        }
+
+        &:hover {
+          background-color: hsla(0, 5%, 93%, 0.8);
+          color: var(--text-muted);
+          cursor: text;
+        }
+      }
+    }
+  
+  }
+}
+video {
   height: auto;
-  width: $videocard-desktop;
-  box-sizing: border-box;
+  width:$videocard-desktop;
+  width: 100%;
+  z-index: 0; //lower than .rightand .left-tools
   @include break(w){
     width: $videocard-widesreen;
   }
-
-  .video-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    padding: 0px 18px;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.07);
-  }
-  .offline-box {
-    margin: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .info {
-      text-align: center;
-    }
-  }
-  .video-box {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    width: $videocard-desktop;
-    box-sizing: border-box;
-    @include break(w){
-      width: $videocard-widesreen;
-    }
-    .video-tools {
-      display: flex;
-      margin-bottom: -50px;
-      justify-content: space-between;
-      position: relative;
-      padding: 12px 18px;
-      align-items: center;
-
-      .left-tools {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        p {
-          color: #fff;
-          font-size: 14px;
-          margin-left: 10px;
-        }
-      }
-      .right-tools {
-        p {
-          color: #fff;
-          font-size: 14px;
-          span {
-            color: var(--text);
-          }
-        }
-        .switcher {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          height: 24px;
-          font-size: 11px;
-          z-index: 5;
-          color: #262424;
-          text-transform: uppercase;
-          font-family: Inter;
-          font-size: 11px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 24px;
-          letter-spacing: 0em;
-          text-align: left;
-          button {
-            cursor: pointer;
-
-            &:first-of-type {
-              margin-right: 2px;
-              border-radius: 18px 0px 0px 18px;
-              padding: 4px 8px 4px 12px;
-              background-color: #fff;
-              border: none;
-            }
-            &:last-of-type {
-              margin-right: 2px;
-              border-radius: 0px 18px 18px 0px;
-              padding: 4px 12px 4px 8px;
-              background-color: #fff;
-              border: none;
-            }
-
-            &:focus {
-              background-color: hsla(0, 5%, 93%, 0.8);
-              color: var(--text-muted);
-              cursor: text;
-            }
-          }
-        }
-      }
-    }
-    video {
-      height: auto;
-      width:$videocard-desktop;
-      @include break(w){
-        width: $videocard-widesreen;
-      }
-    }
-  }
 }
 
-.is-video-wall{
-  width: $videocard-wall;
-  .video-header{
+.video-wall{
+  .block-header{
     display: none;
   }
 
-  .video-box{
+  .block-body{
+    padding: 0;
+    margin: 0;
     flex-direction: column-reverse;
-    width: $videocard-wall;
     .video-tools{
-      margin-bottom: 0px;
-      position: absolute;
-      padding:0px 12px;
-      width: -webkit-fill-available;
-      .left-tools{
-        p{
-          display: block;
+      .right-tools{
+        .duration{
+          display: none;
+        }
+        .switcher{
+          display: none;
+        }
+        .project-status{
+          p{
+            font-size: 14px;
+            color: var(--card);
+            font-weight: 400;
+            span{
+              color: var(--text-muted);
+            }
+          }
         }
       }
-      .right-tools{
-       .switcher{
-        display: none;
-       }
-       p{
-         display: block;
-       }
+      .left-tools{
+        .cam-name{
+          color: var(--card);
+          font-size: 14px;
+          font-weight: 700;
+        }
       }
     }
-    video{
-      width: $videocard-wall;
-    }
+  }
+  .block-footer{
+    display: none;
   }
 }
 
-.no-video-wall{
-  // width: auto;
-  .video-header{
-    display: flex;
+.embedded{  
+  .block-header {
+    padding: 0;
+    min-height: none;
   }
+  .block-body {
+    padding: 0;
+    margin: 0;
 
-  .video-box{
-    flex-direction: column;
-    // width: auto;
     .video-tools{
-      margin-bottom: -50px;
-      position: relative;
-      padding:12px 18px;
-      width: initial;
+      margin: 12px 0;
+    
       .left-tools{
-        p{
+        .cam-name{
           display: none;
         }
       }
       .right-tools{
-       .switcher{
-        display: flex;
-       }
-       p{
-         display: none;
-       }
+        
+        .project-status{
+          display: none;
+        }
       }
     }
-    // video{
-    //   width: auto;
-    // }
+  
   }
+  .block-footer{
+    display: none;
+  }
+}
+.media-wall{
+  .block-header{
+    display: none;
+  }
+  .block-body{
+    justify-content: flex-end;
+    .video-tools{
+      margin: size(0.5);
+      .duration{
+        display: block;
+        z-index: 1; //higher than video
+        font-size: size(1);
+        background-color:var(--text);
+        color:var(--card);
+        padding: 3px 5px;
+        border-radius: 2px;
+        // width: fit-content;
+        // height: fit-content;
+      }
+      .right-tools{
+        display: none;
+        
+      }
+      .left-tools{
+        display: none;
+      }
+    }
+  }
+  .block-footer{
+    display: inherit;
+    margin: 0;
+    padding: 0 size(1);
+    .month{
+      color: var(--text-muted);
+    }
+    .hours{
+      color: var(--hub);
+    }
+  }
+}
+.setup-box {
+  margin:size(3) size(4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .info {
+    text-align: center;
+    margin: size(2)+5 0;
+  }
+ 
 }

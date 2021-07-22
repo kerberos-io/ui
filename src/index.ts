@@ -7,17 +7,19 @@ import Icon from "./components/Icon";
 import Breadcrumb from "./components/Breadcrumb";
 import Gradient from "./components/Gradient";
 import KPI from "./components/KPI";
-import VideoCard from "./components/VideoCard";
 import Badge from "./components/Badge";
 import { Block,BlockHeader,BlockBody,BlockFooter } from "./components/Block";
 import { Footer, FooterList, FooterCopyright } from "./components/Footer";
 import Ellipse from "./components/Ellipse";
 import AlertMessage from "./components/AlertMessage";
-import Input from "./components/Input";
+import {Input,FieldSet,Form} from "./components/Input";
 import SocialList from "./components/SocialList/SocialList";
 import {LandingLayout}  from "./components/Main/LandingLayout";
 import TermsOfUse from "./components/TermsOfUse";
 import  {LoginCard, SignupCard}  from "./components/Cards";
+import {VideoCard, Video, VideoTools,VideoHeader,SetupBox} from "./components/VideoCard";
+import { Table, TableRow, TableHeader, TableCell,TableBody } from "./components/Table";
+import Alert from "./components/Alert";
 
 export {
     Button,
@@ -33,7 +35,6 @@ export {
     Breadcrumb,
     Gradient,
     KPI,
-    VideoCard,
     Badge,
     Block,
     BlockHeader,
@@ -45,9 +46,22 @@ export {
     Ellipse,
     AlertMessage,
     Input,
+    FieldSet,
+    Form,
     SocialList,
     LandingLayout,
     LoginCard,
     SignupCard,
-    TermsOfUse
+    TermsOfUse,
+    VideoCard,
+    VideoTools,
+    VideoHeader,
+    SetupBox,
+    Video,
+    Table,
+    TableHeader,
+    TableRow,
+    TableCell,
+    TableBody,
+    Alert
 };
