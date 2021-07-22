@@ -2,7 +2,7 @@ import React from "react";
 import AlertMessage from "../AlertMessage";
 import { Block, BlockBody, BlockFooter, BlockHeader } from "../Block";
 import Button from "../Button";
-import Input from "../Input";
+import {Input} from "../Input";
 import "./loginsignup.scss";
 
 
@@ -17,17 +17,26 @@ export const LoginCard= () =>
                 <BlockBody>
                     <AlertMessage message="Wrong password, please try again!" />
                     <Input
-                        titleleft="Username or email"
-                        iconleft="accounts"
-                        placeholder="Your username/email"
+                      label={"username or email"}
+                      placeholder={"Your username/email"}
+                      readonly={false}
+                      disabled={false}
+                      type="text"
+                      value=""
+                      iconleft="accounts"
+                      iconright=""
                     />
                     <Input
-                        titleleft="Password"
-                        hint="Forgotten password?"
-                        iconleft="accounts"
-                        placeholder="Your password"
-                        iconright="activity"
-                        seperate
+                       label={"password"}
+                       placeholder={"Your password"}
+                       value=""
+                       readonly={false}
+                       disabled={false}
+                       type="password"
+                       hint="Forgotten password?"
+                       iconleft="accounts"
+                       iconright="activity"
+                       seperate
                     />
                 </BlockBody>
                 <BlockFooter>

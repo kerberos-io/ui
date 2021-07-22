@@ -1,70 +1,73 @@
 import React from "react";
 import Icon from "../Icon";
+import Button from "../Button";
 import "./input.scss";
 
 export interface InputProps {
-  label: string;
-  placeholder: string;
-  value: string;
-  readonly: boolean;
+  label?: string;
+  placeholder?: string;
+  value?: string;
+  readonly?: boolean;
+  disabled?: boolean;
 
-  titleleft?: string;
   hint?: string;
   iconleft?: string;
   iconright?: string;
   seperate?: boolean;
+  type:string,
+  onChange?: (
+    event:React.FormEvent<HTMLInputElement> 
+) => void;
+
 }
 
-const Input = ({
+export const Input = ({
                  label,
                  placeholder,
                  value,
                  readonly = false,
-
-                 titleleft,
+                 disabled = false,
                  hint,
                  iconleft,
                  iconright,
                  seperate,
+                 type,
+                 onChange,
+                 ...rest
+
 }: InputProps) => {
-
-  return (<div class="input">
+  const inputRef = React.useRef() as any
+    const handlelickShowPassword=()=>{
+      const input = inputRef.current
+      input["type"]==="text" ? input["type"]="password" :input["type"]="text"
+    }
+  return (
         <label>
-            {label} {readonly ? "(readonly)" : ""}
-            <input type="text" disabled={readonly} class={{"readonly":readonly}} placeholder={placeholder} value={value} />
+          <div className="input-labels">
+               <p>{label} {readonly ?<i>(readonly)</i>:null}</p>
+               {
+                 hint?<p className="hint">{hint}</p>:null
+               }
+          </div>
+          <div className={`input-bar ${type==="submit"?"submit":""}`}>
+                <div className={`input-box ${iconleft?"":"come-near"}`}>
+                  {iconleft ? (
+                    <div className="icon-left">
+                      <Icon label={`${iconleft}`} />
+                    </div>
+                  ) : null}
+                  <input ref={inputRef} {...rest} type={type} className="input"  readOnly={readonly} disabled={disabled}  placeholder={placeholder} value={value} onChange={onChange} />
+                </div>
+            
+                {iconright ? (
+                   iconright==="activity"?<Button icon="activity" label="" type="outlined" onClick={handlelickShowPassword}/>:
+                    <div className={`icon-right ${seperate ?"seperate":""}`}>
+                     <Icon label={`${iconright}`} />
+                    </div>
+                    
+                ) :<span className="expand"></span>}
+          </div>
         </label>
-      </div>
   );
-
-  /*return (
-    <div className="input-container">
-      <div className="input-box">
-        {titleleft || hint ? (
-          <div className="input-title">
-            <p>{titleleft}</p>
-            <p>{hint}</p>
-          </div>
-        ) : null}
-
-        <div className="input-bar">
-          {iconleft ? (
-            <div className="input-icon-left">
-              <Icon label={`${iconleft}`} />
-            </div>
-          ) : null}
-
-          <div className="input-itself">
-            <input placeholder={placeholder} />
-          </div>
-          {iconright ? (
-            <div className={seperate ? "seperate" : "input-icon-right"}>
-              <Icon label={`${iconright}`} />
-            </div>
-          ) : <span className="expand"></span>}
-        </div>
-      </div>
-    </div>
-  );*/
 };
 
-export default Input;
