@@ -26,7 +26,7 @@ export interface BadgeProps {
             case "recording":
                 return {
                     className:"badge-recording",
-                    title:"LIVE",
+                    title:title,
                     blink:blink,
                     status:"alert"
                 }
