@@ -14,5 +14,6 @@ export const _Alert= Template.bind({})
 _Alert.args={
     platter:true,
     notify:true,
-    blink:true
+    blink:true,
+    status:"alert"
 }

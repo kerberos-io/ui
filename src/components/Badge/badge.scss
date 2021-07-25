@@ -4,15 +4,16 @@
     display: flex;  
     justify-content: center;
     align-items: center;
-    height: 24px;         
-    border-radius: 18px;
-    padding: 0px 12px 0px 8px;
-    width: fit-content;
+    border-radius: size(1.5);
+    padding: 4px size(1) 4px size(1)-4;
+    width: max-content;
 
     span{
         text-transform: uppercase;
         margin-left: 5px;
         font-size:13px;
+        width: max-content;
+
     }
     .devided{
         font-weight: 400;
@@ -30,3 +31,9 @@
     }
 }
 
+.round{
+    padding: size(0.5);
+    span{
+        display: none;
+    }
+}

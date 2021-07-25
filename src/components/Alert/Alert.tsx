@@ -4,12 +4,14 @@ import Ellipse from "../Ellipse";
 import "./alert.scss"
 
 export  interface ALertProps{
+    status:string,
     platter?:boolean,
     notify?:boolean,
     blink?:boolean
 
 }
 const ALert = ({
+    status,
     platter,
     notify,
     blink
@@ -17,7 +19,7 @@ const ALert = ({
     return(
         <div className={`alert ${platter?"with-platter":""}`}>
             {
-            notify?<Ellipse status="hub" aura blink={blink}/>:null
+            notify?<Ellipse status={status} aura blink={blink}/>:null
             }
             <Icon label="alerts" />
         </div>

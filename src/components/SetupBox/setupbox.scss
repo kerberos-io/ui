@@ -1,0 +1,25 @@
+@import "../../app.scss";
+
+.setup-box {
+    margin:0 size(3) size(4) size(3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .info {
+      text-align: center;
+      margin: size(2)+5 0;
+    }
+   
+  }
+  .dashed{
+    width: fit-content;
+    border:2px dashed hsla(var(--text-light-hsl));
+    margin: 0;
+    padding: size(9) size(20);
+    .info{
+        margin: 0;
+    }
+    button{
+        margin-top: size(2);
+    }
+  }

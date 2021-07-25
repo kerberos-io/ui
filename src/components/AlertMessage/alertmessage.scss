@@ -1,3 +1,4 @@
+@import "../../app.scss";
 .alert-message {
     display: flex;
     flex-direction: row;
@@ -6,25 +7,23 @@
     justify-content: space-around;
     align-items: center;
     color: var(--alert);
-    background: hsla(2, 100%, 98%, 1);
-    height: 48px;
-    width: fit-content;
+    background: hsla(var(--alert-hsl),0.1);
+    width: max-content;
+    padding: size(1)+2 0;
     .info-circle{
       font-size: 12px;
       border: 1px solid var(--alert);
       color: var(--alert);
-      padding: 1px 6px;
+      padding: 1px size(1)-6;
       border-radius: 50%;
       font-weight: bold;
-      margin-right: 10px;
-      margin-left: 10px;
+      margin:0 size(1)-2;
     }
     .cross-sign{
       font-size: 12px;
       color: var(--alert);
       font-weight: bold;
-      margin-left: 10px;
-      margin-right: 10px;
+      margin: 0 size(1)-2;
 
     }
   }

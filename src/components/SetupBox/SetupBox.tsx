@@ -1,9 +1,10 @@
 import React from "react";
-import "./videocard.scss"
+import "./setupbox.scss"
 import Badge from "../Badge";
 import Button from "../Button";
 
 export interface SetupBoxProps{
+  dashed?:boolean,
   header:string,
   text:string,
   btnicon:string,
@@ -11,14 +12,15 @@ export interface SetupBoxProps{
 }
 
 
-export const SetupBox = ({  
+const SetupBox = ({  
+    dashed=false,
     header,
     text,
     btnicon,
     btnlabel
     }:SetupBoxProps) => {
     return (
-        <div className="setup-box">
+        <div className={`setup-box ${dashed?" dashed":""}`}>
            <div className="info">
              <h3>{header}</h3>
              <p className="item">{text}</p>
@@ -28,4 +30,5 @@ export const SetupBox = ({
     )
 }
 
+export default SetupBox
 

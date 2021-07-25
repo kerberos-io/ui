@@ -14,7 +14,7 @@ export default {
     
 } as Meta;
 
-export const _VideoWall4= ()=> <VideoWall>
+export const _VideoWall4= ()=> <VideoWall hide={false}>
         <VWHeader grid={[4,9,16]}/>
         <VWBody cols={2}>
                 {
@@ -31,7 +31,7 @@ export const _VideoWall4= ()=> <VideoWall>
         </VWBody>
 </VideoWall>
 
-export const _VideoWall9= ()=> <VideoWall>
+export const _VideoWall9= ()=> <VideoWall hide={false}>
         <VWHeader grid={[4,9,16]}/>
         <VWBody cols={3}>
                 {

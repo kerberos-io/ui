@@ -8,7 +8,8 @@ export interface BadgeProps {
     blink?:boolean,
     aura?:boolean,
     devided?:number,
-    devisor?:number
+    devisor?:number,
+    round?:boolean
   }
 
   const Badge=({
@@ -17,7 +18,8 @@ export interface BadgeProps {
     blink=false,
     aura=false,
     devided,
-    devisor
+    devisor,
+    round
   }:BadgeProps)=>{
     const state=(():any=>{
         switch (status) {
@@ -40,7 +42,7 @@ export interface BadgeProps {
             }
     })()
     return(
-        <div className={`badge ${state.className}`} style={{backgroundColor:state.backgroundColor}} >
+        <div className={`badge ${state.className} ${round?"round":""}`} style={{backgroundColor:state.backgroundColor}} >
           <Ellipse status={state.status} blink={state.blink} aura={state.aura}/>             
             {state.title?<span>{state.title}</span>:null}
             {!state.title&&(devided||devisor)?<><span className="devided">{devided}</span><span className="devisor">/ {devisor}</span></>:null}

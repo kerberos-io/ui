@@ -5,7 +5,7 @@ import { Block,BlockBody, BlockFooter, BlockHeader } from "../Block";
 import { VideoTools } from "./VideoTools";
 import { Video } from "./Video";
 import { VideoHeader } from "./VideoHeader";
-import { SetupBox } from "./SetupBox";
+import SetupBox  from "../SetupBox";
 import "./videocard.scss";
 
 export interface VideoCardProps {

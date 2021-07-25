@@ -17,11 +17,11 @@ import SocialList from "./components/SocialList/SocialList";
 import {LandingLayout}  from "./components/Main/LandingLayout";
 import TermsOfUse from "./components/TermsOfUse";
 import  {LoginCard, SignupCard}  from "./components/Cards";
-import {VideoCard, Video, VideoTools,VideoHeader,SetupBox} from "./components/VideoCard";
+import {VideoCard, Video, VideoTools,VideoHeader} from "./components/VideoCard";
 import { Table, TableRow, TableHeader, TableCell,TableBody } from "./components/Table";
 import Alert from "./components/Alert";
 import { VideoWall,VWBody, VWHeader } from "./components/VideoWall";
-
+import SetupBox from "./components/SetupBox";
 export {
     Button,
     Sidebar,

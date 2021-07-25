@@ -3,13 +3,15 @@ import "./videowall.scss";
 
 export interface VideoWallProps  {
     children?:any,
+    hide:boolean
 };
 
 export const VideoWall = ({
-        children
+        children,
+        hide
             }: VideoWallProps) => {
     return (
-        <div className="page-video-wall">
+        <div className={`page-video-wall ${hide?"hide":""} `}>
             {children}
         </div>
     );
