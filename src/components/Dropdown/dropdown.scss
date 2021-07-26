@@ -1,0 +1,103 @@
+@import "../../app.scss";
+
+.dropdown{
+  position: absolute;
+  top: 72px;
+  width: fit-content;
+  background: var(--card);
+  border-radius: var(--radius);
+  z-index: 999;
+  @extend %modal-shadow;
+  &::before{
+    background: url(/images/selectbox-arrowup.svg);
+    content: "";
+    width: 18px;
+    height: 9px;
+    position: absolute;
+    top: -9px;
+  }
+
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: var(--radius);
+    
+
+    li{
+      padding: 0 size(2);
+      &:focus-within{
+        background: hsla(var(--hub-hsl), 0.1);
+      }
+      &:first-of-type{
+       .items{
+        padding-top: 10px;
+       }
+      }
+
+     
+      .items{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        height: size(2);    
+        min-width: size(16);  
+     
+        .title{
+          font-size: 15px;
+          text-transform: none;
+          display: flex;
+          align-content: center;
+          justify-content: flex-start;
+          align-items: center;
+          .icon{
+            margin-right: 8px;
+          }
+        }
+        input{
+          width: fit-content;
+        }
+       }
+    }
+      .input-list{
+        border-bottom: 1px solid var(--bg-muted);
+      label{       
+        .input-labels{
+          display: none;
+        }
+        .input-bar{
+          border: none;
+          padding: 0;
+          &:focus-within{
+            box-shadow: none;
+          }
+          .input-box{
+            input{
+              width: 100%;
+              padding: size(1);
+              padding-right: 0;
+            }
+          }
+          .expand{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.left{
+  &::before{
+    left: 20px;
+
+  }
+}
+
+.right{
+  &::before{
+    right: 20px;
+  }
+}

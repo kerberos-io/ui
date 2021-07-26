@@ -44,6 +44,8 @@ export const Verify = () => <Icon label="verify" />
 export const Email = () => <Icon label="email" />
 export const Locked = () => <Icon label="locked" />
 export const Trush = () => <Icon label="trush" />
+export const ArrowUp = () => <Icon label="arrow-up" />
+export const Location = () => <Icon label="location" />
 
 
 

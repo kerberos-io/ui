@@ -22,6 +22,7 @@ import { Table, TableRow, TableHeader, TableCell,TableBody } from "./components/
 import Alert from "./components/Alert";
 import { VideoWall,VWBody, VWHeader } from "./components/VideoWall";
 import SetupBox from "./components/SetupBox";
+import { Dropdown, DropList } from "./components/Dropdown";
 export {
     Button,
     Sidebar,
@@ -67,5 +68,7 @@ export {
     Alert,
     VideoWall,
     VWBody,
-    VWHeader
+    VWHeader,
+    Dropdown,
+    DropList
 };
