@@ -41,7 +41,8 @@ export const Input = ({
 
 }: InputProps) => {
   const inputRef = React.useRef() as any
-    const handlelickShowPassword=()=>{
+    const handlelickShowPassword=(event:any)=>{
+      event.preventDefault()
       const input = inputRef.current
       input["type"]==="text" ? input["type"]="password" :input["type"]="text"
     }
