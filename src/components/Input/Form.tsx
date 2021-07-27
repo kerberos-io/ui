@@ -3,9 +3,9 @@ import "./input.scss";
 
 export interface FormProps{
     children:HTMLFieldSetElement|HTMLInputElement|any,
-    onSubmit?:(
+    onSubmit?:any|((
         event:React.FormEvent<HTMLFormElement>|any
-    ) => void|any
+    ) => void)
 }
 export const Form = ({children,onSubmit}:FormProps) =>{
     return (
