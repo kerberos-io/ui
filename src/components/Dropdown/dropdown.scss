@@ -63,6 +63,9 @@
     }
       .input-list{
         border-bottom: 1px solid var(--bg-muted);
+        &:focus-within{
+          background: none;
+        }
       label{       
         .input-labels{
           display: none;
