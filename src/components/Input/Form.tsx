@@ -5,7 +5,7 @@ export interface FormProps{
     children:HTMLFieldSetElement|HTMLInputElement|any,
     onSubmit?:(
         event:React.FormEvent<HTMLFormElement>|any
-    ) => void
+    ) => void|any
 }
 export const Form = ({children,onSubmit}:FormProps) =>{
     return (
