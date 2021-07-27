@@ -8,15 +8,16 @@
   border-radius: var(--radius);
   z-index: 999;
   @extend %modal-shadow;
-  &::before{
-    background: url(/images/selectbox-arrowup.svg);
+  #arrow-up{
     content: "";
     width: 18px;
     height: 9px;
     position: absolute;
-    top: -9px;
+    top: -15px;
+    svg{
+      color:white;
+    }
   }
-
   ul{
     list-style: none;
     margin: 0;
@@ -105,14 +106,14 @@
 }
 
 .left{
-  &::before{
+  #arrow-up{
     left: 20px;
 
   }
 }
 
 .right{
-  &::before{
+  #arrow-up{
     right: 20px;
   }
 }

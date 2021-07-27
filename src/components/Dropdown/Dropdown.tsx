@@ -1,4 +1,5 @@
 import React from "react";
+import Icon from "../Icon";
 import { Input } from "../Input";
 import "./dropdown.scss";
 
@@ -16,6 +17,9 @@ export const Dropdown = ({
               }: DropdownProps) => {
     return (
         <div className={`dropdown ${direction==="left"?"left":"right"}`}>
+            <div id="arrow-up">
+                <Icon label="arrow-up" />
+            </div>
             <ul>
               {
                   search ?
