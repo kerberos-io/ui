@@ -3,20 +3,21 @@ import React from "react";
 import "./alertmessage.scss"
 import Icon from "../Icon";
 export interface AlertMessageProps{
-    message:string
+    message:string,
+    show:boolean
 }
 
-const AlertMessage = ({message}:AlertMessageProps)=>{
+const AlertMessage = ({message,show=true}:AlertMessageProps)=>{
         let msgRef:any;
-        const handleRemove =(e:any)=>{
+        const handleHide =(e:any)=>{
             e.preventDefault()
-            msgRef.remove()
+            msgRef.style.display="none"
         }
         return(
-            <div ref={(ref)=>msgRef=ref} className="alert-message">
+            <div ref={(ref)=>msgRef=ref} className="alert-message" style={{display:show?"flex":"none"}}>
                 <Icon label="info" />
                 <span>{message}</span>
-                <span className="cross-sign" onClick={handleRemove}><Icon label="cross" /></span>
+                <span className="cross-sign" ><Icon label="cross" /></span>
           </div>
         )
 }
