@@ -3,10 +3,13 @@ import "./input.scss";
 
 export interface FormProps{
     children:HTMLFieldSetElement|HTMLInputElement|any,
+    onSubmit?:(
+        event:React.FormEvent<HTMLFormElement>
+    ) => void
 }
-export const Form = ({children}:FormProps) =>{
+export const Form = ({children,onSubmit}:FormProps) =>{
     return (
-        <form >
+        <form onSubmit={onSubmit} noValidate>
             {children}
         </form>
     )
