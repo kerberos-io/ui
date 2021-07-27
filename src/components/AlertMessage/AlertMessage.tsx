@@ -7,11 +7,16 @@ export interface AlertMessageProps{
 }
 
 const AlertMessage = ({message}:AlertMessageProps)=>{
+        let msgRef:any;
+        const handleRemove =(e:any)=>{
+            e.preventDefault()
+            msgRef.remove()
+        }
         return(
-            <div className="alert-message">
+            <div ref={(ref)=>msgRef=ref} className="alert-message">
                 <Icon label="info" />
                 <span>{message}</span>
-                <Icon label="cross" />
+                <span className="cross-sign" onClick={handleRemove}><Icon label="cross" /></span>
           </div>
         )
 }
