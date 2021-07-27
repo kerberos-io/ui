@@ -29,17 +29,20 @@
       &:focus-within{
         background: hsla(var(--hub-hsl), 0.1);
       }
+      &:hover{
+        background: hsla(var(--hub-hsl), 0.1);
+      }
       &:first-of-type{
-       .items{
-        padding-top: 10px;
+       .drop-items{
+          padding-top: 10px;
        }
       }
 
      
-      .items{
+      .drop-items{
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: normal;
         padding-top: 6px;
         padding-bottom: 6px;
         height: size(2);    
@@ -60,10 +63,18 @@
           width: fit-content;
         }
        }
+       .fit{
+         min-width: 0;
+         width: fit-content;
+         
+       }
     }
-      .input-list{
+      .search-input{
         border-bottom: 1px solid var(--bg-muted);
         &:focus-within{
+          background: none;
+        }
+        &:hover{
           background: none;
         }
       label{       
@@ -76,6 +87,7 @@
           &:focus-within{
             box-shadow: none;
           }
+        
           .input-box{
             input{
               width: 100%;

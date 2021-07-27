@@ -19,7 +19,7 @@ export const Dropdown = ({
             <ul>
               {
                   search ?
-                  <li className="input-list">
+                  <li className="search-input">
                     <Input
                         hint=""
                         iconleft="search"

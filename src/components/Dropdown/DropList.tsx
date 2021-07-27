@@ -5,21 +5,24 @@ import "./dropdown.scss";
 export interface DropListProps  {
     title:string,
     radio?:boolean,
-    icon?:string
+    icon?:string,
+    isInput?:boolean
 
 };
 
 export const DropList = ({
     title,
     radio=false,
-    icon
+    icon,
+    isInput=true
               }: DropListProps) => {
     return (
         <li>
-            <label className="items">
-               
+            <label className={`drop-items ${!isInput?"fit":""}`}>               
                 <div className="title">{icon?<> <Icon label={icon||""}/>{`  `}</>:null}{title}</div>
-                <input type={radio?"radio":"checkbox"} />
+               {
+                   isInput? <input type={radio?"radio":"checkbox"} />:null
+               }
             </label>
         </li>
     );

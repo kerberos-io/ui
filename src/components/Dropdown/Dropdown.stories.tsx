@@ -34,3 +34,9 @@ export const NewestOldest = () =><Dropdown search={false} direction="right">
     <DropList icon="cameras" title="Newest" />
     <DropList icon="cameras" title="Oldest" />
 </Dropdown>
+
+export const Languages = () => <Dropdown search={false} direction="right">
+    <DropList title="EN" isInput={false} />
+    <DropList title="ES" isInput={false} />
+    <DropList title="DE" isInput={false} />
+</Dropdown>
