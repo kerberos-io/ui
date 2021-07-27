@@ -29,6 +29,7 @@ export default {
         commonjs(),
         typescript({ useTsconfigDeclarationDir: true }),
         scss(),
-        svgr({ babel: false })
+        postcss(),
+        svgr({ babel: false }),
     ]
 };
