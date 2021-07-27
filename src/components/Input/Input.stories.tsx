@@ -48,3 +48,9 @@ export const _Form = () =><Form>
         />
         </FieldSet>
     </Form>
+
+export const _Buttonize = ()=>  <Input                        
+    iconright="arrow-down-full-sm"
+    type="button"
+    value="EN"
+    />

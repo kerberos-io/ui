@@ -1,6 +1,6 @@
 @import "../../app.scss";
 
-label{
+label.generic-input{
   .input-labels {
 
     display: flex;
@@ -96,7 +96,27 @@ label{
 
 
 }
+.buttonize{
+  div.input-labels{
+      display: none;
+  }
 
+  .input-bar{
+      // padding:0;
+      width: fit-content;
+      .input-box{
+          input{
+              padding: 5px 5px 5px size(1)-1;
+              font-size: 13px;
+              color: var(--text-muted);
+          }
+      }
+      div.icon-right{
+          height: 0;
+          padding-left: size(1);
+      }
+  }
+}
 fieldset{
   border: none;
 }

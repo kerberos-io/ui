@@ -1,0 +1,119 @@
+@import "../../app.scss";
+
+.dropdown{
+  position: absolute;
+  top: 72px;
+  width: fit-content;
+  background: var(--card);
+  border-radius: var(--radius);
+  z-index: 999;
+  @extend %modal-shadow;
+  #arrow-up{
+    content: "";
+    width: 18px;
+    height: 9px;
+    position: absolute;
+    top: -15px;
+    svg{
+      color:white;
+    }
+  }
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: var(--radius);
+    
+
+    li{
+      padding: 0 size(2);
+      &:focus-within{
+        background: hsla(var(--hub-hsl), 0.1);
+      }
+      &:hover{
+        background: hsla(var(--hub-hsl), 0.1);
+      }
+      &:first-of-type{
+       .drop-items{
+          padding-top: 10px;
+       }
+      }
+
+     
+      .drop-items{
+        display: flex;
+        justify-content: space-between;
+        align-items: normal;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        height: size(2);    
+        min-width: size(16);  
+     
+        .title{
+          font-size: 15px;
+          text-transform: none;
+          display: flex;
+          align-content: center;
+          justify-content: flex-start;
+          align-items: center;
+          .icon{
+            margin-right: 8px;
+          }
+        }
+        input{
+          width: fit-content;
+        }
+       }
+       .fit{
+         min-width: 0;
+         width: fit-content;
+         
+       }
+    }
+      .search-input{
+        border-bottom: 1px solid var(--bg-muted);
+        &:focus-within{
+          background: none;
+        }
+        &:hover{
+          background: none;
+        }
+      label{       
+        .input-labels{
+          display: none;
+        }
+        .input-bar{
+          border: none;
+          padding: 0;
+          &:focus-within{
+            box-shadow: none;
+          }
+        
+          .input-box{
+            input{
+              width: 100%;
+              padding: size(1);
+              padding-right: 0;
+            }
+          }
+          .expand{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.left{
+  #arrow-up{
+    left: 20px;
+
+  }
+}
+
+.right{
+  #arrow-up{
+    right: 20px;
+  }
+}

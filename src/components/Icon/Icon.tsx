@@ -473,6 +473,23 @@ export function Trush(){
         </svg>
     )
 }
+
+export function ArrowUp(){
+    return(
+        <svg className={"icon"} width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 0L0 9H18L9 0Z" fill="currentColor"/>
+        </svg>
+    )
+}
+
+export function Location(){
+    return(
+        <svg className={"icon"} fill="none" height="18" viewBox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg">
+            <path _ngcontent-osq-c2="" clip-rule="evenodd" d="M2.63977 3.6945C3.60315 1.63165 5.67557 0 8.99992 0C12.3243 0 14.3967 1.63165 15.36 3.69451C16.2775 5.659 16.1823 8.02363 15.2407 9.53003C14.2882 11.0538 12.7448 13.2982 11.4807 15.1363C10.8093 16.1127 10.2167 16.9744 9.8334 17.5526C9.64814 17.832 9.33519 18 8.99992 18C8.66466 18 8.3517 17.832 8.16645 17.5526C7.78308 16.9743 7.1904 16.1124 6.5189 15.136C5.2549 13.2979 3.71159 11.0537 2.75917 9.53006C1.81753 8.02364 1.72234 5.65899 2.63977 3.6945ZM4.4519 4.54079C3.77601 5.98807 3.92594 7.62341 4.4551 8.46995C5.39014 9.96579 6.86091 12.1036 8.1055 13.9128C8.42251 14.3735 8.72485 14.813 8.99992 15.2151C9.27494 14.8131 9.5772 14.3738 9.89414 13.9131C11.1388 12.1039 12.6097 9.96591 13.5447 8.46997C14.0739 7.62343 14.2238 5.98806 13.5479 4.54078C12.918 3.19188 11.5586 2 8.99992 2C6.44123 2 5.08186 3.19188 4.4519 4.54079Z" fill="currentColor" fill-rule="evenodd">
+            </path><path _ngcontent-osq-c2="" clip-rule="evenodd" d="M8.99988 9C10.1044 9 10.9999 8.10457 10.9999 7C10.9999 5.89543 10.1044 5 8.99988 5C7.89531 5 6.99988 5.89543 6.99988 7C6.99988 8.10457 7.89531 9 8.99988 9Z" fill="currentColor" fill-rule="evenodd"></path>
+        </svg>     
+    )
+}
 const Icon = ({
                   label
               }: IconProps) => {
@@ -575,6 +592,10 @@ const Icon = ({
             return <Locked/>
         case "trush":
             return <Trush/>
+        case "arrow-up":
+            return <ArrowUp/>
+        case "location":
+            return <Location/>
     }
     return <span></span>;
 };

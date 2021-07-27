@@ -17,7 +17,10 @@ export interface InputProps {
   type:string,
   onChange?: (
     event:React.FormEvent<HTMLInputElement> 
-) => void;
+  ) => void;
+  onClick?: (
+    event: React.MouseEvent<HTMLInputElement, MouseEvent>
+  ) => void;
 
 }
 
@@ -33,16 +36,18 @@ export const Input = ({
                  seperate,
                  type,
                  onChange,
+                 onClick,
                  ...rest
 
 }: InputProps) => {
   const inputRef = React.useRef() as any
-    const handlelickShowPassword=()=>{
+    const handlelickShowPassword=(event:any)=>{
+      event.preventDefault()
       const input = inputRef.current
       input["type"]==="text" ? input["type"]="password" :input["type"]="text"
     }
   return (
-        <label>
+        <label className={`generic-input ${type==="button"?"buttonize":""}`}>
           <div className="input-labels">
                <p>{label} {readonly ?<i>(readonly)</i>:null}</p>
                {
@@ -56,7 +61,7 @@ export const Input = ({
                       <Icon label={`${iconleft}`} />
                     </div>
                   ) : null}
-                  <input ref={inputRef} {...rest} type={type} className="input"  readOnly={readonly} disabled={disabled}  placeholder={placeholder} value={value} onChange={onChange} />
+                  <input ref={inputRef} {...rest} type={type} className="input"  readOnly={readonly} disabled={disabled}  placeholder={placeholder} value={value} onChange={onChange} onClick={onClick}/>
                 </div>
             
                 {iconright ? (
