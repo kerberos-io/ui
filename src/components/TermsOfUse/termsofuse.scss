@@ -1,12 +1,17 @@
 @import "../../app.scss";
 
 .termsofuse{
-    width: 316px;
+    width: 312px;
+    margin-top: size(4);
     .terms-text{
+        margin-bottom: size(2);
         p{
+            margin: 0;
+            font-size: 13px;
             a{
                 color: var(--hub);
                 text-decoration: underline;
+                font-weight: 600;
             }
         }
     }
@@ -15,12 +20,17 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        line-height: size(2);
         input{
-            margin-top: 14px;
+            // margin-top: 14px;
+            margin: 0 size(1)+3 0 0;
+            width: 14px;
+            height: 14px;
+            border: 2px solid var(--text-light);
         }
         b{
             font-size: 13px;
-            margin-left: 8px;
+            font-weight: 600;
         }
     }
 }
