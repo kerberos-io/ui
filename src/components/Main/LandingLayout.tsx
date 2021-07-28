@@ -73,15 +73,22 @@ const Column4 = [
 ];
 
 export interface LandingLayoutProps{
-    children:any
+    children:any,
+    title?:string,
+    version?:string,
+    description?:string
 }
-export const LandingLayout = ({children}:LandingLayoutProps) =>
+export const LandingLayout = ({
+    children,
+    title,
+    version,
+    description}:LandingLayoutProps) =>
     <div id="landing-layout">
         <Gradient/>
 
         <header>
-            <h1>Kerberos Hub <span className="version">v3.0</span></h1>
-            <p>Control panel and management for all Kerberos services</p>
+            <h1>{title} <span className="version">{version}</span></h1>
+            <p>{description}</p>
         </header>
 
        {children}

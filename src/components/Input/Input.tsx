@@ -54,7 +54,7 @@ export const Input = ({
                  hint?<p className="hint">{hint}</p>:null
                }
           </div>
-          <div className={`input-bar ${type==="submit"?"submit":""}`}>
+          <div className={`input-bar ${!iconright?"fit-right":""}`}>
                 <div className={`input-box ${iconleft?"":"come-near"}`}>
                   {iconleft ? (
                     <div className="icon-left">

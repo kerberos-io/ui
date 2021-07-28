@@ -5,8 +5,13 @@ label.generic-input{
 
     display: flex;
     justify-content: space-between;
+    margin-top: size(2);
     p{
      color: var(--text-light);
+     font-size: size(1);
+     padding: 0;
+     margin: 0;
+     line-height: size(3);
 
       text-transform: uppercase;
       i{
@@ -45,11 +50,19 @@ label.generic-input{
       display: flex;
       align-items: flex-end;
       width: 100%;
+      .icon-left{
+        svg{
+          width: 14px;
+        }
+      }
       input {
 
         outline: none;
         border: none;
         margin: 0;
+        font-size: 15px;
+        color: var(--text-light);
+        padding-left: size(1)+2;
 
         &:focus {
           outline: none;
@@ -67,6 +80,9 @@ label.generic-input{
       display: flex;
       align-items: center;
       border: none;
+      svg{
+        width: 14px;
+      }
     }
 
     .seperate {
@@ -92,6 +108,11 @@ label.generic-input{
         }
       }
     }
+  }
+
+  .fit-right{
+    display: block;
+    padding-right: 0;
   }
 
 

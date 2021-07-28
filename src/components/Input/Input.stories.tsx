@@ -43,7 +43,7 @@ export const _Form = () =><Form>
         placeholder="Your password"
         iconright="activity"
         seperate={true}
-        value="fffff"
+        value=""
         type="password"
         />
         </FieldSet>
