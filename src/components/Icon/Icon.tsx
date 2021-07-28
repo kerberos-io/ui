@@ -426,13 +426,21 @@ export function Github(){
 
 export function Info(){
     return(
-        <span className="icon info-circle">!</span>
+        <svg className={"icon"} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 16C5.13401 16 2 12.866 2 9C2 5.13401 5.13401 2 9 2C12.866 2 16 5.13401 16 9C16 12.866 12.866 16 9 16ZM0 9C0 13.9706 4.02944 18 9 18C13.9706 18 18 13.9706 18 9C18 4.02944 13.9706 0 9 0C4.02944 0 0 4.02944 0 9Z" fill="#C13733"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 10C9.55228 10 10 9.55228 10 9V6C10 5.44772 9.55228 5 9 5C8.44772 5 8 5.44772 8 6V9C8 9.55228 8.44772 10 9 10Z" fill="#C13733"/>
+            <path d="M10 12C10 11.4477 9.55228 11 9 11C8.44772 11 8 11.4477 8 12C8 12.5523 8.44772 13 9 13C9.55228 13 10 12.5523 10 12Z" fill="#C13733"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 11C9.55228 11 10 11.4477 10 12C10 12.5523 9.55228 13 9 13C8.44772 13 8 12.5523 8 12C8 11.4477 8.44772 11 9 11Z" fill="#C13733"/>
+        </svg>
     )
 }
 
 export function Cross(){
     return(
-        <span className="icon cross-sign">X</span>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L11.7071 10.2929C12.0976 10.6834 12.0976 11.3166 11.7071 11.7071C11.3166 12.0976 10.6834 12.0976 10.2929 11.7071L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#C13733"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 11.7071C-0.0976311 11.3166 -0.0976311 10.6834 0.292893 10.2929L10.2929 0.292895C10.6834 -0.09763 11.3166 -0.09763 11.7071 0.292895C12.0976 0.683419 12.0976 1.31658 11.7071 1.70711L1.70711 11.7071C1.31658 12.0976 0.683417 12.0976 0.292893 11.7071Z" fill="#C13733"/>
+        </svg>
     )
 }
 

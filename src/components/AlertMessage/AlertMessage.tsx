@@ -9,9 +9,11 @@ export interface AlertMessageProps{
 const AlertMessage = ({message}:AlertMessageProps)=>{
         return(
             <div className="alert-message" >
-                <Icon label="info" />
-                <span>{message}</span>
-                <span className="cross-sign" ><Icon label="cross" /></span>
+                <div>
+                    <Icon label="info" />
+                    <span className="message">{message}</span>
+                </div>
+                <Icon label="cross" />
           </div>
         )
 }

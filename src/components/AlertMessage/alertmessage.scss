@@ -4,27 +4,24 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    color: var(--alert);
-    background: hsla(var(--alert-hsl),0.1);
-    width: max-content;
-    padding: size(1)+2 0;
-    .info-circle{
-      font-size: 12px;
-      border: 1px solid var(--alert);
-      color: var(--alert);
-      padding: 1px size(1)-6;
-      border-radius: 50%;
-      font-weight: bold;
-      margin:0 size(1)-2;
-    }
-    .cross-sign{
-      font-size: 12px;
-      color: var(--alert);
-      font-weight: bold;
-      margin: 0 size(1)-2;
-      cursor: pointer;
+    // background: hsla(var(--alert-hsl),0.1);
+    background: hsla(2, 100%, 98%, 1);
+    // width: max-content;
+    padding: size(1) size(2);
+    div{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    .message{
+        font-size: 15px;
+        color: var(--alert);
+        margin-left: size(1);
+        font-weight: 500;
+        line-height: size(2);
 
+      }
     }
+   
   }
