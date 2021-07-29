@@ -46,6 +46,7 @@ export const Locked = () => <Icon label="locked" />
 export const Trush = () => <Icon label="trush" />
 export const ArrowUp = () => <Icon label="arrow-up" />
 export const Location = () => <Icon label="location" />
+export const Flag = () => <Icon label="flag" />
 
 
 

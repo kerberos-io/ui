@@ -11,7 +11,7 @@ export default {
     },
 } as Meta;
 
-export const ArrowDownFullSm = () => <Icon label={"arrow-down-full-sm"} />
+export const ArrowDownFullSm = () => <Icon label={"arrow-down-sm"} />
 export const EnterpriseSm = () => <Icon label={"enterprise-sm"} />
 export const OpensourceSm = () => <Icon label={"opensource-sm"} />
 export const NoteSm = () => <Icon label={"note-sm"} />

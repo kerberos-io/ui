@@ -498,6 +498,14 @@ export function Location(){
         </svg>     
     )
 }
+
+export function Flag(){
+    return(
+        <svg className={"icon"} width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1 0C1.55228 0 2 0.447715 2 1H13C13.4045 1 13.7691 1.24364 13.9239 1.61732C14.0787 1.99099 13.9931 2.42111 13.7071 2.70711L10.4142 6L13.7071 9.29289C13.9931 9.57889 14.0787 10.009 13.9239 10.3827C13.7691 10.7564 13.4045 11 13 11H2V17C2 17.5523 1.55228 18 1 18C0.447715 18 0 17.5523 0 17V1C0 0.447715 0.447715 0 1 0ZM2 9H10.5858L8.29289 6.70711C7.90237 6.31658 7.90237 5.68342 8.29289 5.29289L10.5858 3H2V9Z" fill="white"/>
+        </svg>
+    )
+}
 const Icon = ({
                   label
               }: IconProps) => {
@@ -564,7 +572,7 @@ const Icon = ({
             return <UnlockedBig/>
         case "pause-circle-big":
             return <PauseCircleBig/>
-        case "arrow-down-full-sm":
+        case "arrow-down-sm":
             return <ArrowDownFullSm/>
         case "enterprise-sm":
             return <EnterpriseSm/>
@@ -604,6 +612,8 @@ const Icon = ({
             return <ArrowUp/>
         case "location":
             return <Location/>
+        case "flag":
+            return <Flag/>
     }
     return <span></span>;
 };
