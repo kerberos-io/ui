@@ -534,6 +534,17 @@ export function Compass(){
         </svg>
     )
 }
+
+export function Grid(){
+    return(
+        <svg className={"icon"} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H7C7.55228 0 8 0.447715 8 1V7C8 7.55228 7.55228 8 7 8H1C0.447715 8 0 7.55228 0 7V1ZM2 2V6H6V2H2Z" fill="#A69D9D"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 11C0 10.4477 0.447715 10 1 10H7C7.55228 10 8 10.4477 8 11V17C8 17.5523 7.55228 18 7 18H1C0.447715 18 0 17.5523 0 17V11ZM2 12V16H6V12H2Z" fill="#A69D9D"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 1C10 0.447715 10.4477 0 11 0H17C17.5523 0 18 0.447715 18 1V7C18 7.55228 17.5523 8 17 8H11C10.4477 8 10 7.55228 10 7V1ZM12 2V6H16V2H12Z" fill="#A69D9D"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 11C10 10.4477 10.4477 10 11 10H17C17.5523 10 18 10.4477 18 11V17C18 17.5523 17.5523 18 17 18H11C10.4477 18 10 17.5523 10 17V11ZM12 12V16H16V12H12Z" fill="#A69D9D"/>
+        </svg>
+    )
+}
 const Icon = ({
                   label
               }: IconProps) => {
@@ -646,6 +657,8 @@ const Icon = ({
             return <List/>
         case "compass":
             return <Compass/>
+        case "grid":
+            return <Grid/>
     }
     return <span></span>;
 };

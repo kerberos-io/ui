@@ -49,6 +49,7 @@ export const Location = () => <Icon label="location" />
 export const Flag = () => <Icon label="flag" />
 export const List = () => <Icon label="list" />
 export const Compass = () => <Icon label="compass" />
+export const Grid = () => <Icon label="grid" />
 
 
 

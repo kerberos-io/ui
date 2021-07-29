@@ -1,13 +1,13 @@
 import React from "react";
 import "./pinnedbadge.scss"
-export interface PinnedBadgeProps{
+export interface PinProps{
     pin:string,
     status:string,
     round?:boolean
 
 }
 
-const PinnedBadge = ({pin,status,round}:PinnedBadgeProps) =>{
+const Pin = ({pin,status,round}:PinProps) =>{
     const abbrPin = pin.split(" ").map(w =>w.slice(0,1).toUpperCase()).join("").slice(0,3)
     return (
         <div className="pinned-badge" style={{backgroundColor:`hsla(var(--${status}-hsl), 0.1)`,
@@ -19,4 +19,4 @@ const PinnedBadge = ({pin,status,round}:PinnedBadgeProps) =>{
     )
 }
 
-export default PinnedBadge       
+export default Pin       

@@ -23,6 +23,7 @@ import Alert from "./components/Alert";
 import { VideoWall,VWBody, VWHeader } from "./components/VideoWall";
 import SetupBox from "./components/SetupBox";
 import { Dropdown, DropList } from "./components/Dropdown";
+import Pin from "./components/Pin";
 export {
     Button,
     Sidebar,
@@ -70,5 +71,6 @@ export {
     VWBody,
     VWHeader,
     Dropdown,
-    DropList
+    DropList,
+    Pin
 };

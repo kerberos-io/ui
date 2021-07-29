@@ -1,14 +1,14 @@
 import React from "react";
-import PinnedBadge ,{PinnedBadgeProps}from "./PinnedBadge";
+import Pin ,{PinProps}from "./Pin";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 
 export default {
-    title:"Components/PinnedBadge",
-    component:PinnedBadge
+    title:"Components/Pin",
+    component:Pin
 } as Meta
 
-const Template:Story<PinnedBadgeProps> = (args) =><PinnedBadge {...args} />
+const Template:Story<PinProps> = (args) =><Pin {...args} />
 export const Default = Template.bind({})
 Default.args={
     pin:"Robert McCurry Junior",

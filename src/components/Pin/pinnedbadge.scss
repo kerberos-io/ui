@@ -3,12 +3,13 @@
     width: size(2);
     height: size(2);
     box-sizing: border-box;
-    text-align: center;
-    line-height: 1;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
     span{
         text-transform: uppercase;
         font-size: size(1)-4;
-        vertical-align: middle;
         font-weight: 600;
         color: var(--text);
     }
