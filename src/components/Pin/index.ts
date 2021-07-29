@@ -1,1 +1,1 @@
-export { default} from "./PinnedBadge"
+export { default} from "./Pin"
