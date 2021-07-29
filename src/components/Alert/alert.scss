@@ -2,7 +2,12 @@
 
 .alert{
     width: fit-content;
+    cursor: pointer;
+ 
     .icon{
+        &:hover{
+                color: var(--hub);
+        }
         margin: 6px;
         color: var(--text-muted);
 

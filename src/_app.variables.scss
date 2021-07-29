@@ -116,3 +116,7 @@ $videocard-wall:50vw;
   border: 1px solid var(--hub);
 
 }
+
+%inner-shadow-right{
+  box-shadow: -1px 0px 0px 0px hsla(0, 5%, 91%, 1) inset;
+}

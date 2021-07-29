@@ -136,6 +136,11 @@ label.generic-input{
               color: var(--text-muted);
           }
       }
+      div.icon-left{
+        svg{
+          vertical-align: middle;
+        }
+      }
       div.icon-right{
           height: 0;
           padding-left: size(1);

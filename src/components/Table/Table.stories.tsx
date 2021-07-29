@@ -10,6 +10,9 @@ import Badge from "../Badge";
 import Ellipse from "../Ellipse";
 import Icon from "../Icon";
 import Button from "../Button";
+import { CamerasTable } from "./CamerasTable";
+import { CamerasRow } from "./CamerasRow";
+import { ConnectionRow } from "./ConnectionRow";
 export default {
   title: "Components/Table",
   component: Table,
@@ -101,3 +104,23 @@ export const OnlyOneRow = () => (
     </TableBody>
   </Table>
 )
+
+export const _CamerasTable = () =>  <CamerasTable>
+<CamerasRow status="warning" statusTitle="Live" nameStatus="success" name="rorschach-first" city="Pargue" state="Czehia" time="304d 22h 48:04" version="2.8.0" isOffline={false} isEnterperise={false}/>
+<CamerasRow status="alert" statusTitle="Offline" nameStatus="hub" name="rh-second" city="Bonn" state="Germany" time="304d 22h 48:04" version="2.8.9" isOffline={true}/>
+<CamerasRow status="success" statusTitle="Live" nameStatus="success" name="rorschach-first" city="Jihlava" state="Czehia" time="304d 22h 48:04" version="2.8.0" isOffline={false} isEnterperise={false}/>
+<CamerasRow status="success" statusTitle="Live" nameStatus="success" name="rorschach-first" city="Jihlava" state="Czehia" time="304d 22h 48:04" version="2.8.0" isOffline={false}/>
+<CamerasRow status="success" statusTitle="Live" nameStatus="success" name="rorschach-first" city="Jihlava" state="Czehia" time="304d 22h 48:04" version="2.8.0" isOffline={false} isEnterperise={false}/>
+<CamerasRow status="success" statusTitle="Live" nameStatus="success" name="rorschach-first" city="Jihlava" state="Czehia" time="304d 22h 48:04" version="2.8.0" isOffline={false}/>
+</CamerasTable>
+
+export const _ConnectionTable = () =><Table>
+  <TableHeader>  
+  <TableRow headercells={["site name", "tech", "cameras","controls"]} />
+  </TableHeader>
+  <TableBody>
+  <ConnectionRow pinStatus="hub" siteName="Store01s" sitePin="Jhony Bravo" techName="Kubernetes" techContainer="Cluster" camStatus="success" camDevided={10} camDevisor={7} />
+  <ConnectionRow pinStatus="warning" siteName="Cam12" sitePin="Mamma Mia" techName="Opensource" techContainer="Docker" camStatus="alert" camDevided={1} camDevisor={4} />
+  <ConnectionRow pinStatus="hub" siteName="Store01s" sitePin="Jhony Bravo" techName="Opensource" techContainer="Raspberry Pi" camStatus="success" camDevided={10} camDevisor={7} />
+  </TableBody>
+</Table>

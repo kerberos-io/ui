@@ -68,6 +68,12 @@
               font-size: 13px;
               margin: size(1) size(0.5);
             }
+            .pinned-badge{
+              span{
+                font-size: 8px;
+                font-weight: 600;
+              }
+            }
             svg {
               color: var(--text-muted);
             }

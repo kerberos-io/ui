@@ -50,6 +50,7 @@ export const Flag = () => <Icon label="flag" />
 export const List = () => <Icon label="list" />
 export const Compass = () => <Icon label="compass" />
 export const Grid = () => <Icon label="grid" />
+export const Pencil = () => <Icon label="pencil" />
 
 
 

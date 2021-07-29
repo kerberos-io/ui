@@ -1,0 +1,162 @@
+@import "../../app.variables";
+
+.control-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--card-muted);
+    padding:0;
+    @extend %box-shadow;
+
+    // height: size(5);
+    &>div{
+        // border-right: 2px solid var(--text-muted);
+        // padding-top: size(1);
+        padding: 7px;
+        // width: 100%;
+    }
+    .generic-input{
+        .input-labels{
+            display: none;
+        }
+        .input-bar{
+            box-shadow: none;
+            background-color: var(--card-muted);
+            border: none;
+            &:focus-within{
+                box-shadow: none;
+                border: none;
+            }
+            &:hover{
+                border: none;
+            }
+            .input-box{
+                input{
+                    background-color: var(--card-muted);
+                }
+            }
+        }
+    }
+    .search-input{
+        width: 280px;
+            @extend %inner-shadow-right;
+
+        .input-bar{
+            .input-box{
+                input{
+                    width: 280px;
+                    font-size: 14px
+                }
+            }
+        }
+    }
+    .location-button{
+        // border-left: 2px solid var(--text-muted);
+            @extend %inner-shadow-right;
+
+
+        width: size(15);
+        width: 179px;
+        .generic-input{
+            .input-bar{
+                padding:size(1)-7 size(2);
+                .input-box{
+                    padding-right: size(4);
+                    // .icon-left{
+                    //     svg{
+                    //         vertical-align: middle;
+                    //     }
+                    // }
+                    input{
+                        font-size: 14px;
+                        color:var(--text-muted);
+                        cursor: pointer;
+                        &:focus{
+                            color: var(--hub);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .display-group{
+        display: flex;
+        justify-content: flex-end;
+        padding: size(1) size(2) size(1) size(1) ;
+        background-color: var(--card-muted);
+        // border-left: 2px solid var(--text-muted);
+        // padding-right: size(2);
+        width: 340px;
+        @extend %inner-shadow-right;
+
+        button{
+            &:first-of-type{
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+            }
+            &:nth-child(2){
+                border-radius: 0;
+            }
+            &:last-of-type{
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+            span{
+                color:var(--text-muted);
+                font-weight: 600;
+            }
+            &:focus-within{
+                background-color: hsla(var(--hub-hsl),0.05);
+                span{
+                        color: var(--hub);
+                }
+                svg{
+                    path{
+                        fill: var(--hub);
+                    }
+                }
+            }
+            svg{
+                path{
+                    fill: var(--text-light);
+                }
+            }
+        }
+
+    }
+
+    .sort-filter{
+        // border-left: 2px solid var(--text-muted);
+        background-color: var(--card-muted);
+
+        display: flex;
+        justify-content: flex-end;
+        // width: 180px;
+
+        .generic-input{
+            .input-bar{
+                padding:size(1)-7 size(2);
+                .input-box{
+                    
+                    // .icon-left{
+                    //     svg{
+                    //         vertical-align: middle;
+                    //     }
+                    // }
+                    input{
+                        font-size: 14px;
+                        color:var(--text);
+                        cursor: pointer;
+                        &:focus{
+                            color: var(--hub);
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+ 
