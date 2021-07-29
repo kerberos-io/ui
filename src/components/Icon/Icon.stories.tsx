@@ -47,6 +47,8 @@ export const Trush = () => <Icon label="trush" />
 export const ArrowUp = () => <Icon label="arrow-up" />
 export const Location = () => <Icon label="location" />
 export const Flag = () => <Icon label="flag" />
+export const List = () => <Icon label="list" />
+export const Compass = () => <Icon label="compass" />
 
 
 
