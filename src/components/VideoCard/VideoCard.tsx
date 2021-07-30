@@ -50,7 +50,7 @@ export const VideoCard = ({
   handleClickSD,
 }: VideoCardProps) => {
   return (
-    <div className={`${isVideoWall?"video-wall":"embedded"} ${isMediaWall?"media-wall":""}`}>
+    <div className={`${isVideoWall?"videocard-wall":"videocard-embedded"} ${isMediaWall?"videocard-media":""}`}>
       <Block>
         <BlockHeader>
           <VideoHeader statusTitle={headerStatusTitle} status={headerStatus} label={label}/>

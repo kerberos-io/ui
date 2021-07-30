@@ -14,17 +14,17 @@ import Ellipse from "./components/Ellipse";
 import AlertMessage from "./components/AlertMessage";
 import {Input,FieldSet,Form} from "./components/Input";
 import SocialList from "./components/SocialList/SocialList";
-import {LandingLayout}  from "./components/Main/LandingLayout";
+import LandingLayout  from "./components/LandingLayout";
 import TermsOfUse from "./components/TermsOfUse";
-import  {LoginCard, SignupCard}  from "./components/Cards";
 import {VideoCard, Video, VideoTools,VideoHeader} from "./components/VideoCard";
 import { Table, TableRow, TableHeader, TableCell,TableBody, CamerasTable, CamerasRow, ConnectionRow} from "./components/Table";
 import Alert from "./components/Alert";
-import { VideoWall,VWBody, VWHeader } from "./components/VideoWall";
 import SetupBox from "./components/SetupBox";
 import { Dropdown, DropList } from "./components/Dropdown";
 import Pin from "./components/Pin";
 import {ControlBar, FilterDisplay, FilterSearch, FilterSite, FilterSort } from "./components/ControlBar"
+import { VideoContainer,VideoWallHeader } from "./components/VideoContainer";
+import Toggle from "./components/Toggle";
 export {
     Button,
     Sidebar,
@@ -54,8 +54,6 @@ export {
     Form,
     SocialList,
     LandingLayout,
-    LoginCard,
-    SignupCard,
     TermsOfUse,
     VideoCard,
     VideoTools,
@@ -71,9 +69,6 @@ export {
     CamerasRow,
     ConnectionRow,
     Alert,
-    VideoWall,
-    VWBody,
-    VWHeader,
     Dropdown,
     DropList,
     Pin,
@@ -81,5 +76,8 @@ export {
     FilterDisplay,
     FilterSearch,
     FilterSite,
-    FilterSort
+    FilterSort,
+    VideoContainer,
+    VideoWallHeader,
+    Toggle
 };

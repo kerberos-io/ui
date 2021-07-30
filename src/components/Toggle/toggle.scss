@@ -1,0 +1,55 @@
+@import "../../app.scss";
+
+  .sweet-toggling .badge{
+    height: 18px;
+    width: 32px;
+    padding: 0;
+    margin: 0;
+    border-radius: size(1.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition:  background-color 300ms linear ;
+    .ellipse-container{
+      margin: 0;
+      padding: 0;
+      transition: margin 300ms linear ;
+      cursor: pointer;
+      .ellipse{
+        transition:  background-color 300ms linear ;
+        padding: 0;
+        margin: 0;
+        height: 6px;
+        width: 6px;
+      }
+    }
+  }
+
+.toggle-on{
+  .badge{
+    .ellipse-container{
+      margin-left: size(1)+6;
+    }
+  }
+}
+
+.toggle-off{
+  .badge{
+    background-color: hsla(var(--text-muted-hsl), 0.2) !important;
+    .ellipse-container{
+      border: 2px solid hsla(var(--text-muted-hsl), 0.2) !important;
+      .ellipse{
+        background-color: var(--text-muted) !important ;
+      }
+    }
+  }
+}
+
+.aura-off{
+  .badge{
+    .ellipse-container{
+      border: none !important;     
+    }
+  }
+}
+

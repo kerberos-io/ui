@@ -10,6 +10,6 @@ export interface VideoProps{
 export const Video = ({  src,poster
    }:VideoProps) => {
     return (
-        <video src={src} poster={poster}/>
+        <video className="videocard-video" src={src} poster={poster}/>
     )
 }

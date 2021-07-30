@@ -1,15 +1,18 @@
 import React from "react";
 import Button from "../Button";
-import "./videowall.scss";
-export interface VWHeaderProps  {
-  grid:string[]|number[]
+import "./videocontainer.scss";
+
+export interface VideoWallHeaderProps  {
+  grid:string[]|number[],
+  hide?:boolean
 };
 
-export const VWHeader = ({
-       grid
-            }: VWHeaderProps) => {
+export const VideoWallHeader = ({
+       grid,
+       hide=false
+            }: VideoWallHeaderProps) => {
     return (
-        <div className="vw-header">
+        <div className={`video-wall-header ${hide?"hide":""}`}>
             <a className="brand-logo">
               <img
                 src={"/images/header-minimal-logo-36x36.svg"}

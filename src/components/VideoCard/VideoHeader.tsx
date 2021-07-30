@@ -15,7 +15,7 @@ export const VideoHeader = ({
     statusTitle,
     }:VideoHeaderProps) => {
     return (
-            <div className="video-header">
+            <div className="videocard-header">
                 <h3>{label}</h3>
                 <Badge status={status} title={statusTitle}  />
             </div>

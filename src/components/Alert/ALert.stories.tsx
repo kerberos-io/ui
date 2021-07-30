@@ -6,7 +6,9 @@ import ALert,{ALertProps}  from "./Alert";
 
 export default {
     title:"Components/Alert",
-    component:ALert
+    component:ALert,
+    argTypes: { onClick: { action: 'clicked' } },
+
 } as Meta
 const Template: Story<ALertProps> = (args) => <ALert {...args} />;
 

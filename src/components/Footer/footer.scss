@@ -4,7 +4,7 @@ footer {
   @extend %inner-shadow;
   display: flex;
   box-sizing: border-box;
-  padding: size(5) size(2);
+  padding: size(6) size(2);
   justify-content: space-evenly;
   background: var(--bg-muted);
 
@@ -12,7 +12,7 @@ footer {
     font-size: 18px;
     color: var(--text-muted);
     padding: 0;
-    margin: 0 0 size(2) 0;
+    margin: 0 0 size(1) 0;
   }
 
   .footer-copyright {
@@ -41,7 +41,7 @@ footer {
             color: var(--text-light);
             font-size: 13px;
             margin: 0;
-            padding: 0 0 size(0.3) 0;
+            padding: 0;
           }
         }
       }

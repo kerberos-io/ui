@@ -7,6 +7,7 @@ import { FieldSet } from "./FieldSet";
 export default {
     title:"Components/Input",
     component:Input,
+    argTypes: { onClick: { action: 'clicked' } },
 
 } as Meta;
 const Template: Story<InputProps> = (args) => <Input {...args} />;
@@ -31,7 +32,7 @@ export const _Form = () =><Form>
         disabled={false}
         iconleft="accounts"
         placeholder="Your username/email"
-        value=""
+        // value=""
         type="text"
         />
     <Input  
@@ -43,14 +44,24 @@ export const _Form = () =><Form>
         placeholder="Your password"
         iconright="activity"
         seperate={true}
-        value=""
+        // value=""
         type="password"
         />
         </FieldSet>
     </Form>
 
-export const _Buttonize = ()=>  <Input                        
-    iconright="arrow-down-full-sm"
+export const _Buttonize1 = ()=>  <Input                        
+    iconright="arrow-down-sm"
     type="button"
     value="EN"
     />
+export const _Buttonize2 = ()=>  <Input                        
+iconleft="preferences"
+type="button"
+/>
+export const _Buttonize3 = ()=>  <Input
+iconleft="sort"
+value="Name"
+type="button"
+iconright="arrow-down-sm"
+/>

@@ -17,7 +17,7 @@ const TermsOfUse = ({
                 </p>
             </div>
             <div className="terms-checkbox" >
-                <input type="checkbox" />
+                <input required type="checkbox" />
                 <b>I have read and agree with Terms of Use</b>
             </div>
         </div>

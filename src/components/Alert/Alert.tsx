@@ -7,17 +7,21 @@ export  interface ALertProps{
     status:string,
     platter?:boolean,
     notify?:boolean,
-    blink?:boolean
+    blink?:boolean,
+    onClick?:(
+        event:React.MouseEvent<HTMLDivElement,MouseEvent>
+    )=>void
 
 }
 const ALert = ({
     status,
     platter,
     notify,
-    blink
+    blink,
+    onClick
 }:ALertProps) =>{
     return(
-        <div className={`alert ${platter?"with-platter":""}`}>
+        <div onClick={onClick} className={`alert ${platter?"with-platter":""}`}>
             {
             notify?<Ellipse status={status} aura blink={blink}/>:null
             }
