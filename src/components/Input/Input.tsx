@@ -52,15 +52,8 @@ export const Input = ({
        :(input["type"]="text",setIcon("activity"))
     }
 
-    const handleKeyDown=(e:any)=>{
-      if(e.key==="Enter"){
-          e.preventDefault()       
-        }
-    }
-
     const eyeEvents = {
       onClick:handleClickShowPassword,
-      onKeyDown:handleKeyDown
     }
     
   return (
@@ -78,7 +71,7 @@ export const Input = ({
                       <Icon label={`${iconleft}`} />
                     </div>
                   ) : null}
-                  <input ref={inputRef} onKeyDown={handleKeyDown} {...rest} type={type} className="input"  readOnly={readonly} disabled={disabled}  placeholder={placeholder} value={value} onChange={onChange} onClick={onClick}/>
+                  <input ref={inputRef} {...rest} type={type} className="input"  readOnly={readonly} disabled={disabled}  placeholder={placeholder} value={value} onChange={onChange} onClick={onClick}/>
                 </div>
             
                 {iconright ? (
