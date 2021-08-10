@@ -6,5 +6,6 @@ export default {
     title: "Components/Main",
 } as Meta;
 
+
 export const Main = () => MainPage();
 
