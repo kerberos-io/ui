@@ -10,19 +10,19 @@ const Copyright = {
     socials:[
         {
             label:"twitter",
-            href:""
+            href:"https://twitter.com/kerberosio"
         },
         {
             label:"reddit",
-            href:""
+            href:"https://www.reddit.com/r/kerberos_io/"
         },
         {
             label:"youtube",
-            href:""
+            href:"https://www.youtube.com/channel/UCnd9q7iRNNw4W95eQwQuECA"
         },
         {
             label:"github",
-            href:""
+            href:"https://github.com/kerberos-io"
         }
     ]
 };
@@ -30,53 +30,53 @@ const Copyright = {
 const Column2 = [
     {
         item:"Opensource Agent",
-        href:""
+        href:"https://doc.kerberos.io/opensource/get-started/"
     },
     {
         item:"Enterprise Agent",
-        href:""
-    },
-    {
-        item:"Kerberos Hub",
-        href:""
+        href:"https://doc.kerberos.io/enterprise/get-started/"
     },
     {
         item:"Kerberos Vault",
-        href:""
+        href:"https://doc.kerberos.io/vault/get-started/"
+    },
+    {
+        item:"Kerberos Hub",
+        href:"https://doc.kerberos.io/hub/first-things-first/"
     }
 ];
 
 const Column3 = [
     {
         item:"Documentation",
-        href:""
+        href:"https://doc.kerberos.io/"
     },
     {
         item:"Enterprise Support",
-        href:""
+        href:"https://kerberosio.zendesk.com/hc/en-us"
     },
     {
         item:"Reddit Community",
-        href:""
+        href:"https://www.reddit.com/r/kerberos_io/"
     }
 ];
 
 const Column4 = [
     {
+        item:"Homepage",
+        href:"https://kerberos.io/"
+    },
+    {
         item:"About",
-        href:""
+        href:"https://kerberos.io/about/"
     },
     {
         item:"Contact",
-        href:""
-    },
-    {
-        item:"Blog",
-        href:""
+        href:"https://kerberos.io/about/"
     },
     {
         item:"Careers",
-        href:""
+        href:"https://kerberos.io/about/"
     }
 ];
 

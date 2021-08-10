@@ -1,6 +1,6 @@
 {
   "name": "@kerberos-io/ui",
-  "version": "1.44.0",
+  "version": "1.45.0",
   "main": "lib/index.js",
   "repository": "https://github.com/kerberos-io/ui",
   "author": "cedricve <cedric@verstraeten.io>",

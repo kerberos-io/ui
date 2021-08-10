@@ -16,7 +16,7 @@ const FooterList = ({ title, items }: FooterProps) => {
       <ul>
         { items.map(({ item, href }) => (
             <li>
-              <a href={href}>
+              <a target={"_blank"} href={href}>
                 <p>{item}</p>
               </a>
             </li>
