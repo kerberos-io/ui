@@ -51,8 +51,8 @@ export const WithLogin= () => <Block>
     </BlockBody>
     <BlockFooter>
         <Button icon="" type="outlined" label="Sign-up" />
-        <Button type="default" icon="logout" label="Login" />
-    </BlockFooter> 
+        <Button buttonType="submit" type="default" icon="logout" label="Login" />
+    </BlockFooter>
 </Block>
 
 const termsofuse={

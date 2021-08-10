@@ -5,6 +5,7 @@ import "./button.scss";
 export interface ButtonProps  {
     label: string;
     icon: string;
+    buttonType?: "button" | "submit" | "reset";
     type?: string;
     onClick?: (
         event: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -14,11 +15,12 @@ export interface ButtonProps  {
 const Button = ({
                 onClick,
                 label,
+                buttonType = "button",
                 type = "neutral",
                 icon,
             }: ButtonProps) => {
     return (
-        <button onClick={onClick} className={`button ${type}`}>
+        <button type={buttonType} onClick={onClick} className={`button ${type}`}>
             <Icon label={icon}/>
             <span className="text">{label}</span>
         </button>
