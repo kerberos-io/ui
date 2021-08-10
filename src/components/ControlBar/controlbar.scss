@@ -20,9 +20,9 @@
             display: none;
         }
         .input-bar{
-            box-shadow: none;
+            box-shadow: none !important; ;
             background-color: var(--card-muted);
-            border: none;
+            border: none !important;;
             &:focus-within{
                 box-shadow: none;
                 border: none;
@@ -53,6 +53,7 @@
     .location-button{
         // border-left: 2px solid var(--text-muted);
             @extend %inner-shadow-right;
+            background-color: var(--card-muted);
 
 
         width: size(15);

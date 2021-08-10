@@ -1,0 +1,32 @@
+@import "../../app.scss";
+
+#landing-layout {
+    padding: 0 initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    header {
+        padding: size(9)-5 0 size(6) 0;
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: size(1);
+
+            span.version {
+                font-size: 14px;
+                color: var(--text-light);
+                font-weight: 400;
+            }
+        }
+
+        p {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    footer{
+        padding-top: size(6);
+    }
+}

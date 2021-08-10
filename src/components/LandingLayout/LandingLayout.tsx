@@ -1,7 +1,7 @@
 import React from "react";
 import { Footer, FooterList, FooterCopyright } from "../Footer";
 import Gradient from "../Gradient";
-import "./main.scss";
+import "./landinglayout.scss";
 
 const Copyright = {
     title: "Kerberos.io",
@@ -39,38 +39,47 @@ const Column2 = [
     {
         item:"Kerberos Hub",
         href:""
+    },
+    {
+        item:"Kerberos Vault",
+        href:""
     }
 ];
 
 const Column3 = [
     {
-        item:"Opensource Agent",
+        item:"Documentation",
         href:""
     },
     {
-        item:"Enterprise Agent",
+        item:"Enterprise Support",
         href:""
     },
     {
-        item:"Kerberos Hub",
+        item:"Reddit Community",
         href:""
     }
 ];
 
 const Column4 = [
     {
-        item:"Opensource Agent",
+        item:"About",
         href:""
     },
     {
-        item:"Enterprise Agent",
+        item:"Contact",
         href:""
     },
     {
-        item:"Kerberos Hub",
+        item:"Blog",
+        href:""
+    },
+    {
+        item:"Careers",
         href:""
     }
 ];
+
 
 export interface LandingLayoutProps{
     children:any,
@@ -78,7 +87,7 @@ export interface LandingLayoutProps{
     version?:string,
     description?:string
 }
-export const LandingLayout = ({
+const LandingLayout = ({
     children,
     title,
     version,
@@ -108,3 +117,4 @@ export const LandingLayout = ({
             />
         </Footer>
     </div>
+export default LandingLayout

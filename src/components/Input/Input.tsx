@@ -40,12 +40,29 @@ export const Input = ({
                  ...rest
 
 }: InputProps) => {
-  const inputRef = React.useRef() as any
-    const handlelickShowPassword=(event:any)=>{
+
+    const inputRef = React.useRef() as any;
+    const [ icon, setIcon ]=React.useState("eye-crossed");
+
+    const handleClickShowPassword=(event:any)=>{
       event.preventDefault()
       const input = inputRef.current
-      input["type"]==="text" ? input["type"]="password" :input["type"]="text"
+      input["type"]==="text" ?
+       (input["type"]="password" ,setIcon("eye-crossed"))
+       :(input["type"]="text",setIcon("activity"))
     }
+
+    const handleKeyDown=(e:any)=>{
+      if(e.key==="Enter"){
+          e.preventDefault()       
+        }
+    }
+
+    const eyeEvents = {
+      onClick:handleClickShowPassword,
+      onKeyDown:handleKeyDown
+    }
+    
   return (
         <label className={`generic-input ${type==="button"?"buttonize":""}`}>
           <div className="input-labels">
@@ -61,15 +78,17 @@ export const Input = ({
                       <Icon label={`${iconleft}`} />
                     </div>
                   ) : null}
-                  <input ref={inputRef} {...rest} type={type} className="input"  readOnly={readonly} disabled={disabled}  placeholder={placeholder} value={value} onChange={onChange} onClick={onClick}/>
+                  <input ref={inputRef} onKeyDown={handleKeyDown} {...rest} type={type} className="input"  readOnly={readonly} disabled={disabled}  placeholder={placeholder} value={value} onChange={onChange} onClick={onClick}/>
                 </div>
             
                 {iconright ? (
-                   iconright==="activity"?<Button icon="activity" label="" type="outlined" onClick={handlelickShowPassword}/>:
-                    <div className={`icon-right ${seperate ?"seperate":""}`}>
-                     <Icon label={`${iconright}`} />
-                    </div>
-                    
+                   iconright === "activity" ?
+                    <span {...eyeEvents}>
+                      <Button  icon={icon} label="" type="outlined"  />
+                    </span>
+                     :<div className={`icon-right ${seperate ?"seperate":""}`}>
+                        <Icon label={`${iconright}`} />
+                      </div>                    
                 ) :<span className="expand"></span>}
           </div>
         </label>

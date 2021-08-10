@@ -23,7 +23,7 @@ export const VideoTools = ({
     duration,
     camera}:VideoToolsProps) => {
     return (
-        <div className="video-tools">
+        <div className="videocard-tools">
             <div className="duration">
                     <span>{duration}</span>
                 </div>

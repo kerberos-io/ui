@@ -1,13 +1,13 @@
 @import "../../app.scss";
 
-.video-header {
+.videocard-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 size(1.5);
 }
-.video-tools {
+.videocard-tools {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,17 +51,16 @@
           border: none;
         }
 
-        &:hover {
-          background-color: hsla(0, 5%, 93%, 0.8);
+        &:hover,&:focus {
+          background-color: hsla(var(--bg-hsl), 0.8);
           color: var(--text-muted);
-          cursor: text;
         }
       }
     }
   
   }
 }
-video {
+.videocard-video {
   height: auto;
   width:$videocard-desktop;
   width: 100%;
@@ -71,7 +70,7 @@ video {
   // }
 }
 
-.video-wall{
+.videocard-wall{
   .block-generic{
     width: auto;
   }
@@ -83,7 +82,7 @@ video {
     padding: 0;
     margin: 0;
     flex-direction: column-reverse;
-    .video-tools{
+    .videocard-tools{
      position: relative; 
       margin-top: -53px;
       .right-tools{
@@ -118,7 +117,7 @@ video {
   }
 }
 
-.embedded{  
+.videocard-embedded{  
   .block-generic{
     width: auto;
   }
@@ -130,7 +129,7 @@ video {
     padding: 0;
     margin: 0;
 
-    .video-tools{
+    .videocard-tools{
       margin: 12px 0;
     
       .left-tools{
@@ -151,7 +150,7 @@ video {
     display: none;
   }
 }
-.media-wall{
+.videocard-media{
   .block-generic{
     width: auto;
   }
@@ -160,8 +159,12 @@ video {
   }
   .block-body{
     justify-content: flex-end;
-    .video-tools{
+    flex-direction: column-reverse;
+    .videocard-tools{
       margin: size(0.5);
+      position: relative;
+      top: -38px;
+      margin-bottom: -25px;
       .duration{
         display: block;
         z-index: 1; //higher than video

@@ -1,6 +1,6 @@
 @import "../../app.scss";
 
-.vw-header {
+.video-wall-header {
     background: #262424;
     display: flex;
     justify-content: space-between;
@@ -9,6 +9,10 @@
     padding: 0px 0 0px size(2)-4;
     box-sizing: border-box;
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 454545;
     @extend %card-header-shadow;
     .brand-logo {
       display: flex;
@@ -36,15 +40,51 @@
   }
 
 
-.page-video-wall{
+.video-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: size(4);
+  z-index: 454;
+  display: grid;
+  column-gap: 0;
+  row-gap: 0;
+  grid-template-columns: auto auto;
+}
 
-  .grid-container{
-      display: grid;
-      column-gap: unset;
-      row-gap: unset;
-      grid-template-columns: auto auto;
-  }
+.video-container-embedded{  
+   position: relative;
+   display: grid;
+   column-gap: size(2);
+   row-gap: size(2);
+   top: 0;
+    .vw-header {
+      display: none;
+    }
+  
+  // .grid-container {
+  //   display: grid;
+  //   column-gap: size(2);
+  //   row-gap: size(2);
+    .videocard-embedded {
+      .block-body {
+        .videocard-tools {
+          position: relative;
+          margin-bottom: -38px;
+        }
+      }
+    }
+  // }
+}
 
+.hide{
+  display: none;
+}
+
+ 
   .cols-2{
     grid-template-columns: auto auto;
   }
@@ -55,8 +95,3 @@
   .cols-4{
     grid-template-columns: auto auto auto auto;
   }
-}
-
-.hide{
-  display: none;
-}

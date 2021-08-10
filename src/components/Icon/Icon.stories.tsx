@@ -51,6 +51,10 @@ export const List = () => <Icon label="list" />
 export const Compass = () => <Icon label="compass" />
 export const Grid = () => <Icon label="grid" />
 export const Pencil = () => <Icon label="pencil" />
+export const ArrowDown = () => <Icon label="arrowdown" />
+export const Preferences = () => <Icon label="preferences" />
+export const ArrowRight = () => <Icon label="arrowright" />
+export const EyeCrossed = () => <Icon label="eye-crossed" />
 
 
 

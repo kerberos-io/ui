@@ -47,35 +47,43 @@ const Column2 = [
     {
         item:"Kerberos Hub",
         href:""
+    },
+    {
+        item:"Kerberos Vault",
+        href:""
     }
 ];
 
 const Column3 = [
     {
-        item:"Opensource Agent",
+        item:"Documentation",
         href:""
     },
     {
-        item:"Enterprise Agent",
+        item:"Enterprise Support",
         href:""
     },
     {
-        item:"Kerberos Hub",
+        item:"Reddit Community",
         href:""
     }
 ];
 
 const Column4 = [
     {
-        item:"Opensource Agent",
+        item:"About",
         href:""
     },
     {
-        item:"Enterprise Agent",
+        item:"Contact",
         href:""
     },
     {
-        item:"Kerberos Hub",
+        item:"Blog",
+        href:""
+    },
+    {
+        item:"Careers",
         href:""
     }
 ];
