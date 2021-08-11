@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7874eca-d48e-4f8e-9104-f922ae587379" name="Default Changelist" comment="" />
+    <list default="true" id="a7874eca-d48e-4f8e-9104-f922ae587379" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Block/Block.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Block/Block.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/FooterList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/FooterList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LandingLayout/LandingLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingLayout/LandingLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.stories.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +33,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1tydDSKjaOeDCjd1owwEziwSDbw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -84,6 +96,8 @@
       <workItem from="1624456585247" duration="7000" />
       <workItem from="1626431694074" duration="732000" />
       <workItem from="1626460941597" duration="1829000" />
+      <workItem from="1628088724027" duration="1683000" />
+      <workItem from="1628621989738" duration="5745000" />
     </task>
     <servers />
   </component>
