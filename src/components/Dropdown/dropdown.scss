@@ -28,10 +28,10 @@
     li{
       padding: 0 size(2);
       &:focus-within{
-        background: hsla(var(--hub-hsl), 0.1);
+        background: hsla(var(--primary-hsl), 0.1);
       }
       &:hover{
-        background: hsla(var(--hub-hsl), 0.1);
+        background: hsla(var(--primary-hsl), 0.1);
       }
       &:first-of-type{
        .drop-items{

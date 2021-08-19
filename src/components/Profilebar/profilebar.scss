@@ -13,7 +13,7 @@
     cursor: pointer;
 
     &.is-active {
-      background: hsla(var(--hub-hsl), 0.1);
+      background: hsla(var(--primary-hsl), 0.1);
       border-radius: var(--radius);
       border-top-left-radius: 30px;
       border-bottom-left-radius: 30px;

@@ -42,7 +42,7 @@ ul.nav {
     }
     &.is-active {
       font-weight: 600;
-      background: hsla(var(--hub-hsl), 0.1);
+      background: hsla(var(--primary-hsl), 0.1);
       span {
         color: var(--hub);
       }
@@ -52,7 +52,7 @@ ul.nav {
       .badge {
         color: var(--hub);
         font-weight: 400;
-        box-shadow: 0 0 0 1px hsla(var(--hub-hsl), 0.5) inset;
+        box-shadow: 0 0 0 1px hsla(var(--primary-hsl), 0.5) inset;
       }
     }
     .menu-caret {

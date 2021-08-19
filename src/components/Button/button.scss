@@ -48,7 +48,7 @@
   }
   // draw semitransparent shadow around the button
   &:focus {
-    box-shadow: 0 0 0 4px hsla(var(--hub-hsl), 0.25);
+    box-shadow: 0 0 0 4px hsla(var(--primary-hsl), 0.25);
   }
   &.input { width: auto; } // fix for input buttons
 

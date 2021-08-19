@@ -108,7 +108,7 @@
                 font-weight: 600;
             }
             &:focus-within{
-                background-color: hsla(var(--hub-hsl),0.05);
+                background-color: hsla(var(--primary-hsl),0.05);
                 span{
                         color: var(--hub);
                 }
@@ -160,4 +160,3 @@
     }
 }
 
- 
