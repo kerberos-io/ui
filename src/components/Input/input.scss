@@ -17,7 +17,7 @@ label.generic-input{
         }
       }
     .hint {
-      color: var(--hub);
+      color: var(--primary);
       cursor: pointer;
       text-transform: none;
 
@@ -103,7 +103,7 @@ label.generic-input{
       }
       svg:hover{
         path{
-          fill:var(--hub)
+          fill:var(--primary)
         }
       }
     }

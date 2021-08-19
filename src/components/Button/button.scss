@@ -15,9 +15,9 @@
   align-items: center;
   justify-content: center;
   height: size(3);
-  background: var(--hub);
+  background: var(--primary);
   border: 0;
-  border-bottom: 2px solid var(--hub-darker);
+  border-bottom: 2px solid var(--primary-darker);
   border-radius: var(--radius);
   cursor: pointer;
   outline: none;
@@ -40,7 +40,7 @@
   // make the button look pressed a bit (move icon and text down) + colorize the same color as button shadow
   &.active { box-shadow: 0 3px 1px hsla(var(--text-hsl), 0.4) inset; }
   &:hover, &.active {
-    background: var(--hub-darker);
+    background: var(--primary-darker);
     text-decoration: none;
     .icon { top: 1px; }
     .text { top: 1px; }

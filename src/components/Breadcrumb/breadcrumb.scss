@@ -38,7 +38,7 @@ header.breadcrumb {
         color: var(--text-muted);
 
         &:focus, &:hover {
-          color: var(--hub);
+          color: var(--primary);
         }
       }
 
@@ -46,7 +46,7 @@ header.breadcrumb {
         margin: 0 size(1) 0 0;
 
         &.active {
-          color: var(--hub);
+          color: var(--primary);
         }
 
         &::after {

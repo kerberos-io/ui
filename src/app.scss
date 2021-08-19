@@ -79,9 +79,9 @@ hr {
   align-items: center;
   justify-content: center;
   height: size(3);
-  background: var(--hub);
+  background: var(--primary);
   border: 0;
-  border-bottom: 2px solid var(--hub-darker);
+  border-bottom: 2px solid var(--primary-darker);
   border-radius: var(--radius);
   cursor: pointer;
   outline: none;
@@ -104,7 +104,7 @@ hr {
   // make the button look pressed a bit (move icon and text down) + colorize the same color as button shadow
   &.active { box-shadow: 0 3px 1px hsla(var(--text-hsl), 0.4) inset; }
   &:hover, &.active {
-    background: var(--hub-darker);
+    background: var(--primary-darker);
     text-decoration: none;
     .icon { top: 1px; }
     .text { top: 1px; }
@@ -192,7 +192,7 @@ label {
   cursor: pointer;
   &:hover { color: var(--text-muted); }
   &:focus-within { // if any item within <label> is focused..
-    color: var(--hub); font-weight: 560; // ..colorize label's text
+    color: var(--primary); font-weight: 560; // ..colorize label's text
   }
   // Toggle buttons
   &.toggle-button {
@@ -243,7 +243,7 @@ input, textarea, select {
       border: 1px solid var(--text-light);
     }
     &:focus {
-      border: 1px solid var(--hub);
+      border: 1px solid var(--primary);
       box-shadow: 0px 0px 0px 3px hsla(var(--primary-hsl), 0.2);
     }
   }
@@ -358,7 +358,7 @@ input, textarea, select {
       box-shadow: none;
     }
     &:focus-within {
-      .icon * { fill: var(--hub); }
+      .icon * { fill: var(--primary); }
     }
   }
   ul.items { // list of selectable items (scrollable)
@@ -382,7 +382,7 @@ input, textarea, select {
       &:hover { background: var(--card-muted); }
       &.selected {
         background: hsla(var(--primary-hsl), 0.1);
-        .name, .meta { color: var(--hub); }
+        .name, .meta { color: var(--primary); }
         &:hover { background: hsla(var(--primary-hsl), 0.15); }
       }
       .checkbox {

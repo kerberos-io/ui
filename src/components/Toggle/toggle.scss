@@ -8,7 +8,6 @@
     border-radius: size(1.5);
     display: flex;
     align-items: center;
-    justify-content: space-around;
     transition:  background-color 300ms linear ;
     .ellipse-container{
       margin: 0;
@@ -27,16 +26,17 @@
 
 .toggle-on{
   .badge{
-    .ellipse-container{
-      margin-left: size(1)+6;
-    }
+    justify-content: flex-end;
   }
 }
 
 .toggle-off{
   .badge{
+    justify-content: flex-start;
     background-color: hsla(var(--text-muted-hsl), 0.2) !important;
     .ellipse-container{
+      left: 5px;
+      position: relative;
       border: 2px solid hsla(var(--text-muted-hsl), 0.2) !important;
       .ellipse{
         background-color: var(--text-muted) !important ;
@@ -48,6 +48,8 @@
 .aura-off{
   .badge{
     .ellipse-container{
+      right: 5px;
+      position: relative;
       border: none !important;     
     }
   }

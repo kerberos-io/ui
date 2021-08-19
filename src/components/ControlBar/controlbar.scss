@@ -73,7 +73,7 @@
                         color:var(--text-muted);
                         cursor: pointer;
                         &:focus{
-                            color: var(--hub);
+                            color: var(--primary);
                         }
                     }
                 }
@@ -110,11 +110,11 @@
             &:focus-within{
                 background-color: hsla(var(--primary-hsl),0.05);
                 span{
-                        color: var(--hub);
+                        color: var(--primary);
                 }
                 svg{
                     path{
-                        fill: var(--hub);
+                        fill: var(--primary);
                     }
                 }
             }
@@ -150,7 +150,7 @@
                         color:var(--text);
                         cursor: pointer;
                         &:focus{
-                            color: var(--hub);
+                            color: var(--primary);
                         }
 
                     }
