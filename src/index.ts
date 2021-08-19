@@ -25,6 +25,7 @@ import Pin from "./components/Pin";
 import {ControlBar, FilterDisplay, FilterSearch, FilterSite, FilterSort } from "./components/ControlBar"
 import { VideoContainer,VideoWallHeader } from "./components/VideoContainer";
 import Toggle from "./components/Toggle";
+import InfoBar from "./components/InfoBar";
 export {
     Button,
     Sidebar,
@@ -79,5 +80,6 @@ export {
     FilterSort,
     VideoContainer,
     VideoWallHeader,
-    Toggle
+    Toggle,
+    InfoBar
 };

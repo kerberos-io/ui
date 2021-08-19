@@ -7,6 +7,7 @@ export interface NavigationItemProps  {
     title:string;
     icon:string;
     link?:any;
+    external?:boolean;
     active?:boolean;
 };
 
@@ -14,14 +15,18 @@ const NavigationItem = ({
                         title,
                         icon,
                         link,
+                        external = false,
                         active = false,
                     }: NavigationItemProps) => {
     return (
         <li>
-            <NavLink to={link} activeClassName="is-active">
+            { !external ? <NavLink to={link} activeClassName="is-active">
                 <Icon label={icon}/>
                 <span>{title}</span>
-            </NavLink>
+            </NavLink> : <a href={link} target={"_blank"}>
+                <Icon label={icon}/>
+                <span>{title}</span>
+            </a> }
         </li>);
 };
 

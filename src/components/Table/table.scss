@@ -6,6 +6,9 @@
     text-align: justify;
 
     thead.table-header {
+      th {
+        font-weight: normal;
+      }
       .table-row {
         th {
           &:first-of-type {
@@ -13,7 +16,6 @@
           }
           &:last-of-type {
             padding-right: size(2);
-
             float: right;
           }
           .table-cell {

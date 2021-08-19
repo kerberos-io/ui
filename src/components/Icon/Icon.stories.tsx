@@ -55,7 +55,10 @@ export const ArrowDown = () => <Icon label="arrowdown" />
 export const Preferences = () => <Icon label="preferences" />
 export const ArrowRight = () => <Icon label="arrowright" />
 export const EyeCrossed = () => <Icon label="eye-crossed" />
-
-
-
-
+export const Api = () => <Icon label="api" />
+export const Book = () => <Icon label="book" />
+export const Github = () => <Icon label="github" />
+export const GithubNav = () => <Icon label="github-nav" />
+export const InfoAddUser = () => <Icon label="info-add-user" />
+export const InfoHeavyBox = () => <Icon label="info-heavy-box" />
+export const InfoProfessor = () => <Icon label="info-professor" />
