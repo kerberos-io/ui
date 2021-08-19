@@ -12,7 +12,14 @@ export default {
 const Template: Story<ToggleProps> = (args) => <Toggle {...args} />;
 
 // Reuse that template for creating different stories
-export const Default = Template.bind({});
-Default.args = { 
+export const ToggleOff = Template.bind({});
+ToggleOff.args = {
     on:false
- };
+};
+
+
+// Reuse that template for creating different stories
+export const ToggleOn = Template.bind({});
+ToggleOn.args = {
+    on:true
+};

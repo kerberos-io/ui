@@ -28,3 +28,9 @@ export const WithWarningStatus = Template.bind({})
 WithWarningStatus.args={
     status:"warning",
 }
+
+export const WithLabel = () => (
+    <>
+        <Ellipse status="color-red" /> <p>rh-first</p>
+    </>
+);

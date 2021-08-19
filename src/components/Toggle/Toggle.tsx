@@ -20,7 +20,7 @@ const Toggle = ({
     onClick}:ToggleProps) => {
     return (
         <div className={`sweet-toggling ${on?"toggle-on":"toggle-off"} ${aura?"":"aura-off"}`} onClick={onClick}>
-            <Badge status={status} title="   " blink={false} aura={aura}/>
+            <Badge status={status} title="" blink={false} aura={aura}/>
         </div>
     );
 };
