@@ -9,15 +9,17 @@ export interface InputProps {
   value?: string;
   readonly?: boolean;
   disabled?: boolean;
-
   hint?: string;
   iconleft?: string;
   iconright?: string;
   seperate?: boolean;
-  type:string,
-  onChange?: (
-    event:React.FormEvent<HTMLInputElement> 
-  ) => void;
+  type?:string,
+    onBlur?: (
+        event:React.FormEvent<HTMLInputElement>
+    ) => void;
+    onChange?: (
+        event:React.FormEvent<HTMLInputElement>
+    ) => void;
   onClick?: (
     event: React.MouseEvent<HTMLInputElement, MouseEvent>
   ) => void;
@@ -59,7 +61,7 @@ export const Input = ({
   return (
         <label className={`generic-input ${type==="button"?"buttonize":""}`}>
           <div className="input-labels">
-               <p>{label} {readonly ?<i>(readonly)</i>:null}</p>
+               <p>{label} {label && readonly ?<i>(readonly)</i>:null}</p>
                {
                  hint?<p className="hint">{hint}</p>:null
                }

@@ -36,8 +36,8 @@ label.generic-input{
         @extend %input-hover-border;
       }
       &:focus-within{
-          @extend %input-focus-border;
-         @extend %input-box-shadow;
+        @extend %input-focus-border;
+        @extend %input-box-shadow;
       }
     
     .input-box {

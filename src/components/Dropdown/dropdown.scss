@@ -1,5 +1,12 @@
 @import "../../app.scss";
 
+.input {
+  cursor: pointer;
+}
+
+.dropdown-container {
+  position: relative;
+}
 .dropdown{
   position: absolute;
   top: 72px;
@@ -8,6 +15,7 @@
   border-radius: var(--radius);
   z-index: 999;
   @extend %modal-shadow;
+
   #arrow-up{
     content: "";
     width: 18px;
@@ -23,7 +31,6 @@
     margin: 0;
     padding: 0;
     border-radius: var(--radius);
-    
 
     li{
       padding: 0 size(2);
@@ -38,7 +45,6 @@
           padding-top: 10px;
        }
       }
-
      
       .drop-items{
         display: flex;
@@ -113,6 +119,7 @@
 }
 
 .right{
+  right: 0;
   #arrow-up{
     right: 20px;
   }

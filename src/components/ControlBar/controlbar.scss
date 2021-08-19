@@ -12,7 +12,7 @@
     &>div{
         // border-right: 2px solid var(--text-muted);
         // padding-top: size(1);
-        padding: 7px;
+        padding: 6px;
         // width: 100%;
     }
     .generic-input{
@@ -84,7 +84,7 @@
     .display-group{
         display: flex;
         justify-content: flex-end;
-        padding: size(1) size(2) size(1) size(1) ;
+        align-color: center;
         background-color: var(--card-muted);
         // border-left: 2px solid var(--text-muted);
         // padding-right: size(2);
