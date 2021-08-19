@@ -16,7 +16,7 @@
     --vault-hsl: 229, 25%, 45%;
     --vault-darker: hsl(230, 28%, 31%);
     --vault-darker-hsl: 230, 28%, 31%;
-    
+
     --primary: hsl(278, 30%, 48%);
     --primary-hsl: 278, 30%, 48%;
     --primary-darker: hsl(278, 34%, 31%);
@@ -61,8 +61,8 @@
     --bg-white: hsl(0, 0%, 100%);
     --bg-white-hsl: 0, 0%, 100%;
 
-    --upper-gradient: linear-gradient(90deg, var(--hub) 0%, #b255b4 58.33%, var(--oss) 100%);
-    --upper-gradient-mobile: linear-gradient(90deg, var(--hub) 0%, #b255b4 100%);
+    --upper-gradient: linear-gradient(90deg, var(--primary) 0%, #b255b4 58.33%, var(--oss) 100%);
+    --upper-gradient-mobile: linear-gradient(90deg, var(--primary) 0%, #b255b4 100%);
 
     /* Special colors to be picked */
     --color-pink: hsl(324, 86%, 47%);
