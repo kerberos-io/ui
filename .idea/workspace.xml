@@ -6,15 +6,14 @@
       <change afterPath="$PROJECT_DIR$/src/components/InfoBar/InfoBar.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/InfoBar/index.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/InfoBar/infobar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modal/Modal.stories.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/Modal/Modal.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/Modal/ModalBody.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/Modal/ModalFooter.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/Modal/ModalHeader.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/Modal/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modal/modal.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ControlBar/controlbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ControlBar/controlbar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dropdown/Dropdown.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dropdown/dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dropdown/dropdown.scss" afterDir="false" />
@@ -22,6 +21,9 @@
       <change beforePath="$PROJECT_DIR$/src/components/Icon/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/Icon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/github.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/github.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input/input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/Modal.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/Modal.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/modal.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/navigation.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Table/table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/table.scss" afterDir="false" />
@@ -115,7 +117,7 @@
       <workItem from="1628088724027" duration="1683000" />
       <workItem from="1628621989738" duration="6635000" />
       <workItem from="1628833246545" duration="585000" />
-      <workItem from="1629369755695" duration="21408000" />
+      <workItem from="1629369755695" duration="27603000" />
     </task>
     <servers />
   </component>

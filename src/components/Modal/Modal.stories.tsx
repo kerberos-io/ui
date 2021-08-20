@@ -43,11 +43,11 @@ export const Default = () =><Modal>
                     type={"text"} />
                 <Input
                     label={"Region"}
-                    placeholder={"The region you host SQS in."}
+                    placeholder={"The region where you consume SQS"}
                     type={"text"} />
                 <Input
                     label={"Topic"}
-                    placeholder={"The topic name to which messages will be send."}
+                    placeholder={"The topic name to which messages will be send"}
                     type={"text"} />
             </div>
 
@@ -60,11 +60,11 @@ export const Default = () =><Modal>
                 <p>To connect your AWS SQS queue, make sure <a href={"https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-setting-up.html#sqs-getting-access-key-id-secret-access-key"} target={"_blank"}>you have created an IAM user</a> through the AWS console, and given it the correct permissions.</p>
                 <Input
                     label={"Access key"}
-                    placeholder={"Retrieve the access key from your IAM user."}
+                    placeholder={"Retrieve the access key from your IAM user"}
                     type={"text"} />
                 <Input
                     label={"Secret access key"}
-                    placeholder={"Retrieve the secret access key from your IAM user."}
+                    placeholder={"Retrieve the secret access key from your IAM user"}
                     type={"text"} />
             </div>
         </div>
