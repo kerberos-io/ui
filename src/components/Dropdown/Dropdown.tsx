@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "../Icon";
 import { Input } from "../Input";
-const { useState } = React;
+const { useState, useRef, useEffect } = React;
 import "./dropdown.scss";
 
 export interface DropdownProps  {
@@ -18,12 +18,27 @@ export const Dropdown = ({
 
     const [check, setCheck] = useState(false);
     const toggleChecked = () => setCheck(value => !value);
+    const node = useRef();
+    const handleClick = e => {
+        if (node.current.contains(e.target)) {
+            return;
+        }
+        setCheck(false);
+    };
+
+    useEffect(() => {
+        // add when mounted
+        document.addEventListener("mousedown", handleClick);
+        // return function to be called when unmounted
+        return () => {
+            document.removeEventListener("mousedown", handleClick);
+        };
+    }, []);
 
     return (
-        <div className={"dropdown-container"}>
+        <div className={"dropdown-container"} ref={node}>
             <div className={"input"}>
                 <Input
-                    onBlur={() => setCheck(false)}
                     onClick={toggleChecked}
                     iconleft={"location"}
                     iconright={"arrow-down-sm"}
