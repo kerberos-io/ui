@@ -13,8 +13,7 @@ export interface DropdownProps  {
 export const Dropdown = ({
     children,
     direction,
-    search=true
-              }: DropdownProps) => {
+    search=true }: DropdownProps) => {
 
     const [check, setCheck] = useState(false);
     const toggleChecked = () => setCheck(value => !value);

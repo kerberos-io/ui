@@ -4,26 +4,25 @@ import Button from "../Button";
 import "./input.scss";
 
 export interface InputProps {
-  label?: string;
-  placeholder?: string;
-  value?: string;
-  readonly?: boolean;
-  disabled?: boolean;
-  hint?: string;
-  iconleft?: string;
-  iconright?: string;
-  seperate?: boolean;
-  type?:string,
+    label?: string;
+    placeholder?: string;
+    value?: string;
+    readonly?: boolean;
+    disabled?: boolean;
+    hint?: string;
+    iconleft?: string;
+    iconright?: string;
+    seperate?: boolean;
+    type?:string,
     onBlur?: (
         event:React.FormEvent<HTMLInputElement>
     ) => void;
     onChange?: (
         event:React.FormEvent<HTMLInputElement>
     ) => void;
-  onClick?: (
+    onClick?: (
     event: React.MouseEvent<HTMLInputElement, MouseEvent>
-  ) => void;
-
+    ) => void;
 }
 
 export const Input = ({

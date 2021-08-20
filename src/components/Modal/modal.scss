@@ -1,0 +1,112 @@
+@import "../../app.scss";
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  @extend %modal-shadow;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-white);
+  max-width: 900px;
+  max-height: calc(100vh - 72px);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: size(1) size(1) size(5) size(1); // space out from the sides on small screens
+  @include break(t) {
+    min-width: 500px;
+    max-height: calc(100vh - 48px);
+    margin: size(2);
+  }
+  .header {
+    flex: auto; // so multi-line titles can wrap and stretch the modal-header
+  }
+  .body {
+    flex: 0 1 100%;
+    overflow: auto;
+    background: var(--card-muted);
+  }
+  .actions {
+    flex: 0 0 size(5);
+  }
+}
+
+.modal-header {
+  @extend %card-header-shadow;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: size(2); // 3
+  color: var(--text);
+  padding: size(1) size(1.5) size(1) size(2);
+  background: var(--bg-white);
+  position: relative;
+  @include break(t) {
+    font-size: 22px;
+    line-height: size(2.5);
+    padding: size(1.5) size(1.5) size(1.5) size(3);
+  }
+
+  .title {
+    padding-right: size(2);
+    flex: 1;
+    span {
+      color: var(--text-light);
+      font-weight: 400;
+      font-size: 0.85em;
+      margin-left: 6px;
+    }
+  }
+
+  .close {
+    flex: 0;
+    display: flex;
+    padding: size(1);
+    align-items: center;
+    cursor: pointer;
+    &:hover, &:focus {
+      background: var(--card-muted);
+      border-radius: 50%;
+    }
+  }
+}
+
+.modal-body {
+  background: var(--card-muted);
+  padding: size(2) size(2) size(1);
+  @include break(t) {
+    padding: size(2) size(3);
+  }
+}
+
+.modal-footer {
+  @extend %card-footer-shadow;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--text);
+  padding: size(1);
+  position: relative;
+  .left {
+    display: flex;
+    flex: auto;
+  }
+  .right {
+    display: flex;
+    flex: auto;
+    justify-content: flex-end;
+  }
+}
