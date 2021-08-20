@@ -93,6 +93,10 @@
 
   .block {
     margin-bottom: size(2);
+
+    .title:not(:first-child){
+      margin-top: size(2);
+    }
   }
 
   .title {
