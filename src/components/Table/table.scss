@@ -51,9 +51,6 @@
             .table-cell {
               width: auto;
               justify-content: flex-end;
-              .button{
-                padding-right: 0 ;
-              }
             }
           }
           
@@ -64,11 +61,13 @@
             flex-wrap: nowrap;
             width: max-content;
 
-            p,
-            b,
-            span {
-              font-size: 13px;
-              margin: size(1) size(0.5);
+            .bundle-fields {
+              display: flex;
+              align-items: center;
+              p, b, span {
+                font-size: 13px;
+                margin: size(1) size(0.5);
+              }
             }
             .pinned-badge{
               span{
@@ -86,7 +85,6 @@
               color:var(--alert);
               svg{
                 color:var(--alert);
-              
               }
             }
           }

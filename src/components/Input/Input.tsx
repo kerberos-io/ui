@@ -75,15 +75,15 @@ export const Input = ({
                   <input ref={inputRef} {...rest} type={type} className="input"  readOnly={readonly} disabled={disabled}  placeholder={placeholder} value={value} onChange={onChange} onClick={onClick}/>
                 </div>
             
-                {iconright ? (
+                {iconright && (
                    iconright === "activity" ?
                     <span {...eyeEvents}>
                       <Button  icon={icon} label="" type="outlined"  />
                     </span>
                      :<div className={`icon-right ${seperate ?"seperate":""}`}>
                         <Icon label={`${iconright}`} />
-                      </div>                    
-                ) :<span className="expand"></span>}
+                      </div>
+                )}
           </div>
         </label>
   );

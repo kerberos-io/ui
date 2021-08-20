@@ -22,7 +22,7 @@ const Button = ({
     return (
         <button type={buttonType} onClick={onClick} className={`button ${type}`}>
             <Icon label={icon}/>
-            <span className="text">{label}</span>
+            { label && <span className="text">{label}</span> }
         </button>
     );
 };
