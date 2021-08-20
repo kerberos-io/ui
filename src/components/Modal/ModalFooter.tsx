@@ -11,11 +11,11 @@ export const ModalFooter = ({
     left,
     right }: ModalFooterProps) => {
     return (
-        <div class="modal-footer">
-            <div class="left">
+        <div className="modal-footer">
+            <div className="left">
                 {left}
             </div>
-            <div class="right">
+            <div className="right">
                 {right}
             </div>
         </div>

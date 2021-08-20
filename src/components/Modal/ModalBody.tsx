@@ -8,7 +8,7 @@ export interface ModalBodyProps  {
 
 export const ModalBody = ({ children }: ModalBodyProps) => {
     return (
-        <div class="modal-body">
+        <div className="modal-body">
             {children}
         </div>
     );

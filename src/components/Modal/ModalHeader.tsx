@@ -6,7 +6,7 @@ export interface ModalHeaderProps  {
     title:string,
     subtitle:string,
     onClose?: (
-        event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+        event: React.MouseEvent<HTMLDivElement, MouseEvent>
     ) => void;
 };
 
@@ -16,11 +16,11 @@ export const ModalHeader = ({
     onClose }: ModalHeaderProps) => {
     return (
         <div className={"modal-header"}>
-            <div class="title">
+            <div className="title">
                 {title}
                 <span>{subtitle}</span>
             </div>
-            <div className="close" onclick={onClose} tabindex="0">
+            <div className="close" onClick={onClose} tabIndex={0}>
                 <Icon label={"cross"}></Icon>
             </div>
         </div>
