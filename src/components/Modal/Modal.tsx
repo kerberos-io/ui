@@ -17,8 +17,8 @@ export const Modal = ({
 
     const [check, setCheck] = useState(false);
     const toggleChecked = () => setCheck(value => !value);
-    const node = useRef();
-    const handleClick = e => {
+    const node = useRef() as React.MutableRefObject<HTMLInputElement>;;
+    const handleClick = (e:any) => {
         if (node.current.contains(e.target)) {
             return;
         }
