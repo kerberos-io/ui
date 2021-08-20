@@ -89,6 +89,24 @@
   @include break(t) {
     padding: size(2) size(3);
   }
+
+  .block {
+    margin-bottom: size(2);
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    .icon {
+      path {
+        fill: var(--text-light);
+      }
+      padding: 0 size(1) 0 0;
+    }
+    h1 {
+      font-size: 17px;
+    }
+  }
 }
 
 .modal-footer {
@@ -108,5 +126,9 @@
     display: flex;
     flex: auto;
     justify-content: flex-end;
+
+    Button {
+      margin-left: size(1);
+    }
   }
 }

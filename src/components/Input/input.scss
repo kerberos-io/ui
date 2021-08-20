@@ -1,9 +1,9 @@
 @import "../../app.scss";
 label.generic-input{
+
   .input-labels {
     display: flex;
     justify-content: space-between;
-    margin-top: size(2);
     p{
      color: var(--text-light);
      font-size: size(1);
@@ -45,6 +45,7 @@ label.generic-input{
       display: flex;
       align-items: flex-end;
       width: 100%;
+
       .icon-left{
         svg{
           width: 14px;

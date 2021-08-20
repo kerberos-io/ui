@@ -59,6 +59,26 @@ export const Api = () => <Icon label="api" />
 export const Book = () => <Icon label="book" />
 export const Github = () => <Icon label="github" />
 export const GithubNav = () => <Icon label="github-nav" />
+export const Lock = () => <Icon label="lock" />
+
+export const AllIcons = () => <>
+    <Accounts/>&nbsp;&nbsp;<Activity/>&nbsp;&nbsp;<Alerts/>&nbsp;&nbsp;<Camera/>&nbsp;&nbsp;<Channels/><br/>
+    <Cloud/>&nbsp;&nbsp;<Counting/>&nbsp;&nbsp;<Dashboard/>&nbsp;&nbsp;<Forward/>&nbsp;&nbsp;<Logout/>&nbsp;&nbsp;<br/>
+    <Media/>&nbsp;&nbsp;<Livestream/>&nbsp;&nbsp;<Refresh/>&nbsp;&nbsp;<Share/>&nbsp;&nbsp;<Sites/><br/>
+    <Subscription/>&nbsp;&nbsp;<Tasks/>&nbsp;&nbsp;<User/>&nbsp;&nbsp;<Watch/>&nbsp;&nbsp;<ToggleOff/><br/>
+    <Bookmark/>&nbsp;&nbsp;<Star/>&nbsp;&nbsp;<Checkbox/>&nbsp;&nbsp;<Sort/>&nbsp;&nbsp;<Plus/><br/>
+    <Search/>&nbsp;&nbsp;<Login/>&nbsp;&nbsp;<Info/>&nbsp;&nbsp;<Cross/>&nbsp;&nbsp;<Verify/>&nbsp;&nbsp;<br/>
+    <Email/>&nbsp;&nbsp;<Locked/>&nbsp;&nbsp;<Trush/>&nbsp;&nbsp;<ArrowUp/>&nbsp;&nbsp;<Location/><br/>
+    <Flag/>&nbsp;&nbsp;<List/>&nbsp;&nbsp;<Compass/>&nbsp;&nbsp;<Grid/>&nbsp;&nbsp;<Pencil/><br/>
+    <ArrowDown/>&nbsp;&nbsp;<Preferences/>&nbsp;&nbsp;<ArrowRight/>&nbsp;&nbsp;<EyeCrossed/>&nbsp;&nbsp;<Api/><br/>
+    <Book/>&nbsp;&nbsp;<Github/>&nbsp;&nbsp;<GithubNav/>&nbsp;&nbsp;<Lock/>
+</>
+
+
 export const InfoAddUser = () => <Icon label="info-add-user" />
 export const InfoHeavyBox = () => <Icon label="info-heavy-box" />
 export const InfoProfessor = () => <Icon label="info-professor" />
+
+export const AllInfos = () => <>
+    <InfoAddUser/>&nbsp;&nbsp;<InfoProfessor/>&nbsp;&nbsp;<InfoHeavyBox/><br/>
+</>
