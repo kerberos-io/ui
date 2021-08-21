@@ -49,7 +49,7 @@
       .drop-items{
         display: flex;
         justify-content: space-between;
-        align-items: normal;
+        align-items: center;
         padding-top: 6px;
         padding-bottom: 6px;
         height: size(2);    
@@ -66,9 +66,38 @@
             margin-right: 8px;
           }
         }
-        input{
-          width: fit-content;
+        .checkbox{
+          input{
+            width: fit-content;
+            // margin:auto;
+            margin-bottom:0;
+          }
+
         }
+        .rounded{
+          border: 1px solid #767676;
+          width: 12px;
+          height: 12px;
+          display: flex;
+          border-radius: 50%;
+          input{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border:none;
+            background-color: white;
+            vertical-align: middle;
+            -webkit-appearance: none;
+            outline: none;
+            cursor: pointer;
+            margin: 1px;
+            padding: 3px;
+            &:checked{
+              background-color: #0075ff;
+            }
+          }
+        }
+        
        }
        .fit{
          min-width: 0;
