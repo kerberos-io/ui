@@ -8,11 +8,13 @@ export interface ModalProps  {
     children:any,
     direction:"left"|"right",
     search?:boolean
+    maxWidth:string,
 };
 
 export const Modal = ({
     children,
     direction,
+    maxWidth,
     search=true }: ModalProps) => {
 
     const [check, setCheck] = useState(false);
@@ -34,9 +36,13 @@ export const Modal = ({
         };
     }, []);
 
+    const styling:any = {}
+    if(maxWidth !== "" && maxWidth != null) {
+        styling["maxWidth"] = maxWidth + "px"
+    }
     return (
         <div className={"bg"}>
-            <div className={"modal"} ref={node}>
+            <div className={"modal"} ref={node} style={styling}>
                 {children}
             </div>
         </div>
