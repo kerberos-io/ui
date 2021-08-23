@@ -1,20 +1,30 @@
 import React from "react";
 import Icon from "../Icon";
 import { Input } from "../Input";
+import { DropList } from "./DropList";
 const { useState, useRef, useEffect } = React;
 import "./dropdown.scss";
 
 export interface DropdownProps  {
-    children:any,
+    placeholder:string,
+    icon:string,
+    items: any,
     direction:"left"|"right",
-    search?:boolean
+    search?:boolean,
+    onChange: any,
 };
 
 export const Dropdown = ({
-    children,
+    placeholder,
+    icon,
+    items,
     direction,
-    search=true }: DropdownProps) => {
+    search=true,
+    onChange }: DropdownProps) => {
 
+    const searchedValues = [];
+    const [searchValue, setSearch] = useState(false);
+    const [values, selectValues] = useState([]);
     const [check, setCheck] = useState(false);
     const toggleChecked = () => setCheck(value => !value);
     const node = useRef() as React.MutableRefObject<HTMLInputElement>;
@@ -25,6 +35,28 @@ export const Dropdown = ({
         setCheck(false);
     };
 
+    const onlyUnique = (value, index, self) => {
+        return self.indexOf(value) === index;
+    }
+
+    const onSelectValue = (e) => {
+        // @TODO remove or add the element, currently only adding..
+        let selectedValues = [...values];
+        const {checked} = e.target
+        if(checked) {
+            selectedValues.push(e.target.value)
+        } else {
+            selectedValues = selectedValues.filter(function(value, index, arr){
+                return value !== e.target.value;
+            });
+        }
+        const uniqueValues = selectedValues.filter(onlyUnique);
+        selectValues(uniqueValues);
+        if(onChange) {
+            onChange(uniqueValues)
+        }
+    }
+
     useEffect(() => {
         // add when mounted
         document.addEventListener("mousedown", handleClick);
@@ -34,15 +66,22 @@ export const Dropdown = ({
         };
     }, []);
 
+    let valuesString = "";
+    if(values.length == 1) {
+        valuesString = values[0];
+    } else if (values.length > 1) {
+        valuesString = values[0] + ", +" + (values.length-1).toString();
+    }
     return (
         <div className={"dropdown-container"} ref={node}>
             <div className={"input"}>
                 <Input
                     onClick={toggleChecked}
-                    iconleft={"location"}
+                    iconleft={icon}
                     iconright={"arrow-down-sm"}
                     readonly={true}
-                    placeholder={"lol"}/>
+                    placeholder={placeholder}
+                    value={valuesString}/>
             </div>
             { check && <div className={`dropdown ${direction==="left"?"left":"right"}`}>
                 <div id="arrow-up">
@@ -57,7 +96,9 @@ export const Dropdown = ({
                             iconleft="search"
                             iconright=""
                             label=""
-                            onChange={() => {}}
+                            onChange={(e) => {
+                                setSearch(e.target.value)
+                            }}
                             placeholder="Search..."
                             seperate
                             type="text"
@@ -65,7 +106,9 @@ export const Dropdown = ({
                      </li>
                      :null
                   }
-                   {children}
+                   {items.filter(i => (!searchValue || searchValue ==="") || searchValue && searchValue !=="" && (i.label.indexOf(searchValue) > -1 || i.label.toLowerCase().indexOf(searchValue.toLowerCase()) > -1)).map(i => {
+                       return <DropList icon={icon} title={i.label} value={i.value} checked={values.find(v => v === i.value)} onChange={onSelectValue} />
+                   })}
 
                 </ul>
             </div> }
