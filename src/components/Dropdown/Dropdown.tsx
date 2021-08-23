@@ -23,7 +23,7 @@ export const Dropdown = ({
     onChange }: DropdownProps) => {
 
     const searchedValues = [];
-    const [searchValue, setSearch] = useState(false);
+    const [searchValue, setSearch] = useState("");
     const [values, selectValues] = useState([]);
     const [check, setCheck] = useState(false);
     const toggleChecked = () => setCheck(value => !value);
@@ -35,19 +35,19 @@ export const Dropdown = ({
         setCheck(false);
     };
 
-    const onlyUnique = (value, index, self) => {
+    const onlyUnique = (value: any, index: any, self: any) => {
         return self.indexOf(value) === index;
     }
 
-    const onSelectValue = (e) => {
+    const onSelectValue = (e: any) => {
         // @TODO remove or add the element, currently only adding..
-        let selectedValues = [...values];
-        const {checked} = e.target
+        let selectedValues: any = [...values];
+        const {checked, value} = e.target
         if(checked) {
-            selectedValues.push(e.target.value)
+            selectedValues.push(value)
         } else {
-            selectedValues = selectedValues.filter(function(value, index, arr){
-                return value !== e.target.value;
+            selectedValues = selectedValues.filter((value: any, index: any, arr: any) => {
+                return value !== value;
             });
         }
         const uniqueValues = selectedValues.filter(onlyUnique);
@@ -96,8 +96,9 @@ export const Dropdown = ({
                             iconleft="search"
                             iconright=""
                             label=""
-                            onChange={(e) => {
-                                setSearch(e.target.value)
+                            onChange={(e: any) => {
+                                const {value} = e.target;
+                                setSearch(value)
                             }}
                             placeholder="Search..."
                             seperate
@@ -106,8 +107,8 @@ export const Dropdown = ({
                      </li>
                      :null
                   }
-                   {items.filter(i => (!searchValue || searchValue ==="") || searchValue && searchValue !=="" && (i.label.indexOf(searchValue) > -1 || i.label.toLowerCase().indexOf(searchValue.toLowerCase()) > -1)).map(i => {
-                       return <DropList icon={icon} title={i.label} value={i.value} checked={values.find(v => v === i.value)} onChange={onSelectValue} />
+                   {items.filter((i: any) => (!searchValue || searchValue ==="") || searchValue && searchValue !=="" && (i.label.indexOf(searchValue) > -1 || i.label.toLowerCase().indexOf(searchValue.toLowerCase()) > -1)).map((i:any) => {
+                       return <DropList icon={icon} title={i.label} value={i.value} checked={values.find((v:any) => v === i.value)} onChange={onSelectValue} />
                    })}
 
                 </ul>
