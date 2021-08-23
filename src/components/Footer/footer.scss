@@ -7,6 +7,8 @@ footer {
   padding: size(6) size(2);
   justify-content: space-evenly;
   background: var(--bg-muted);
+  flex-wrap: wrap;
+  row-gap: size(2);
 
   //flex-direction: column;
   //width: 100%;
@@ -19,6 +21,8 @@ footer {
   }
 
   .footer-copyright {
+    width: 140px;
+
     p {
       font-size: 13px;
       padding: 0;
@@ -30,6 +34,7 @@ footer {
   .footer-list {
 
     //margin: size(2) 0 0 0;
+    width: 140px;
 
     h3 {
       font-size: 15px;

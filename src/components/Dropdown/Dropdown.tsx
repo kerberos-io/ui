@@ -44,7 +44,7 @@ export const Dropdown = ({
             }))
     }
 
-    const Childrens=React.Children.map(children,(child,ind)=>{
+    const NewChildren=React.Children.map(children,(child,ind)=>{
 
             const childRef =React.useRef() as any;           
             const {title} = child.props                         
@@ -118,7 +118,7 @@ export const Dropdown = ({
                      </li>
                      :null
                   }
-                  {Childrens}
+                  {NewChildren}
 
                 </ul>
             </div> }
