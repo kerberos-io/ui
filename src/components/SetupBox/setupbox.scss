@@ -16,6 +16,7 @@
     border:2px dashed hsla(var(--text-light-hsl));
     margin: 0;
     padding: size(9) size(20);
+    border-radius: var(--radius);
     .info{
         margin: 0;
     }
