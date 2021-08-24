@@ -14,6 +14,7 @@ export const SitesMultipleSelect = () =>
     <Dropdown direction="right" icon={"location"} placeholder={"Select sites"} items={[
         {label: "Hannver, Germany", value: "Hannver, Germany"},
         {label: "Düsseldorf, Germany", value: "Düsseldorf, Germany"},
+        {label: "FC Bayern Munich, Germany", value: "Düsseldorf, Germany"},
         {label: "Berlin, Germany", value: "Berlin, Germany"}
     ]}/>
 
