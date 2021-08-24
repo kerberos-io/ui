@@ -8,6 +8,7 @@ import "./dropdown.scss";
 export interface DropdownProps  {
     placeholder:string,
     icon:string,
+    selected: any,
     items: any,
     direction:"left"|"right",
     search?:boolean,
@@ -19,6 +20,7 @@ export interface DropdownProps  {
 export const Dropdown = ({
     placeholder,
     icon,
+    selected,
     items,
     direction,
     search=true,
@@ -28,7 +30,7 @@ export const Dropdown = ({
 
     const searchedValues = [];
     const [searchValue, setSearch] = useState("");
-    const [values, selectValues] = useState([]);
+    const [values, selectValues] = useState([...selected]);
     const [check, setCheck] = useState(false);
     const toggleChecked = () => setCheck(value => !value);
     const node = useRef() as React.MutableRefObject<HTMLInputElement>;
