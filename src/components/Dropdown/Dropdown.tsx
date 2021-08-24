@@ -30,7 +30,7 @@ export const Dropdown = ({
 
     const searchedValues = [];
     const [searchValue, setSearch] = useState("");
-    const [values, selectValues] = useState([...selected]);
+    const [values, selectValues] = useState(selected ? [...selected] : []);
     const [check, setCheck] = useState(false);
     const toggleChecked = () => setCheck(value => !value);
     const node = useRef() as React.MutableRefObject<HTMLInputElement>;
@@ -104,29 +104,25 @@ export const Dropdown = ({
                     <Icon label="arrow-up" />
                 </div>
                 <ul>
-                  {
-                      search ?
+                    { search &&
                       <li className="search-input">
-                        <Input
-                            hint=""
-                            iconleft="search"
-                            iconright=""
-                            label=""
-                            onChange={(e: any) => {
-                                const {value} = e.target;
-                                setSearch(value)
-                            }}
-                            placeholder="Search..."
-                            seperate
-                            type="text"
-                            />
-                     </li>
-                     :null
-                  }
+                          <Input
+                              hint=""
+                              iconleft="search"
+                              iconright=""
+                              label=""
+                              onChange={(e: any) => {
+                                  const {value} = e.target;
+                                  setSearch(value)
+                              }}
+                              placeholder="Search..."
+                              seperate
+                              type="text"
+                          />
+                      </li> }
                    {items.filter((i: any) => (!searchValue || searchValue ==="") || searchValue && searchValue !=="" && (i.label.indexOf(searchValue) > -1 || i.label.toLowerCase().indexOf(searchValue.toLowerCase()) > -1)).map((i:any) => {
                        return <DropList key={i.value} icon={icon} radio={isRadio} title={i.label} value={i.value} checked={values.find((v:any) => v === i.value)} onChange={onSelectValue} />
                    })}
-
                 </ul>
             </div> }
         </div>
