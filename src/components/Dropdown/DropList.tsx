@@ -35,7 +35,7 @@ export const DropList = ({
             fullStr.substr(fullStr.length - backChars);
     };
 
-    const fieldMaxLength = 20;
+    const fieldMaxLength = 15;
     return (
         <li>
             <label className={`drop-item`}>

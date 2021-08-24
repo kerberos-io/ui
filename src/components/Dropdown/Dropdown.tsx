@@ -118,7 +118,7 @@ export const Dropdown = ({
                      :null
                   }
                    {items.filter((i: any) => (!searchValue || searchValue ==="") || searchValue && searchValue !=="" && (i.label.indexOf(searchValue) > -1 || i.label.toLowerCase().indexOf(searchValue.toLowerCase()) > -1)).map((i:any) => {
-                       return <DropList icon={icon} radio={isRadio} title={i.label} value={i.value} checked={values.find((v:any) => v === i.value)} onChange={onSelectValue} />
+                       return <DropList key={i.value} icon={icon} radio={isRadio} title={i.label} value={i.value} checked={values.find((v:any) => v === i.value)} onChange={onSelectValue} />
                    })}
 
                 </ul>
