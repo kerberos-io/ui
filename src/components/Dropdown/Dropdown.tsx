@@ -67,21 +67,6 @@ export const Dropdown = ({
         }
     }
 
-    const truncate = (fullStr:any, strLen:any, separator:any) => {
-        if (fullStr.length <= strLen) return fullStr;
-
-        separator = separator || '...';
-
-        var sepLen = separator.length,
-            charsToShow = strLen - sepLen,
-            frontChars = Math.ceil(charsToShow/2),
-            backChars = Math.floor(charsToShow/2);
-
-        return fullStr.substr(0, frontChars) +
-            separator +
-            fullStr.substr(fullStr.length - backChars);
-    };
-
     useEffect(() => {
         // add when mounted
         document.addEventListener("mousedown", handleClick);
@@ -133,7 +118,7 @@ export const Dropdown = ({
                      :null
                   }
                    {items.filter((i: any) => (!searchValue || searchValue ==="") || searchValue && searchValue !=="" && (i.label.indexOf(searchValue) > -1 || i.label.toLowerCase().indexOf(searchValue.toLowerCase()) > -1)).map((i:any) => {
-                       return <DropList icon={icon} radio={isRadio} title={truncate(i.label, 15, "..")} value={i.value} checked={values.find((v:any) => v === i.value)} onChange={onSelectValue} />
+                       return <DropList icon={icon} radio={isRadio} title={i.label} value={i.value} checked={values.find((v:any) => v === i.value)} onChange={onSelectValue} />
                    })}
 
                 </ul>

@@ -7,6 +7,12 @@
     cursor: pointer;
   }
 
+  .tooltip-custom {
+    font-size: 12px !important;
+    line-height: 30px !important;
+    padding: 0px 10px !important;
+  }
+
   .dropdown {
     position: absolute;
     top: 72px;
