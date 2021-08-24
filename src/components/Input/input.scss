@@ -1,21 +1,25 @@
 @import "../../app.scss";
-label.generic-input{
+
+label.generic-input {
 
   .input-labels {
     display: flex;
     justify-content: space-between;
-    p{
-     color: var(--text-light);
-     font-size: size(1);
-     padding: 0;
-     margin: 0;
-     line-height: size(3);
+
+    p {
+      color: var(--text-light);
+      font-size: size(1);
+      padding: 0;
+      margin: 0;
+      line-height: size(3);
 
       text-transform: uppercase;
-      i{
+
+      i {
         text-transform: none;
-        }
       }
+    }
+
     .hint {
       color: var(--primary);
       cursor: pointer;
@@ -25,40 +29,43 @@ label.generic-input{
   }
 
   .input-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background:var(--card);
-      border: 1px solid var(--bg-muted);
-      border-radius: var(--radius);
-      padding: 0  size(1.5) 0 size(2)+2;
-      &:hover{
-        @extend %input-hover-border;
-      }
-      &:focus-within{
-        @extend %input-focus-border;
-        @extend %input-box-shadow;
-      }
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card);
+    border: 1px solid var(--bg-muted);
+    border-radius: var(--radius);
+    padding: 0 size(1.5) 0 size(2)+2;
+
+    &:hover {
+      @extend %input-hover-border;
+    }
+
+    &:focus-within {
+      @extend %input-focus-border;
+      @extend %input-box-shadow;
+    }
+
     .input-box {
 
       display: flex;
       align-items: flex-end;
       width: 100%;
 
-      .icon-left{
-        svg{
+      .icon-left {
+        svg {
           width: 14px;
           height: 18px;
         }
       }
+
       input {
 
         outline: none;
         border: none;
         margin: 0;
         font-size: 15px;
-        color: var(--text-light);
+        color: var(--text-muted);
         padding-left: size(1)+2;
 
         &:focus {
@@ -66,21 +73,25 @@ label.generic-input{
           border: none;
           box-shadow: none;
         }
-        &::placeholder{
-         color: var(--text-light);
+
+        &::placeholder {
+          color: var(--text-light);
         }
       }
     }
-    .come-near{
+
+    .come-near {
       margin-left: size(-2)-2;
     }
+
     .icon-right {
       height: size(4);
       padding-left: size(1.5);
       display: flex;
       align-items: center;
       border: none;
-      svg{
+
+      svg {
         width: 14px;
       }
     }
@@ -88,7 +99,8 @@ label.generic-input{
     .seperate {
       border-left: 1px solid var(--bg-muted);
     }
-    .button{
+
+    .button {
       width: fit-content;
       padding: 0;
       border: none;
@@ -96,61 +108,72 @@ label.generic-input{
       border-left: 1px solid var(--bg-muted);
       height: 48px;
       border-radius: 0;
-      &:focus{
+
+      &:focus {
         box-shadow: none;
       }
-      span{
+
+      span {
         display: none;
       }
-      svg:hover{
-        path{
-          fill:var(--primary)
+
+      svg:hover {
+        path {
+          fill: var(--primary)
         }
       }
     }
   }
-  .fit-right{
+
+  .fit-right {
     display: block;
     padding-right: 0;
   }
 
 
 }
-.buttonize{
-  div.input-labels{
-      display: none;
+
+.buttonize {
+  div.input-labels {
+    display: none;
   }
 
-  .input-bar{
-      width: fit-content;
-      &:focus{
-        @extend %input-hover-border;
-        box-shadow: 0 0 0 4px hsla(var(--bg-muted-hsl), 0.5);
+  .input-bar {
+    width: fit-content;
+
+    &:focus {
+      @extend %input-hover-border;
+      box-shadow: 0 0 0 4px hsla(var(--bg-muted-hsl), 0.5);
+    }
+
+    &:focus-within {
+      border: 1px solid var(--text-light) !important;
+      box-shadow: 0 0 0 4px hsla(var(--bg-muted-hsl), 0.5) !important;
+    }
+
+    .input-box {
+      input {
+        padding: 5px 5px 5px size(1)-1;
+        font-size: 13px;
+        color: var(--text-muted);
+        cursor: pointer;
       }
-      &:focus-within{
-        border: 1px solid var(--text-light) !important;
-        box-shadow: 0 0 0 4px hsla(var(--bg-muted-hsl), 0.5) !important;
+    }
+
+    div.icon-left {
+      svg {
+        vertical-align: middle;
       }
-      .input-box{
-          input{
-              padding: 5px 5px 5px size(1)-1;
-              font-size: 13px;
-              color: var(--text-muted);
-              cursor: pointer;
-          }
-      }
-      div.icon-left{
-        svg{
-          vertical-align: middle;
-        }
-      }
-      div.icon-right{
-          height: 0;
-          padding-left: size(1);
-      }
-     
-   }
+    }
+
+    div.icon-right {
+      height: 0;
+      padding-left: size(1);
+    }
+
+  }
 }
-fieldset{
+
+fieldset {
   border: none;
 }

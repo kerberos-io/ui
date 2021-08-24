@@ -11,6 +11,7 @@ export interface DropdownProps  {
     items: any,
     direction:"left"|"right",
     search?:boolean,
+    isRadio?:boolean,
     onChange: any,
 };
 
@@ -20,6 +21,7 @@ export const Dropdown = ({
     items,
     direction,
     search=true,
+    isRadio=false,
     onChange }: DropdownProps) => {
 
     const searchedValues = [];
@@ -40,22 +42,45 @@ export const Dropdown = ({
     }
 
     const onSelectValue = (e: any) => {
-        // @TODO remove or add the element, currently only adding..
-        let selectedValues: any = [...values];
-        const {checked, value} = e.target
-        if(checked) {
-            selectedValues.push(value)
+        if(!isRadio) {
+            let selectedValues: any = [...values];
+            const {checked, value} = e.target
+            if (checked) {
+                selectedValues.push(value)
+            } else {
+                selectedValues = selectedValues.filter((v: any, index: any, arr: any) => {
+                    return v !== value;
+                });
+            }
+            const uniqueValues = selectedValues.filter(onlyUnique);
+            selectValues(uniqueValues);
+            if (onChange) {
+                onChange(uniqueValues)
+            }
         } else {
-            selectedValues = selectedValues.filter((value: any, index: any, arr: any) => {
-                return value !== value;
-            });
-        }
-        const uniqueValues = selectedValues.filter(onlyUnique);
-        selectValues(uniqueValues);
-        if(onChange) {
-            onChange(uniqueValues)
+            const {value} = e.target
+            const values: any = [value];
+            selectValues(values);
+            if (onChange) {
+                onChange(values)
+            }
         }
     }
+
+    const truncate = (fullStr:any, strLen:any, separator:any) => {
+        if (fullStr.length <= strLen) return fullStr;
+
+        separator = separator || '...';
+
+        var sepLen = separator.length,
+            charsToShow = strLen - sepLen,
+            frontChars = Math.ceil(charsToShow/2),
+            backChars = Math.floor(charsToShow/2);
+
+        return fullStr.substr(0, frontChars) +
+            separator +
+            fullStr.substr(fullStr.length - backChars);
+    };
 
     useEffect(() => {
         // add when mounted
@@ -108,7 +133,7 @@ export const Dropdown = ({
                      :null
                   }
                    {items.filter((i: any) => (!searchValue || searchValue ==="") || searchValue && searchValue !=="" && (i.label.indexOf(searchValue) > -1 || i.label.toLowerCase().indexOf(searchValue.toLowerCase()) > -1)).map((i:any) => {
-                       return <DropList icon={icon} title={i.label} value={i.value} checked={values.find((v:any) => v === i.value)} onChange={onSelectValue} />
+                       return <DropList icon={icon} radio={isRadio} title={truncate(i.label, 15, "..")} value={i.value} checked={values.find((v:any) => v === i.value)} onChange={onSelectValue} />
                    })}
 
                 </ul>

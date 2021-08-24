@@ -1,126 +1,142 @@
 @import "../../app.scss";
 
-.input {
-  cursor: pointer;
-}
-
 .dropdown-container {
   position: relative;
-}
-.dropdown{
-  position: absolute;
-  top: 72px;
-  width: fit-content;
-  background: var(--card);
-  border-radius: var(--radius);
-  z-index: 999;
-  @extend %modal-shadow;
 
-  #arrow-up{
-    content: "";
-    width: 18px;
-    height: 9px;
-    position: absolute;
-    top: -15px;
-    svg{
-      color:white;
-    }
+  .input {
+    cursor: pointer;
   }
-  ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border-radius: var(--radius);
 
-    li{
-      padding: 0 size(2);
-      &:focus-within{
-        background: hsla(var(--primary-hsl), 0.1);
+  .dropdown {
+    position: absolute;
+    top: 72px;
+    width: fit-content;
+    background: var(--card);
+    border-radius: var(--radius);
+    z-index: 999;
+    @extend %modal-shadow;
+
+    #arrow-up {
+      content: "";
+      width: 18px;
+      height: 9px;
+      position: absolute;
+      top: -15px;
+
+      svg {
+        color: white;
       }
-      &:hover{
-        background: hsla(var(--primary-hsl), 0.1);
-      }
-      &:first-of-type{
-       .drop-items{
-          padding-top: 10px;
-       }
-      }
-     
-      .drop-items{
-        display: flex;
-        justify-content: space-between;
-        align-items: normal;
-        padding-top: 6px;
-        padding-bottom: 6px;
-        height: size(2);    
-        min-width: size(16);  
-     
-        .title{
-          font-size: 15px;
-          text-transform: none;
-          display: flex;
-          align-content: center;
-          justify-content: flex-start;
-          align-items: center;
-          .icon{
-            margin-right: 8px;
-          }
-        }
-        input{
-          width: fit-content;
-        }
-       }
-       .fit{
-         min-width: 0;
-         width: fit-content;
-         
-       }
     }
-      .search-input{
-        border-bottom: 1px solid var(--bg-muted);
-        &:focus-within{
-          background: none;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-radius: var(--radius);
+
+      li {
+        padding: 0 size(2);
+
+        &:focus-within {
+          background: hsla(var(--primary-hsl), 0.1);
         }
-        &:hover{
-          background: none;
+
+        &:hover {
+          background: hsla(var(--primary-hsl), 0.1);
         }
-      label{       
-        .input-labels{
-          display: none;
-        }
-        .input-bar{
-          border: none;
-          padding: 0;
-          &:focus-within{
-            box-shadow: none;
+
+        &:first-of-type {
+          .drop-item {
+            padding-top: 10px;
           }
-        
-          .input-box{
-            input{
-              width: 100%;
-              padding: size(1);
-              padding-right: 0;
+        }
+
+        .drop-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: normal;
+          padding: 8px 0;
+          min-width: 250px;
+          height: 20px;
+
+          .title {
+            font-size: 15px;
+            text-transform: none;
+            display: flex;
+            align-content: center;
+            justify-content: flex-start;
+            align-items: center;
+            flex: 0.75;
+
+            .icon {
+              margin-right: 8px;
             }
           }
-          .expand{
+
+          input[type='checkbox'], input[type='radio'] {
+            display: flex;
+            width: 15px;
+            align-self: center;
+            margin: 0;
+            padding: 0 0 0 size(1);
+          }
+        }
+      }
+
+      .search-input {
+        border-bottom: 1px solid var(--bg-muted);
+
+        &:focus-within {
+          background: none;
+        }
+
+        &:hover {
+          background: none;
+        }
+
+        label {
+          .input-labels {
             display: none;
+          }
+
+          .input-bar {
+            border: none;
+            padding: 0;
+            margin: 0;
+
+            &:focus-within {
+              box-shadow: none;
+            }
+
+            .input-box {
+              input[type="checkbox"], input[type="radio"] {
+                width: 100%;
+                padding: size(1);
+                padding-right: 0;
+              }
+            }
+
+            .expand {
+              display: none;
+            }
           }
         }
       }
     }
   }
-}
 
-.left{
-  #arrow-up{
-    left: 20px;
+  .left {
+    #arrow-up {
+      left: 20px;
 
+    }
   }
-}
 
-.right{
-  right: 0;
-  #arrow-up{
-    right: 20px;
+  .right {
+    right: 0;
+
+    #arrow-up {
+      right: 20px;
+    }
   }
 }

@@ -7,7 +7,6 @@ export interface DropListProps  {
     value:string,
     radio?:boolean,
     icon?:string,
-    isInput?:boolean,
     checked?: boolean,
     onChange?: any
 };
@@ -17,12 +16,11 @@ export const DropList = ({
     value,
     radio=false,
     icon,
-    isInput=true,
     checked=false,
     onChange,}: DropListProps) => {
     return (
         <li>
-            <label className={`drop-items ${!isInput?"fit":""}`}>               
+            <label className={`drop-item`}>
                 <div className="title">
                     { icon && <>
                         <Icon label={icon||""}/>
@@ -30,9 +28,7 @@ export const DropList = ({
                     </> }
                     {title}
                 </div>
-               {
-                   isInput && <input type={radio ? "radio" : "checkbox"} checked={checked} value={value} onChange={onChange} />
-               }
+               <input type={radio ? "radio" : "checkbox"} checked={checked} value={value} onChange={onChange} />
             </label>
         </li>
     );
