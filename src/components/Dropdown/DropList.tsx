@@ -43,7 +43,7 @@ export const DropList = ({
                     { icon && <Icon label={icon||""}/> }
                     { title && title.length > fieldMaxLength && <>
                         <span data-tip={title}>{truncate(title, fieldMaxLength - 3, "..")}</span>
-                        <ReactTooltip place={"top"} classNane={"tooltip-custom"} />
+                        <ReactTooltip place={"top"} className={"tooltip-custom"} />
                     </> }
                     { title && title.length <= fieldMaxLength && <span>{title}</span> }
                 </div>
