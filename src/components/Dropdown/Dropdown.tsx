@@ -83,9 +83,12 @@ export const Dropdown = ({
 
     let valuesString = "";
     if(values.length == 1) {
-        valuesString = values[0];
+        const item = items.find((i:any) => i.value === values[0]);
+        valuesString = item.label;
+
     } else if (values.length > 1) {
-        valuesString = values[0] + ", +" + (values.length-1).toString();
+        const item = items.find((i:any) => i.value === values[0]);
+        valuesString = item.label + ", +" + (values.length-1).toString();
     }
     return (
         <div className={"dropdown-container"} ref={node}>

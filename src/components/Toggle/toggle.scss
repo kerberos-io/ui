@@ -1,57 +1,69 @@
 @import "../../app.scss";
 
-  .sweet-toggling .badge{
-    height: 18px;
-    width: 32px;
-    padding: 0;
-    margin: 0;
-    border-radius: size(1.5);
-    display: flex;
-    align-items: center;
-    transition:  background-color 300ms linear ;
-    .ellipse-container{
-      margin: 0;
-      padding: 0;
-      transition: margin 300ms linear ;
-      cursor: pointer;
-      .ellipse{
-        transition:  background-color 300ms linear ;
-        padding: 0;
-        margin: 0;
-        height: 6px;
-        width: 6px;
-      }
-    }
-  }
-
-.toggle-on{
-  .badge{
-    justify-content: flex-end;
+.toggle {
+  position: relative;
+  display: flex;
+  width: 32px;
+  height: 18px;
+  margin: 0;
+  input {
+    display: none;
   }
 }
 
-.toggle-off{
-  .badge{
-    justify-content: flex-start;
-    background-color: hsla(var(--text-muted-hsl), 0.2) !important;
-    .ellipse-container{
-      left: 5px;
-      position: relative;
-      border: 2px solid hsla(var(--text-muted-hsl), 0.2) !important;
-      .ellipse{
-        background-color: var(--text-muted) !important ;
-      }
-    }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--text-light);
+  transition: .4s;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 3px;
+    background-color: var(--card);
+    transition: .4s;
   }
 }
 
-.aura-off{
-  .badge{
-    .ellipse-container{
-      right: 5px;
-      position: relative;
-      border: none !important;     
-    }
+
+input:checked + .slider {
+  background: var(--success);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(12px);
+  background: var(--card);
+}
+
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 18px;
+  &::before {
+    border-radius: 50%;
   }
 }
+
+
+.disabled {
+  input:checked + .slider {
+    background: #ccc;
+  }
+  input:checked + .slider:before {
+    background: #a2a2a2;
+  }
+}
+
 

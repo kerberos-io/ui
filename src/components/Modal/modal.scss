@@ -84,7 +84,7 @@
 }
 
 .modal-body {
-  overflow: scroll;
+  overflow-y: auto;
   background: var(--card-muted);
   padding: size(2) size(2) size(1);
   @include break(t) {

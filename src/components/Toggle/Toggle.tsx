@@ -4,24 +4,25 @@ import Alert from "../Alert";
 import Badge from "../Badge";
 import "./toggle.scss";
 
-export interface ToggleProps  {
-    on:boolean,
-    aura?:boolean,
-    status?:string,
-    onClick:(
-        event: React.MouseEvent<HTMLDivElement, MouseEvent>
-    ) => void;
+export interface ToggleProps {
+    on: boolean,
+    disabled: boolean,
+    onClick: any;
 };
 
 const Toggle = ({
-    on,
-    aura=false,
-    status="hub",
-    onClick}:ToggleProps) => {
+                    on = false,
+                    disabled = true,
+                    onClick
+                }: ToggleProps) => {
     return (
-        <div className={`sweet-toggling ${on?"toggle-on":"toggle-off"} ${aura?"":"aura-off"}`} onClick={onClick}>
-            <Badge status={status} title="" blink={false} aura={aura}/>
-        </div>
+
+        <label className={"toggle"}>
+            { onClick && <input type="checkbox" disabled={disabled} checked={on} onClick={onClick} />}
+            { !onClick && <input type="checkbox" disabled={disabled} checked={on} />}
+            <span className="slider round"></span>
+        </label>
+
     );
 };
 
