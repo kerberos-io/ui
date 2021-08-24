@@ -11,6 +11,7 @@ export interface DropdownProps  {
     items: any,
     direction:"left"|"right",
     search?:boolean,
+    style?: "form" | "controlbar";
     isRadio?:boolean,
     onChange: any,
 };
@@ -21,6 +22,7 @@ export const Dropdown = ({
     items,
     direction,
     search=true,
+    style = "form",
     isRadio=false,
     onChange }: DropdownProps) => {
 
@@ -91,6 +93,7 @@ export const Dropdown = ({
                     iconleft={icon}
                     iconright={"arrow-down-sm"}
                     readonly={true}
+                    style={style}
                     placeholder={placeholder}
                     value={valuesString}/>
             </div>

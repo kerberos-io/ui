@@ -13,30 +13,16 @@ export default {
  } as Meta
 
  export const _ControlBar = () => <ControlBar>
-    <FilterSearch>
-        <Input iconleft="search" placeholder="Search..." type="text" />
-    </FilterSearch>
-    <FilterSite>
-    <Input
-        type="button"
-        iconleft="location"
-        iconright="arrow-down-sm"
-        value="Site"
-    />
-    </FilterSite>
-    <FilterDisplay>
-    <Button type="outlined" icon="list" label="List" />
-    <Button type="outlined" icon="grid" label="Grid" />
-    <Button type="outlined" icon="compass" label="Map" />
-    </FilterDisplay>
-    <FilterSort>
-        <Input
-        iconleft="sort"
-        value="Name"
-        type="button"
-        iconright="arrow-down-sm"
-        />
-    </FilterSort>
+
+     <Input iconleft="search" placeholder="Search..." type="text" style={"controlbar"} />
+     <Input iconleft="search" placeholder="Search..." type="text" style={"controlbar"} />
+     <Dropdown direction="right" icon={"location"} placeholder={"Select sites"} style={"controlbar"} items={[
+         {label: "Hannver, Germany", value: "Hannver, Germany"},
+         {label: "Düsseldorf, Germany", value: "Düsseldorf, Germany"},
+         {label: "FC Bayern Munich, Germany", value: "FC Bayern Munich, Germany"},
+         {label: "Berlin, Germany", value: "Berlin, Germany"}
+     ]}/>
+
 </ControlBar>
 
 export const _ControlBar2 = () => <ControlBar>
