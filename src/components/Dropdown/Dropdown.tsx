@@ -34,6 +34,7 @@ export const Dropdown = ({
         if (node.current.contains(e.target)) {
             return;
         }
+        setSearch("")
         setCheck(false);
     };
 
