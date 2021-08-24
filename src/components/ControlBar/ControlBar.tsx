@@ -6,8 +6,9 @@ export interface ControlBarProps{
 
 export const ControlBar = ({children}:ControlBarProps) =>{
     return(
-        <div className="control-bar">
-            {children}
+        <div className="controlbar">
+                {React.Children.map(children,(child,ind)=>
+                <div className="controlbar-item">{child}</div>)}            
         </div>
     )
 }

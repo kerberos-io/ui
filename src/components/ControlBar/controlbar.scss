@@ -1,18 +1,56 @@
 @import "../../app.variables";
 
-.control-bar{
+.controlbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--card-muted);
     padding:0;
-    @extend %box-shadow;
+    // @extend %box-shadow;
+    flex-wrap: wrap;
+    .generic-input .input-bar{
+        justify-content: space-around;
+        .input-box input {width: 140px;padding-right: 0;overflow: auto;}
+    }
+    .controlbar-item{
+        padding: 6px 0;
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding-right: 12px;
+        flex-basis: calc(25% - 12px);
+        max-width: calc(25% - 12px);
+        border-right: 1px solid var(--text-light);
+
+        @include break(d){
+            flex-basis: calc(18% - 12px) !important;
+            max-width: calc(18% - 12px) !important;
+            &:last-of-type{
+                border-right: none;
+            }
+
+        }
+        @include break(t){
+            flex-basis: calc(25% - 12px);
+            max-width: calc(25% - 12px);
+            &:last-of-type{
+                border-right: none;
+            }
+
+        }
+        @extend %box-shadow;
+       
+
+    }
 
     // height: size(5);
-    &>div{
+    &>div,&>label{
         // border-right: 2px solid var(--text-muted);
         // padding-top: size(1);
-        padding: 6px;
+        padding: 6px 0;
+        //  flex-basis: 122px;
+
+        // flex:1;
+        // flex-basis: 140px;
         // width: 100%;
     }
     .generic-input{
