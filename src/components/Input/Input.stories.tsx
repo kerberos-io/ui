@@ -11,11 +11,26 @@ export default {
 
 } as Meta;
 const Template: Story<InputProps> = (args) => <Input {...args} />;
+
 export const _Input = Template.bind({});
 _Input.args={
     label: "password",
     readonly: false,
     disabled:false,
+    hint:"Forgotten password?",
+    iconleft:"accounts",
+    placeholder:"Your password",
+    iconright:"activity",
+    seperate:true,
+    type:"password"
+}
+
+export const Error = Template.bind({});
+Error.args={
+    label: "password",
+    readonly: false,
+    disabled:false,
+    error: "Password is not complex enough",
     hint:"Forgotten password?",
     iconleft:"accounts",
     placeholder:"Your password",

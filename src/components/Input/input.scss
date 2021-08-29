@@ -140,6 +140,24 @@ label.generic-input {
     display: block;
     padding-right: 0;
   }
+
+  &.error {
+    .input-labels p {
+      color: var(--alert);
+    }
+    .input-bar {
+      border: 1px solid var(--alert);
+      svg path {
+        fill: var(--alert);
+      }
+      input {
+        color: var(--alert);
+        &::placeholder {
+          color: var(--alert);
+        }
+      }
+    }
+  }
 }
 
 .buttonize {

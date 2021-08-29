@@ -12,6 +12,7 @@ export interface DropdownProps  {
     items: any,
     direction:"left"|"right",
     search?:boolean,
+    label: string;
     style?: "form" | "controlbar";
     isRadio?:boolean,
     onChange: any,
@@ -24,6 +25,7 @@ export const Dropdown = ({
     items,
     direction,
     search=true,
+    label="",
     style = "form",
     isRadio=false,
     onChange }: DropdownProps) => {
@@ -96,8 +98,10 @@ export const Dropdown = ({
                 <Input
                     onClick={toggleChecked}
                     iconleft={icon}
+                    label={label}
                     iconright={"arrow-down-sm"}
                     readonly={true}
+                    readonlyLabel={false}
                     style={style}
                     placeholder={placeholder}
                     value={valuesString}/>
@@ -110,10 +114,10 @@ export const Dropdown = ({
                     { search &&
                       <li className="search-input">
                           <Input
-                              hint=""
                               iconleft="search"
                               iconright=""
                               label=""
+                              hint=""
                               onChange={(e: any) => {
                                   const {value} = e.target;
                                   setSearch(value)
