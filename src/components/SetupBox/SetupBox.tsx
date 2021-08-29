@@ -9,7 +9,7 @@ export interface SetupBoxProps {
     text: string,
     btnicon: string,
     btnlabel: string
-    button: any
+    button?: any
 }
 
 const SetupBox = ({
