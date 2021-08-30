@@ -15,7 +15,7 @@ export interface InputProps {
     iconleft?: string;
     iconright?: string;
     seperate?: boolean;
-    style?: "form" | "controlbar";
+    layout?: "form" | "controlbar";
     type?:string,
     onBlur?: (
         event:React.FormEvent<HTMLInputElement>
@@ -37,7 +37,7 @@ export const Input = ({
                  readonlyLabel = false,
                  disabled = false,
                  hint,
-                 style = "form",
+                 layout = "form",
                  iconleft,
                  iconright,
                  seperate,
@@ -76,7 +76,7 @@ export const Input = ({
                   { hint !== "" && <p className="hint">{hint}</p> }
               </> }
           </div>
-          <div className={`input-bar ${!iconright?"fit-right":""} ${style}`}>
+          <div className={`input-bar ${!iconright?"fit-right":""} ${layout}`}>
                 <div className={`input-box ${iconleft?"":"come-near"}`}>
                   {iconleft && 
                     <div className="icon-left">
