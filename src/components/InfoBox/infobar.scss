@@ -1,0 +1,21 @@
+@import "../../app.scss";
+
+div.info-bar {
+  display: flex;
+  .avatar {
+    align-content: center;
+    justify-content: flex-start;
+    padding: size(4) size(4) size(4) 0;
+  }
+  .description {
+    align-content: center;
+    justify-content: center;
+    font-family: Inter;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: size(2);
+    }
+  }
+}
