@@ -1,8 +1,8 @@
 import React from "react";
 import Icon from "../Icon";
-import "./infobar.scss";
+import "./infobox.scss";
 
-export interface InfoBarProps  {
+export interface InfoBoxProps  {
     image: string;
     title: string;
     description?: string;
@@ -11,12 +11,12 @@ export interface InfoBarProps  {
     ) => void;
 };
 
-const InfoBar = ({
+const InfoBox = ({
                 image,
                 title,
                 description,
                 onClick,
-            }: InfoBarProps) => {
+            }: InfoBoxProps) => {
     return (
         <div className={"info-bar"}>
             <div className={"avatar"}>

@@ -26,6 +26,7 @@ import {ControlBar, FilterDisplay, FilterSearch, FilterSite, FilterSort } from "
 import { VideoContainer,VideoWallHeader } from "./components/VideoContainer";
 import Toggle from "./components/Toggle";
 import InfoBar from "./components/InfoBar";
+import InfoBox from "./components/InfoBox";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from "./components/Modal";
 
 export {
@@ -84,6 +85,7 @@ export {
     VideoWallHeader,
     Toggle,
     InfoBar,
+    InfoBox,
     Modal,
     ModalHeader,
     ModalBody,

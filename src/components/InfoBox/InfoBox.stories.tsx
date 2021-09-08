@@ -1,17 +1,17 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import InfoBar, { InfoBarProps } from "./InfoBar";
+import InfoBox, { InfoBoxProps } from "./InfoBox";
 
 export default {
-    title: "Components/InfoBar",
-    component: InfoBar,
+    title: "Components/InfoBox",
+    component: InfoBox,
     argTypes: { onClick: { action: 'clicked' } },
 } as Meta;
 
 // Create a master template for mapping args to render the Button component
-const Template: Story<InfoBarProps> = (args) => <InfoBar {...args} />;
+const Template: Story<InfoBoxProps> = (args) => <InfoBox {...args} />;
 
 // Reuse that template for creating different stories
 export const Default = Template.bind({});
-Default.args = { label: "Default Button", icon: "dashboard", type: "" };
+Default.args = { title: "Title", image: "...", description: "description" };
