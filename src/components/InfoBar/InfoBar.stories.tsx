@@ -19,6 +19,12 @@ Alert.args = {
     message:"Wrong password, please try again!"
 };
 
+export const Success = Template.bind({});
+Success.args = {
+    type: "success",
+    message:"Everything worked as expected!"
+};
+
 export const Info = Template.bind({});
 Info.args = {
     type: "info",

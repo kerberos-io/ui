@@ -8,6 +8,8 @@
   justify-content: space-between;
   align-items: center;
   padding: size(1) size(2);
+  border-radius: 4px;
+
   div {
     display: flex;
     flex-wrap: nowrap;
@@ -27,6 +29,16 @@
     }
     svg path {
       fill: var(--alert);
+    }
+  }
+
+  &.success {
+    background: hsla(var(--success-hsl),0.1);
+    div .description{
+      color: var(--success);
+    }
+    svg path {
+      fill: var(--success);
     }
   }
 

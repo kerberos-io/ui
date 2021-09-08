@@ -30,4 +30,4 @@ const InfoBox = ({
     );
 };
 
-export default InfoBar;
+export default InfoBox;

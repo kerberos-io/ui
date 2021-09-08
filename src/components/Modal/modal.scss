@@ -29,6 +29,9 @@
     max-height: calc(100vh - 48px);
     margin: size(2);
   }
+  form {
+    display: contents;
+  }
   .header {
     flex: auto; // so multi-line titles can wrap and stretch the modal-header
   }

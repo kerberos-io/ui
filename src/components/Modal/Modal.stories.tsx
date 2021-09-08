@@ -16,7 +16,8 @@ export default {
 } as Meta;
 
 
-export const Default = () =><Modal>
+export const Default = () => <Modal>
+    <form>
     <ModalHeader title={"Add integration"} onClose={()=>alert("closing")}/>
     <ModalBody>
         { /* Select an integration */ }
@@ -80,4 +81,5 @@ export const Default = () =><Modal>
             <Button label={"Add integration"} icon={"plus-circle"} type={"submit"} buttontype={"submit"} />
         </>}
     />
+</form>
 </Modal>
