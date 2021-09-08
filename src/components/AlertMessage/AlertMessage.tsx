@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./alertmessage.scss"
 import Icon from "../Icon";

@@ -1,33 +1,29 @@
 import React from "react";
+import "./infobar.scss"
 import Icon from "../Icon";
-import "./infobar.scss";
 
-export interface InfoBarProps  {
-    image: string;
-    title: string;
-    description?: string;
-    onClick?: (
-        event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-    ) => void;
-};
+export interface InfoBarProps{
+    type:string,
+    message:string,
+    showClose: boolean,
+    onClick?:(
+        event:React.MouseEvent<HTMLDivElement,MouseEvent>
+    )=>void
+}
 
-const InfoBar = ({
-                image,
-                title,
-                description,
-                onClick,
-            }: InfoBarProps) => {
-    return (
-        <div className={"info-bar"}>
-            <div className={"avatar"}>
-                <Icon label={image}></Icon>
+const InfoBar = ({type,message,onClick, showClose = false}:InfoBarProps)=>{
+    return(
+        <div className={`${type} message`} >
+            <div>
+                { type !== "loading" && <Icon label="info" /> }
+                { type === "loading" && <div className="lds-ripple"><div></div><div></div></div> }
+                <span className="description">{message}</span>
             </div>
-            <div className={"description"}>
-                <h1>{title}</h1>
-                <p>{description}</p>
-            </div>
+            { showClose && <div onClick={onClick}>
+                <Icon label="cross" />
+            </div> }
         </div>
-    );
-};
+    )
+}
 
-export default InfoBar;
+export default InfoBar

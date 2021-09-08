@@ -13,5 +13,20 @@ export default {
 const Template: Story<InfoBarProps> = (args) => <InfoBar {...args} />;
 
 // Reuse that template for creating different stories
-export const Default = Template.bind({});
-Default.args = { label: "Default Button", icon: "dashboard", type: "" };
+export const Alert = Template.bind({});
+Alert.args = {
+    type: "alert",
+    message:"Wrong password, please try again!"
+};
+
+export const Info = Template.bind({});
+Info.args = {
+    type: "info",
+    message:"Please provide your information"
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+    type: "loading",
+    message:"Loading, please wait a minute"
+};

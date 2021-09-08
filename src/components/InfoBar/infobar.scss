@@ -1,21 +1,86 @@
 @import "../../app.scss";
 
-div.info-bar {
+.message {
   display: flex;
-  .avatar {
-    align-content: center;
-    justify-content: flex-start;
-    padding: size(4) size(4) size(4) 0;
-  }
-  .description {
-    align-content: center;
-    justify-content: center;
-    font-family: Inter;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  padding: size(1) size(2);
+  div {
     display: flex;
-    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    .description{
+      font-size: 15px;
+      margin-left: size(1);
+      font-weight: 500;
+      line-height: size(2);
+    }
+  }
 
-    h1 {
-      font-size: size(2);
+  &.alert {
+    background: hsla(var(--alert-hsl),0.1);
+    div .description{
+      color: var(--alert);
+    }
+    svg path {
+      fill: var(--alert);
+    }
+  }
+
+  &.info {
+    background: hsla(var(--info-hsl),0.1);
+    div .description{
+      color: var(--info);
+    }
+    svg path {
+      fill: var(--info);
+    }
+  }
+
+  &.loading {
+    background: hsl(0, 0%, 90%);
+    div .description{
+      color: var(--color-gray);
+    }
+    svg path {
+      fill: var(--color-gray);
+    }
+  }
+
+
+  .lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 1px solid #aaa;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 9px;
+      left: 9px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 18px;
+      height: 18px;
+      opacity: 0;
     }
   }
 }
