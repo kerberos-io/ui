@@ -13,6 +13,7 @@ import { Footer, FooterList, FooterCopyright } from "./components/Footer";
 import Ellipse from "./components/Ellipse";
 import AlertMessage from "./components/AlertMessage";
 import {Input,FieldSet,Form} from "./components/Input";
+import {TextArea} from "./components/TextArea";
 import SocialList from "./components/SocialList/SocialList";
 import LandingLayout  from "./components/LandingLayout";
 import TermsOfUse from "./components/TermsOfUse";
@@ -54,6 +55,7 @@ export {
     Ellipse,
     AlertMessage,
     Input,
+    TextArea,
     FieldSet,
     Form,
     SocialList,
