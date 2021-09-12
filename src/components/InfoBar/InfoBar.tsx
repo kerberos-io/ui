@@ -15,7 +15,9 @@ const InfoBar = ({type,message,onClick, showClose = false}:InfoBarProps)=>{
     return(
         <div className={`${type} message`} >
             <div>
-                { type !== "loading" && <Icon label="info" /> }
+                { type === "info" && <Icon label="info" /> }
+                { type === "success" && <Icon label="verify" /> }
+                { type === "alert" && <Icon label="cross" /> }
                 { type === "loading" && <div className="lds-ripple"><div></div><div></div></div> }
                 <span className="description">{message}</span>
             </div>

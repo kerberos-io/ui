@@ -260,8 +260,8 @@ export function Star() {
 export function  Checkbox() {
     return(
         <svg className={"icon"} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect opacity="0.5" x="1" y="1" width="12" height="12" rx="1" stroke="#84559F" stroke-width="2"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.29289 6.29289C3.68342 5.90237 4.31658 5.90237 4.70711 6.29289L6 7.58579L9.29289 4.29289C9.68342 3.90237 10.3166 3.90237 10.7071 4.29289C11.0976 4.68342 11.0976 5.31658 10.7071 5.70711L6.70711 9.70711C6.31658 10.0976 5.68342 10.0976 5.29289 9.70711L3.29289 7.70711C2.90237 7.31658 2.90237 6.68342 3.29289 6.29289Z" fill="#84559F"/>
+            <rect opacity="0.5" x="1" y="1" width="12" height="12" rx="1" stroke="currentColor" stroke-width="2"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.29289 6.29289C3.68342 5.90237 4.31658 5.90237 4.70711 6.29289L6 7.58579L9.29289 4.29289C9.68342 3.90237 10.3166 3.90237 10.7071 4.29289C11.0976 4.68342 11.0976 5.31658 10.7071 5.70711L6.70711 9.70711C6.31658 10.0976 5.68342 10.0976 5.29289 9.70711L3.29289 7.70711C2.90237 7.31658 2.90237 6.68342 3.29289 6.29289Z" fill="currentColor"/>
         </svg>
 
     )
@@ -545,12 +545,12 @@ export function Flag(){
 export function List(){
     return(
         <svg className={"icon"} width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C6 1.44772 6.44772 1 7 1H17C17.5523 1 18 1.44772 18 2C18 2.55228 17.5523 3 17 3H7C6.44772 3 6 2.55228 6 2Z" fill="#84559F"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 8C6 7.44772 6.44772 7 7 7H17C17.5523 7 18 7.44772 18 8C18 8.55228 17.5523 9 17 9H7C6.44772 9 6 8.55228 6 8Z" fill="#84559F"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 14C6 13.4477 6.44772 13 7 13H17C17.5523 13 18 13.4477 18 14C18 14.5523 17.5523 15 17 15H7C6.44772 15 6 14.5523 6 14Z" fill="#84559F"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 0.89543 0.89543 0 2 0C3.10457 0 4 0.89543 4 2C4 3.10457 3.10457 4 2 4C0.89543 4 0 3.10457 0 2Z" fill="#84559F"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 6.89543 0.89543 6 2 6C3.10457 6 4 6.89543 4 8C4 9.10457 3.10457 10 2 10C0.89543 10 0 9.10457 0 8Z" fill="#84559F"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14C0 12.8954 0.89543 12 2 12C3.10457 12 4 12.8954 4 14C4 15.1046 3.10457 16 2 16C0.89543 16 0 15.1046 0 14Z" fill="#84559F"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C6 1.44772 6.44772 1 7 1H17C17.5523 1 18 1.44772 18 2C18 2.55228 17.5523 3 17 3H7C6.44772 3 6 2.55228 6 2Z" fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 8C6 7.44772 6.44772 7 7 7H17C17.5523 7 18 7.44772 18 8C18 8.55228 17.5523 9 17 9H7C6.44772 9 6 8.55228 6 8Z" fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 14C6 13.4477 6.44772 13 7 13H17C17.5523 13 18 13.4477 18 14C18 14.5523 17.5523 15 17 15H7C6.44772 15 6 14.5523 6 14Z" fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 0.89543 0.89543 0 2 0C3.10457 0 4 0.89543 4 2C4 3.10457 3.10457 4 2 4C0.89543 4 0 3.10457 0 2Z" fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 6.89543 0.89543 6 2 6C3.10457 6 4 6.89543 4 8C4 9.10457 3.10457 10 2 10C0.89543 10 0 9.10457 0 8Z" fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14C0 12.8954 0.89543 12 2 12C3.10457 12 4 12.8954 4 14C4 15.1046 3.10457 16 2 16C0.89543 16 0 15.1046 0 14Z" fill="currentColor"/>
         </svg>
     )
 }

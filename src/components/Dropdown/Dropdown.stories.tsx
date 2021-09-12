@@ -19,6 +19,15 @@ export const SitesMultipleSelect = () =>
     ]}/>
 
 
+export const ErrorMultipleSelect = () =>
+    <Dropdown direction="right" label="Location" error={"Missing field"} icon={"location"} placeholder={"Select sites"} items={[
+        {label: "Hannver, Germany", value: "Hannver, Germany"},
+        {label: "Düsseldorf, Germany", value: "Düsseldorf, Germany"},
+        {label: "FC Bayern Munich, Germany", value: "FC Bayern Munich, Germany"},
+        {label: "Berlin, Germany", value: "Berlin, Germany"}
+    ]}/>
+
+
 export const CameraSingleSelect = () =>
     <Dropdown direction="right" icon={"cameras"} placeholder={"Select a camera"} isRadio={true} items={[
         {label: "Camera 1", value: "Camera 1"},

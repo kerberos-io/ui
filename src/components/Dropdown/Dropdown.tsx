@@ -16,6 +16,7 @@ export interface DropdownProps  {
     layout?: "form" | "controlbar";
     isRadio?:boolean,
     onChange: any,
+    error?:string,
 };
 
 export const Dropdown = ({
@@ -27,6 +28,7 @@ export const Dropdown = ({
     search=true,
     label="",
     layout = "form",
+    error = "",
     isRadio=false,
     onChange }: DropdownProps) => {
 
@@ -86,15 +88,19 @@ export const Dropdown = ({
     let valuesString = "";
     if(values.length == 1) {
         const item = items.find((i:any) => i.value === values[0]);
-        valuesString = item.label;
+        if(item && item.label !== "") {
+            valuesString = item.label;
+        }
 
     } else if (values.length > 1) {
         const item = items.find((i:any) => i.value === values[0]);
-        valuesString = item.label + ", +" + (values.length-1).toString();
+        if(item && item.label !== "") {
+            valuesString = item.label + ", +" + (values.length - 1).toString();
+        }
     }
     return (
         <div className={"dropdown-container"} ref={node}>
-            <div className={"input"}>
+            <div className={`input`}>
                 <Input
                     onClick={toggleChecked}
                     iconleft={icon}
@@ -103,6 +109,7 @@ export const Dropdown = ({
                     readonly={true}
                     readonlyLabel={false}
                     layout={layout}
+                    error={error}
                     placeholder={placeholder}
                     value={valuesString}/>
             </div>
