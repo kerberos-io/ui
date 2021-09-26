@@ -9,6 +9,7 @@ export interface CamarasTableProps{
       <Table>
       <TableHeader>
         <TableRow
+          id={"header"}
           headercells={[
             "status",
             "name",
