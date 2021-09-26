@@ -1,8 +1,8 @@
 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 3C0 1.34315 1.34315 0 3 0H15C16.6569 0 18 1.34315 18 3V15C18 16.6569 16.6569 18 15 18H3C1.34315 18 0 16.6569 0 15V3ZM3 2C2.44772 2 2 2.44772 2 3V15C2 15.5523 2.44772 16 3 16H15C15.5523 16 16 15.5523 16 15V3C16 2.44772 15.5523 2 15 2H3Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M17 8H1V6H17V8Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M8 17L8 7L10 7L10 17L8 17Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M4 17L4 7L6 7L6 17L4 17Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M12 17L12 7L14 7L14 17L12 17Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M17 13H1V11H17V13Z" fill="currentColor"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M0 3C0 1.34315 1.34315 0 3 0H15C16.6569 0 18 1.34315 18 3V15C18 16.6569 16.6569 18 15 18H3C1.34315 18 0 16.6569 0 15V3ZM3 2C2.44772 2 2 2.44772 2 3V15C2 15.5523 2.44772 16 3 16H15C15.5523 16 16 15.5523 16 15V3C16 2.44772 15.5523 2 15 2H3Z" fill="currentColor"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M17 8H1V6H17V8Z" fill="currentColor"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M8 17L8 7L10 7L10 17L8 17Z" fill="currentColor"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M4 17L4 7L6 7L6 17L4 17Z" fill="currentColor"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M12 17L12 7L14 7L14 17L12 17Z" fill="currentColor"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M17 13H1V11H17V13Z" fill="currentColor"/>
 </svg>

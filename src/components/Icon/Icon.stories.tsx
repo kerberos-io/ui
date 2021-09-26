@@ -78,6 +78,7 @@ export const AllIcons = () => <>
 export const InfoAddUser = () => <Icon label="info-add-user" />
 export const InfoHeavyBox = () => <Icon label="info-heavy-box" />
 export const InfoProfessor = () => <Icon label="info-professor" />
+export const InfoSurveillance = () => <Icon label="info-surveillance" />
 
 export const AllInfos = () => <>
     <InfoAddUser/>&nbsp;&nbsp;<InfoProfessor/>&nbsp;&nbsp;<InfoHeavyBox/><br/>
