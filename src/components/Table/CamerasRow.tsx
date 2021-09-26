@@ -30,6 +30,7 @@ export interface CamerasRowProps {
   }:CamerasRowProps)=>{
     return(
       <TableRow
+          id={name}
           bodycells={[
             <Badge status={status} title={statusTitle} />,
             <>
@@ -59,4 +60,3 @@ export interface CamerasRowProps {
         />
     )
   }
-  
