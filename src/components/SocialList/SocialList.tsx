@@ -13,7 +13,7 @@ const SocialList = ({list}:SocialListProps) => {
         <li className="social-list">
             {
                 list.map(({label,href}) => (
-                    <a href={href}>
+                    <a href={href} target={"_blank"}>
                         <Icon label={label}/>
                     </a>
                 ))
