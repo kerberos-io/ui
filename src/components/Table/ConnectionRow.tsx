@@ -26,7 +26,7 @@ export interface ConnectionRowProps {
     camDevisor
   }:ConnectionRowProps) =>{
     return(
-      <TableRow bodycells={[
+      <TableRow id={"pin"} bodycells={[
         <>
           <Pin pin={sitePin} status={pinStatus} round/><b>{siteName}</b>
           </>,

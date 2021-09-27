@@ -71,12 +71,12 @@ const headerList = ["status", "name", "site", "uptime", "version", "controls"];
 export const Default = () => (
   <Table>
     <TableHeader>
-      <TableRow headercells={["status", "name", "site", "uptime", "version", "controls"]} />
+      <TableRow id={"header"} headercells={["status", "name", "site", "uptime", "version", "controls"]} />
     </TableHeader>
     <TableBody>
-      <TableRow bodycells={cellList1} />
-      <TableRow bodycells={cellList2} />
-      <TableRow bodycells={cellList3} />
+      <TableRow id={"cells1"} bodycells={cellList1} />
+      <TableRow id={"cells2"} bodycells={cellList2} />
+      <TableRow id={"cells3"} bodycells={cellList3} />
     </TableBody>
   </Table>
 );
@@ -84,7 +84,7 @@ export const Default = () => (
 export const OnlyOneRow = () => (
   <Table>
     <TableBody>
-      <TableRow bodycells={[
+      <TableRow id={"cells"} bodycells={[
         <Badge status="alert" title="offline" />,
         <>
           <Ellipse status="alert" /> <p>rh-first</p>
@@ -116,7 +116,7 @@ export const _CamerasTable = () =>  <CamerasTable>
 
 export const _ConnectionTable = () =><Table>
   <TableHeader>  
-  <TableRow headercells={["site name", "tech", "cameras","controls"]} />
+  <TableRow id={"header"} headercells={["site name", "tech", "cameras","controls"]} />
   </TableHeader>
   <TableBody>
   <ConnectionRow pinStatus="hub" siteName="Store01s" sitePin="Jhony Bravo" techName="Kubernetes" techContainer="Cluster" camStatus="success" camDevided={10} camDevisor={7} />
