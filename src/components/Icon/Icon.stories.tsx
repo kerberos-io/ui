@@ -19,6 +19,7 @@ export const Channels = () => <Icon label={"channels"}/>
 export const Cloud = () => <Icon label={"cloud"}/>
 export const Counting = () => <Icon label={"counting"}/>
 export const Dashboard = () => <Icon label={"dashboard"}/>
+export const Download = () => <Icon label={"download"}/>
 export const Forward = () => <Icon label={"forward"}/>
 export const Logout = () => <Icon label={"logout"}/>
 export const Media = () => <Icon label={"media"}/>
@@ -63,7 +64,7 @@ export const Lock = () => <Icon label="lock" />
 
 export const AllIcons = () => <>
     <Accounts/>&nbsp;&nbsp;<Activity/>&nbsp;&nbsp;<Alerts/>&nbsp;&nbsp;<Camera/>&nbsp;&nbsp;<Channels/><br/>
-    <Cloud/>&nbsp;&nbsp;<Counting/>&nbsp;&nbsp;<Dashboard/>&nbsp;&nbsp;<Forward/>&nbsp;&nbsp;<Logout/>&nbsp;&nbsp;<br/>
+    <Cloud/>&nbsp;&nbsp;<Counting/>&nbsp;&nbsp;<Dashboard/>&nbsp;&nbsp;<Forward/>&nbsp;&nbsp;<Download/>&nbsp;&nbsp;<Logout/>&nbsp;&nbsp;<br/>
     <Media/>&nbsp;&nbsp;<Livestream/>&nbsp;&nbsp;<Refresh/>&nbsp;&nbsp;<Share/>&nbsp;&nbsp;<Sites/><br/>
     <Subscription/>&nbsp;&nbsp;<Tasks/>&nbsp;&nbsp;<User/>&nbsp;&nbsp;<Watch/>&nbsp;&nbsp;<ToggleOff/><br/>
     <Bookmark/>&nbsp;&nbsp;<Star/>&nbsp;&nbsp;<Checkbox/>&nbsp;&nbsp;<Sort/>&nbsp;&nbsp;<Plus/><br/>

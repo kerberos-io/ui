@@ -542,6 +542,18 @@ export function Flag(){
     )
 }
 
+export function Download(){
+    return (
+        <svg className={"icon"} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1 13C1.55228 13 2 13.4477 2 14V16H16V14C16 13.4477 16.4477 13 17 13C17.5523 13 18 13.4477 18 14V17C18 17.5523 17.5523 18 17 18H1C0.447715 18 0 17.5523 0 17V14C0 13.4477 0.447715 13 1 13Z" fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0C9.55228 0 10 0.447715 10 1V12C10 12.5523 9.55228 13 9 13C8.44772 13 8 12.5523 8 12V1C8 0.447715 8.44772 0 9 0Z" fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.29289 6.29289C3.68342 5.90237 4.31658 5.90237 4.70711 6.29289L9.70711 11.2929C10.0976 11.6834 10.0976 12.3166 9.70711 12.7071C9.31658 13.0976 8.68342 13.0976 8.29289 12.7071L3.29289 7.70711C2.90237 7.31658 2.90237 6.68342 3.29289 6.29289Z" fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7071 6.29289C14.3166 5.90237 13.6834 5.90237 13.2929 6.29289L8.29289 11.2929C7.90237 11.6834 7.90237 12.3166 8.29289 12.7071C8.68342 13.0976 9.31658 13.0976 9.70711 12.7071L14.7071 7.70711C15.0976 7.31658 15.0976 6.68342 14.7071 6.29289Z" fill="currentColor"/>
+            <rect x="-484.5" y="-610.5" width="1860" height="1045" stroke="currentColor" stroke-width="3"/>
+        </svg>
+    )
+}
+
 export function List(){
     return(
         <svg className={"icon"} width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -911,6 +923,10 @@ const Icon = ({
             return <Flag/>
         case "list":
             return <List/>
+        case "lock":
+            return <Lock/>
+        case "download":
+            return <Download/>
         case "compass":
             return <Compass/>
         case "grid":
@@ -933,8 +949,6 @@ const Icon = ({
             return <InfoProfessor/>
         case "info-surveillance":
             return <InfoSurveillance/>
-        case "lock":
-            return <Lock/>
     }
     return <span></span>;
 };
