@@ -32,6 +32,8 @@
       background-color: var(--card-muted);
 
       .table-row {
+        border: 5px solid var(--card-muted);
+
         @extend %box-shadow;
 
         td {
@@ -83,6 +85,24 @@
               svg{
                 color:var(--alert);
               }
+            }
+          }
+        }
+
+        &.details {
+          position: relative;
+          top: -14px;
+          display: table-row;
+
+          background: #f3f3f3;
+          td {
+            border-radius: 0;
+            border-bottom-left-radius: var(--radius);
+            border-bottom-right-radius: var(--radius);
+            div {
+              padding: 10px 0;
+              display: flex;
+              flex: 50%;
             }
           }
         }
