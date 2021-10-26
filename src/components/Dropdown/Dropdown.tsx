@@ -15,6 +15,7 @@ export interface DropdownProps  {
     label?: string;
     layout?: "form" | "controlbar";
     isRadio?:boolean,
+    absolute?:boolean,
     onChange: any,
     error?:string,
 };
@@ -27,6 +28,7 @@ export const Dropdown = ({
     direction,
     search=true,
     label="",
+    absolute=false,
     layout = "form",
     error = "",
     isRadio=false,
@@ -99,46 +101,48 @@ export const Dropdown = ({
         }
     }
     return (
-        <div className={"dropdown-container"} ref={node}>
-            <div className={`input`}>
-                <Input
-                    onClick={toggleChecked}
-                    iconleft={icon}
-                    label={label}
-                    iconright={"arrow-down-sm"}
-                    readonly={true}
-                    readonlyLabel={false}
-                    layout={layout}
-                    error={error}
-                    placeholder={placeholder}
-                    value={valuesString}/>
-            </div>
-            { check && <div className={`dropdown ${direction==="left"?"left":"right"}`}>
-                <div id="arrow-up">
-                    <Icon label="arrow-up" />
+        <div className={"dropdown-wrapper"}>
+            <div className={"dropdown-container " + (absolute ? "absolute" : "") } ref={node}>
+                <div className={`input`}>
+                    <Input
+                        onClick={toggleChecked}
+                        iconleft={icon}
+                        label={label}
+                        iconright={"arrow-down-sm"}
+                        readonly={true}
+                        readonlyLabel={false}
+                        layout={layout}
+                        error={error}
+                        placeholder={placeholder}
+                        value={valuesString}/>
                 </div>
-                <ul>
-                    { search &&
-                      <li className="search-input">
-                          <Input
-                              iconleft="search"
-                              iconright=""
-                              label=""
-                              hint=""
-                              onChange={(e: any) => {
-                                  const {value} = e.target;
-                                  setSearch(value)
-                              }}
-                              placeholder="Search..."
-                              seperate
-                              type="text"
-                          />
-                      </li> }
-                   {items.filter((i: any) => (!searchValue || searchValue ==="") || searchValue && searchValue !=="" && (i.label.indexOf(searchValue) > -1 || i.label.toLowerCase().indexOf(searchValue.toLowerCase()) > -1)).map((i:any) => {
-                       return <DropList key={i.value} icon={icon} radio={isRadio} title={i.label} value={i.value} checked={values.find((v:any) => v === i.value)} onChange={onSelectValue} />
-                   })}
-                </ul>
-            </div> }
+                { check && <div className={`dropdown ${direction==="left"?"left":"right"}`}>
+                    <div id="arrow-up">
+                        <Icon label="arrow-up" />
+                    </div>
+                    <ul>
+                        { search &&
+                          <li className="search-input">
+                              <Input
+                                  iconleft="search"
+                                  iconright=""
+                                  label=""
+                                  hint=""
+                                  onChange={(e: any) => {
+                                      const {value} = e.target;
+                                      setSearch(value)
+                                  }}
+                                  placeholder="Search..."
+                                  seperate
+                                  type="text"
+                              />
+                          </li> }
+                       {items.filter((i: any) => (!searchValue || searchValue ==="") || searchValue && searchValue !=="" && (i.label.indexOf(searchValue) > -1 || i.label.toLowerCase().indexOf(searchValue.toLowerCase()) > -1)).map((i:any) => {
+                           return <DropList key={i.value} icon={icon} radio={isRadio} title={i.label} value={i.value} checked={values.find((v:any) => v === i.value)} onChange={onSelectValue} />
+                       })}
+                    </ul>
+                </div> }
+            </div>
         </div>
     );
 };

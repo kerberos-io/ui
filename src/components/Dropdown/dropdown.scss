@@ -1,7 +1,16 @@
 @import "../../app.scss";
 
+.dropdown-wrapper {
+}
+
 .dropdown-container {
+
   position: relative;
+
+  &.absolute {
+    position: absolute;
+    z-index: 99999;
+  }
 
   .input {
     cursor: pointer;
@@ -15,7 +24,7 @@
 
   .dropdown {
     position: absolute;
-    top: 72px;
+    top: 100px;
     width: fit-content;
     background: var(--card);
     border-radius: var(--radius);
