@@ -12,6 +12,9 @@ export interface DropdownProps  {
     items: any,
     direction:"left"|"right",
     search?:boolean,
+    shorten?:boolean,
+    shortenType?:string,
+    shortenMaxLength?:number,
     label?: string;
     layout?: "form" | "controlbar";
     isRadio?:boolean,
@@ -29,6 +32,9 @@ export const Dropdown = ({
     search=true,
     label="",
     absolute=false,
+    shorten=true,
+    shortenType="end",
+    shortenMaxLength=15,
     layout = "form",
     error = "",
     isRadio=false,
@@ -138,7 +144,18 @@ export const Dropdown = ({
                               />
                           </li> }
                        {items.filter((i: any) => (!searchValue || searchValue ==="") || searchValue && searchValue !=="" && (i.label.indexOf(searchValue) > -1 || i.label.toLowerCase().indexOf(searchValue.toLowerCase()) > -1)).map((i:any) => {
-                           return <DropList key={i.value} icon={icon} radio={isRadio} title={i.label} value={i.value} checked={values.find((v:any) => v === i.value)} onChange={onSelectValue} />
+                           return <DropList
+                               key={i.label + i.value}
+                               icon={icon}
+                               radio={isRadio}
+                               title={i.label}
+                               value={i.value}
+                               checked={values.find((v:any) => v === i.value)}
+                               onChange={onSelectValue}
+                               shorten={shorten}
+                               shortenType={shortenType}
+                               shortenMaxLength={shortenMaxLength}
+                           />
                        })}
                     </ul>
                 </div> }

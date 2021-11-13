@@ -9,7 +9,10 @@ export interface DropListProps  {
     radio?:boolean,
     icon?:string,
     checked?: boolean,
-    onChange?: any
+    onChange?: any,
+    shorten?:boolean,
+    shortenType?:string,
+    shortenMaxLength?:number
 };
 
 export const DropList = ({
@@ -18,6 +21,9 @@ export const DropList = ({
     radio=false,
     icon,
     checked=false,
+    shorten=true,
+    shortenType="end",
+    shortenMaxLength=15,
     onChange,}: DropListProps) => {
 
     const truncate = (fullStr:any, strLen:any, separator:any) => {
@@ -25,17 +31,24 @@ export const DropList = ({
 
         separator = separator || '...';
 
-        var sepLen = separator.length,
-            charsToShow = strLen - sepLen,
-            frontChars = Math.ceil(charsToShow/2),
-            backChars = Math.floor(charsToShow/2);
+        if(shortenType === "middle") {
+            var sepLen = separator.length,
+                charsToShow = strLen - sepLen,
+                frontChars = Math.ceil(charsToShow / 2),
+                backChars = Math.floor(charsToShow / 2);
 
-        return fullStr.substr(0, frontChars) +
-            separator +
-            fullStr.substr(fullStr.length - backChars);
+            return fullStr.substr(0, frontChars) +
+                separator +
+                fullStr.substr(fullStr.length - backChars);
+        } else if(shortenType === "end") {
+            return fullStr.substr(0, strLen) + separator
+        }
     };
 
-    const fieldMaxLength = 15;
+    let fieldMaxLength = Infinity;
+    if (shorten) {
+        fieldMaxLength = shortenMaxLength;
+    }
     return (
         <li>
             <label className={`drop-item`}>

@@ -155,6 +155,13 @@ label.generic-input {
         &::placeholder {
           color: var(--alert);
         }
+        outline: none;
+        border: none;
+        &:focus {
+          outline: none;
+          border: none;
+          box-shadow: none;
+        }
       }
     }
   }
