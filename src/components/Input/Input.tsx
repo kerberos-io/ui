@@ -82,8 +82,7 @@ export const Input = ({
                     <div className="icon-left">
                       <Icon label={`${iconleft}`} />
                     </div> }
-                    { value && <input ref={inputRef} {...rest} type={type} className="input" readOnly={readonly} disabled={disabled} placeholder={placeholder} value={value} onChange={onChange} onClick={onClick}/> }
-                    { !value && <input ref={inputRef} {...rest} type={type} className="input" readOnly={readonly} disabled={disabled} placeholder={placeholder} value={""} onChange={onChange} onClick={onClick}/> }
+                    <input ref={inputRef} {...rest} type={type} className="input" readOnly={readonly} disabled={disabled} placeholder={placeholder} value={value} onChange={onChange} onClick={onClick}/>
                 </div>
             
                 {iconright && (
