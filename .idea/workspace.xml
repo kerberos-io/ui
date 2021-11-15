@@ -2,103 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7874eca-d48e-4f8e-9104-f922ae587379" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Icon/svg/info/undraw_surveillance.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tabs/Tabs.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tabs/Tabs.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tabs/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tabs/tabs.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/Icon.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/Icon.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/Icon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/accounts.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/accounts.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/alert-channels.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/alert-channels.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/alert-triangle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/alert-triangle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/alert.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/alert.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/alerts.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/alerts.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/api.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/api.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/arrow-down.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/arrow-down.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/arrow-last.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/arrow-last.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/arrow-left.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/arrow-left.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/arrow-right-double.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/arrow-right-double.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/arrow-right.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/arrow-right.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/big/circle-check-big.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/big/circle-check-big.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/big/circle-cross-big.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/big/circle-cross-big.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/big/lock-locked-1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/big/lock-locked-1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/big/lock-unlocked.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/big/lock-unlocked.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/big/pause-circle-big.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/big/pause-circle-big.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/book.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/book.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/calendar.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/calendar.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/cameras.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/cameras.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/change.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/change.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/chart-line.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/chart-line.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/chart-pie.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/chart-pie.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/check-circle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/check-circle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/cloud.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/cloud.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/colors.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/colors.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/compass.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/compass.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/copy.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/copy.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/counting.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/counting.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/credit-card.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/credit-card.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/cross-circle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/cross-circle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/cross-small.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/cross-small.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/cross.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/cross.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/dashboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/dashboard.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/docs.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/docs.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/download.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/download.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/email.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/email.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/exclamation-circle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/exclamation-circle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/feedback.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/feedback.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/file.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/file.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/floor-plan.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/floor-plan.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/gauge-limit.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/gauge-limit.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/grid.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/grid.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/help-desk.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/help-desk.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/in-out.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/in-out.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/info-circle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/info-circle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/info/undraw_professor.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/info/undraw_professor.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/invoice.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/invoice.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/key.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/key.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/latest-activity.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/latest-activity.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/latest-events.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/latest-events.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/lightbulb.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/lightbulb.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/list.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/list.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/live-stream.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/live-stream.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/lock-locked.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/lock-locked.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/login.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/login.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/logout.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/logout.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/media.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/media.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/mic-muted.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/mic-muted.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/mic.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/mic.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/minus-circle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/minus-circle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/new-shiny.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/new-shiny.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/news.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/news.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/out.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/out.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/patterns.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/patterns.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/pen.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/pen.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/person.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/person.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/plus-circle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/plus-circle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/preferences.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/preferences.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/question-circle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/question-circle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/queue.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/queue.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/refresh.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/refresh.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/role.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/role.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/save.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/save.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/search.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/share.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/share.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/sites.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/sites.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/small/play-icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/small/play-icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/small/tag-small.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/small/tag-small.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/subscription.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/subscription.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/table.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/table.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/tag.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/tag.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/task-cross.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/task-cross.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/task-done.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/task-done.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/task-new.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/task-new.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/task-unknown.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/task-unknown.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/tasks.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/tasks.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/trash.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/trash.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/upload.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/upload.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/user.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/user.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/verify.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/verify.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/video-mute.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/video-mute.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/svg/zone.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/svg/zone.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table/TableRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/TableRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +35,12 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/index.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Tabs/Tabs.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Tabs/tabs.scss" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Tabs/index.ts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Tabs/Tabs.stories.tsx" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1tydDSKjaOeDCjd1owwEziwSDbw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -137,7 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Modal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -147,8 +63,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/Modal" />
       <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/components/Modal" />
       <recent name="$PROJECT_DIR$/src/components/Main" />
       <recent name="$PROJECT_DIR$/src/components/Main/stories" />
       <recent name="$PROJECT_DIR$/src/components/Card" />
@@ -193,6 +109,13 @@
       <workItem from="1629633335524" duration="24059000" />
       <workItem from="1631458754113" duration="3081000" />
       <workItem from="1632595278084" duration="5498000" />
+      <workItem from="1635400217289" duration="3684000" />
+      <workItem from="1635845421478" duration="3148000" />
+      <workItem from="1636103382200" duration="528000" />
+      <workItem from="1636127880872" duration="10042000" />
+      <workItem from="1636832191226" duration="508000" />
+      <workItem from="1636835264855" duration="3881000" />
+      <workItem from="1636966063883" duration="4950000" />
     </task>
     <servers />
   </component>
@@ -218,6 +141,26 @@
           <url>file://$PROJECT_DIR$/src/components/KPI/KPI.tsx</url>
           <line>37</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Dropdown/Dropdown.stories.tsx</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Dropdown/Dropdown.tsx</url>
+          <line>118</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/InfoBar/InfoBar.tsx</url>
+          <line>21</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Input/Input.tsx</url>
+          <line>11</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

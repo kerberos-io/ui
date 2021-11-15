@@ -1,0 +1,31 @@
+@import "../../app.scss";
+
+.tab {
+  @extend %tfx;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: size(1) size(2);
+  font-size: 15px;
+  line-height: size(3);
+  color: var(--text-light);
+  font-weight: 500;
+  border-right: none !important;
+
+  &:hover {
+    background: hsla(var(--card-hsl), 0.5);
+    color: var(--text-muted);
+    span { color: var(--text); }
+  }
+  &.active {
+    background: hsla(var(--hub-hsl), 0.1);
+    box-shadow: 3px 0 var(--hub) inset;
+    color: var(--hub);
+    @include break(w) { box-shadow: 0 3px var(--hub) inset; }
+    span { color: var(--text); }
+  }
+  span {
+    color: var(--text-muted);
+    margin-left: size(1);
+  }
+}
