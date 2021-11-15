@@ -26,7 +26,7 @@ import Pin from "./components/Pin";
 import {ControlBar, FilterDisplay, FilterSearch, FilterSite, FilterSort } from "./components/ControlBar"
 import { VideoContainer,VideoWallHeader } from "./components/VideoContainer";
 import Toggle from "./components/Toggle";
-import Tabs from "./components/Tabs";
+import {Tabs, Tab} from "./components/Tabs";
 import InfoBar from "./components/InfoBar";
 import InfoBox from "./components/InfoBox";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from "./components/Modal";
@@ -67,7 +67,6 @@ export {
     VideoHeader,
     SetupBox,
     Video,
-    Tabs,
     Table,
     TableHeader,
     TableRow,
@@ -93,5 +92,7 @@ export {
     Modal,
     ModalHeader,
     ModalBody,
-    ModalFooter
+    ModalFooter,
+    Tabs,
+    Tab,
 };

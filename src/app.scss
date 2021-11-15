@@ -197,11 +197,8 @@ input, textarea, select {
   }
   .filtering, .sorting { // shared styles
     display: flex;
-    flex-direction: column; // on mobile, stack vertically..
-    @include break-from(500px) {
-      flex-direction: row; // ..on larger displays, show next to each other
-      flex-wrap: wrap;
-    }
+    flex-direction: row; // ..on larger displays, show next to each other
+    flex-wrap: wrap;
     & > * {
       border-bottom: 1px solid var(--bg-muted);
       @include break-from(500px) { flex: 1 1 50%; }
@@ -217,6 +214,11 @@ input, textarea, select {
     @include break(w) { flex: 1 1; align-self: flex-start; }
     & > * {
       @include break(w) { border-right: 1px solid var(--bg-muted); }
+    }
+    &.row {
+      & > * {
+        flex: 1 1 5% !important;
+      }
     }
   }
   .sorting {
