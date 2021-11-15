@@ -3,7 +3,7 @@
   "version": "1.55.0",
   "main": "lib/index.js",
   "repository": "https://github.com/kerberos-io/ui",
-  "author": "cedricve <cedric@verstraeten.io>",
+  "author": "Kerberos.io <support@kerberos.io>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.14.6",
