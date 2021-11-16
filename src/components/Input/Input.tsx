@@ -76,13 +76,13 @@ export const Input = ({
                   { hint !== "" && <p className="hint">{hint}</p> }
               </> }
           </div>
-          <div className={`input-bar ${!iconright?"fit-right":""} ${layout}`}>
+          <div className={`input-bar ${disabled?"disabled":""} ${!iconright?"fit-right":""} ${layout}`}>
                 <div className={`input-box ${iconleft?"":"come-near"}`}>
                   {iconleft && 
                     <div className="icon-left">
                       <Icon label={`${iconleft}`} />
                     </div> }
-                    <input ref={inputRef} {...rest} type={type} className="input" readOnly={readonly} disabled={disabled} placeholder={placeholder} value={value} onChange={onChange} onClick={onClick}/>
+                    <input ref={inputRef} {...rest} type={type} className={`input ${disabled?"disabled":""}`} readOnly={readonly} disabled={disabled} placeholder={placeholder} value={value} onChange={onChange} onClick={onClick}/>
                 </div>
             
                 {iconright && (

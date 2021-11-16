@@ -41,7 +41,7 @@ Error.args={
 
 export const _Form = () =><Form>
     <FieldSet>
-     <Input  
+     <Input
         label= "username or email"
         readonly={false}
         disabled={false}
@@ -50,7 +50,7 @@ export const _Form = () =><Form>
         // value=""
         type="text"
         />
-    <Input  
+    <Input
         label= "password"
         readonly={false}
         disabled={false}
@@ -65,18 +65,25 @@ export const _Form = () =><Form>
         </FieldSet>
     </Form>
 
-export const _Buttonize1 = ()=>  <Input                        
+export const Disabled = () => <Input
+    disabled={true}
+    value="This field is disabled"
+/>
+
+export const Buttonize1 = ()=>  <Input
     iconright="arrow-down-sm"
     type="button"
     value="EN"
-    />
-export const _Buttonize2 = ()=>  <Input                        
-iconleft="preferences"
-type="button"
 />
-export const _Buttonize3 = ()=>  <Input
-iconleft="sort"
-value="Name"
-type="button"
-iconright="arrow-down-sm"
+
+    export const Buttonize2 = ()=>  <Input
+    iconleft="preferences"
+    type="button"
+/>
+
+export const Buttonize3 = ()=>  <Input
+    iconleft="sort"
+    value="Name"
+    type="button"
+    iconright="arrow-down-sm"
 />

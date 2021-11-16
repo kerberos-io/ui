@@ -124,15 +124,8 @@ input, textarea, select {
     width: auto;
   }
   &:not(.button) { // don't apply input status effects on buttons (ie. input[type="submit"])
-    &[disabled], &[readonly] {
-      color: var(--text-muted);
-    }
-    &:hover {
-      border: 1px solid var(--text-light);
-    }
-    &:focus {
-      border: 1px solid var(--primary);
-      box-shadow: 0px 0px 0px 3px hsla(var(--primary-hsl), 0.2);
+    &[disabled] {
+      color: hsl(0, 0, 82) !important;
     }
   }
 }

@@ -24,7 +24,6 @@ label.generic-input {
       color: var(--primary);
       cursor: pointer;
       text-transform: none;
-
     }
   }
 
@@ -132,6 +131,16 @@ label.generic-input {
       &:focus-within {
         @extend %input-focus-border;
         @extend %input-box-shadow;
+      }
+    }
+
+    &.disabled {
+      &:hover {
+        border: 1px solid var(--bg-muted) !important;
+      }
+      &:focus-within {
+        border: 1px solid var(--bg-muted) !important;
+        box-shadow: none !important;
       }
     }
   }
