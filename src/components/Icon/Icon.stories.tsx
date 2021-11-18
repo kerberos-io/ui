@@ -61,6 +61,11 @@ export const Book = () => <Icon label="book" />
 export const Github = () => <Icon label="github" />
 export const GithubNav = () => <Icon label="github-nav" />
 export const Lock = () => <Icon label="lock" />
+export const ArrowSmallUp = () => <Icon label="arrow-small-up" />
+export const ArrowSmallDown = () => <Icon label="arrow-small-down" />
+export const Play = () => <Icon label="play" />
+export const Stop = () => <Icon label="stop" />
+export const CrossCircle = () => <Icon label="cross-circle" />
 
 export const AllIcons = () => <>
     <Accounts/>&nbsp;&nbsp;<Activity/>&nbsp;&nbsp;<Alerts/>&nbsp;&nbsp;<Camera/>&nbsp;&nbsp;<Channels/><br/>

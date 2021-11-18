@@ -807,6 +807,44 @@ export function Lock() {
     )
 }
 
+export function ArrowSmallUp() {
+    return (
+        <svg className={"icon"} width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 0L0 6H12L6 0Z" fill="#A69D9D"/>
+        </svg>)
+}
+
+export function ArrowSmallDown() {
+    return (
+        <svg className={"icon"} width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 6L0 0H12L6 6Z" fill="#A69D9D"/>
+    </svg>)
+}
+
+export function Play() {
+    return (
+        <svg className={"icon"} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2C5.13401 2 2 5.13401 2 9C2 12.866 5.13401 16 9 16C12.866 16 16 12.866 16 9C16 5.13401 12.866 2 9 2ZM0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9Z" fill="#A69D9D"/>
+            <path d="M7 12.6263V5.3737C7 5.21396 7.17803 5.11869 7.31094 5.20729L12.7504 8.83359C12.8691 8.91275 12.8691 9.08725 12.7504 9.16641L7.31094 12.7927C7.17803 12.8813 7 12.786 7 12.6263Z" fill="#A69D9D" stroke="#A69D9D"/>
+        </svg>)
+}
+
+export function Stop() {
+    return (
+        <svg className={"icon"} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2C5.13401 2 2 5.13401 2 9C2 12.866 5.13401 16 9 16C12.866 16 16 12.866 16 9C16 5.13401 12.866 2 9 2ZM0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9Z" fill="#A69D9D"/>
+            <rect x="6" y="6" width="6" height="6" rx="1" fill="#A69D9D"/>
+        </svg>)
+}
+
+export function CrossCircle() {
+    return (<svg className={"icon"} width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fillRule="evenodd" clipRule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12.7071 11.2929C13.0976 11.6834 13.0976 12.3166 12.7071 12.7071C12.3166 13.0976 11.6834 13.0976 11.2929 12.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="currentColor"/>
+            <path fillRule="evenodd" clipRule="evenodd" d="M5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L11.2929 5.29289C11.6834 4.90237 12.3166 4.90237 12.7071 5.29289C13.0976 5.68342 13.0976 6.31658 12.7071 6.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071Z" fill="currentColor"/>
+            <path fillRule="evenodd" clipRule="evenodd" d="M9 2C5.13401 2 2 5.13401 2 9C2 12.866 5.13401 16 9 16C12.866 16 16 12.866 16 9C16 5.13401 12.866 2 9 2ZM0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9Z" fill="currentColor"/>
+        </svg>)
+}
+
 const Icon = ({
                   label
               }: IconProps) => {
@@ -867,6 +905,8 @@ const Icon = ({
             return <Plus/>
         case "search":
             return <Search/>
+        case "cross-circle":
+            return <CrossCircle/>
         case "circle-check-big":
             return <CircleCheckBig/>
         case "circle-cross-big":
@@ -917,6 +957,10 @@ const Icon = ({
             return <Trush/>
         case "arrow-up":
             return <ArrowUp/>
+        case "arrow-small-up":
+            return <ArrowSmallUp/>
+        case "arrow-small-down":
+            return <ArrowSmallDown/>
         case "location":
             return <Location/>
         case "flag":
@@ -925,6 +969,10 @@ const Icon = ({
             return <List/>
         case "lock":
             return <Lock/>
+        case "play":
+            return <Play/>
+        case "stop":
+            return <Stop/>
         case "download":
             return <Download/>
         case "compass":

@@ -125,7 +125,7 @@ input, textarea, select {
   }
   &:not(.button) { // don't apply input status effects on buttons (ie. input[type="submit"])
     &[disabled] {
-      color: hsl(0, 0, 82) !important;
+      color: #D1D1D1 !important;
     }
   }
 }
