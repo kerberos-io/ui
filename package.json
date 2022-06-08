@@ -1,6 +1,6 @@
 {
   "name": "@kerberos-io/ui",
-  "version": "1.58.0",
+  "version": "1.59.0",
   "main": "lib/index.js",
   "repository": "https://github.com/kerberos-io/ui",
   "author": "Kerberos.io <support@kerberos.io>",
@@ -64,5 +64,8 @@
     "rollup-plugin-react-svg": "^3.0.3",
     "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.3.2"
+  },
+  "browser": {
+    "crypto": false
   }
 }
