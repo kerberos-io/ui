@@ -25,6 +25,7 @@ build:
     paths:
       - docs-build
 
+
 docker:
   image: docker:stable
   stage: docker
