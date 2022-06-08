@@ -8,7 +8,6 @@ export interface AlertMessageProps{
     )=>void
 }
 
-
 const AlertMessage = ({message,onClick}:AlertMessageProps)=>{
         return(
             <div className="alert-message" >

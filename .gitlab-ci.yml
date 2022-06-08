@@ -19,8 +19,8 @@ stages:
 build:
   stage: build
   script:
-    - npm install
-    - npm run build-storybook
+    - yarn install
+    - yarn build-storybook
   artifacts:
     paths:
       - docs-build
