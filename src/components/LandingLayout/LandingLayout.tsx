@@ -29,16 +29,16 @@ const Copyright = {
 
 const Column2 = [
     {
-        item:"Opensource Agent",
-        href:"https://doc.kerberos.io/opensource/get-started/"
+        item:"Kerberos Agent",
+        href:"https://doc.kerberos.io/agent/first-things-first/"
     },
     {
-        item:"Enterprise Agent",
-        href:"https://doc.kerberos.io/enterprise/get-started/"
+        item:"Kerberos Factory",
+        href:"https://doc.kerberos.io/factory/first-things-first/"
     },
     {
         item:"Kerberos Vault",
-        href:"https://doc.kerberos.io/vault/get-started/"
+        href:"https://doc.kerberos.io/vault/first-things-first/"
     },
     {
         item:"Kerberos Hub",
@@ -52,7 +52,11 @@ const Column3 = [
         href:"https://doc.kerberos.io/"
     },
     {
-        item:"Enterprise Support",
+        item:"Youtube",
+        href:"https://www.youtube.com/channel/UCnd9q7iRNNw4W95eQwQuECA"
+    },
+    {
+        item:"Support",
         href:"https://kerberosio.zendesk.com/hc/en-us"
     },
     {
