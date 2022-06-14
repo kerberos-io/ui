@@ -82,6 +82,7 @@
     padding: 0;
     margin: 0;
     flex-direction: column-reverse;
+    position: relative;
     .videocard-tools{
      position: relative; 
       margin-top: -53px;
@@ -128,7 +129,8 @@
   .block-body {
     padding: 0;
     margin: 0;
-
+    position: relative;
+    
     .videocard-tools{
       margin: 12px 0;
     
@@ -160,6 +162,7 @@
   .block-body{
     justify-content: flex-end;
     flex-direction: column-reverse;
+    position: relative;
     .videocard-tools{
       margin: size(0.5);
       position: relative;

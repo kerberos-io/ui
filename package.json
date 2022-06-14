@@ -1,6 +1,6 @@
 {
   "name": "@kerberos-io/ui",
-  "version": "1.60.0",
+  "version": "1.61.0",
   "main": "lib/index.js",
   "repository": "https://github.com/kerberos-io/ui",
   "author": "Kerberos.io <support@kerberos.io>",
@@ -9,8 +9,9 @@
     "storybook": "start-storybook --no-manager-cache -s ./public -p 9001",
     "build-storybook": "build-storybook -s ./public -o docs-build",
     "build": "rollup -c",
-    "build-vault": "rollup -c && cp -r lib/* /Users/I353408/Projects/go/src/gitlab.com/kerberos-io/vault/frontend/node_modules/@kerberos-io/ui/lib/",
+    "build-agent": "rollup -c && cp -r lib/* /Users/cedricverstraeten/Projects/go/src/github.com/kerberos-io/agent/ui/node_modules/@kerberos-io/ui/lib/",
     "build-factory": "rollup -c && cp -r lib/* /Users/I353408/Projects/go/src/gitlab.com/kerberos-io/factory/frontend/node_modules/@kerberos-io/ui/lib/",
+    "build-vault": "rollup -c && cp -r lib/* /Users/I353408/Projects/go/src/gitlab.com/kerberos-io/vault/frontend/node_modules/@kerberos-io/ui/lib/",
     "build-glass": "rollup -c && cp -r lib/* /Users/I353408/Projects/go/src/gitlab.com/kerberos-io/glass/frontend/node_modules/@kerberos-io/ui/lib/"
   },
   "module": "lib/index.esm.js",
