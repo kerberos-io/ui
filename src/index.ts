@@ -17,6 +17,7 @@ import {TextArea} from "./components/TextArea";
 import SocialList from "./components/SocialList/SocialList";
 import LandingLayout  from "./components/LandingLayout";
 import TermsOfUse from "./components/TermsOfUse";
+import Card from "./components/Card";
 import {VideoCard, Video, VideoTools,VideoHeader} from "./components/VideoCard";
 import { Table, TableRow, TableHeader, TableCell,TableBody, CamerasTable, CamerasRow, ConnectionRow} from "./components/Table";
 import Alert from "./components/Alert";
@@ -62,6 +63,7 @@ export {
     SocialList,
     LandingLayout,
     TermsOfUse,
+    Card,
     VideoCard,
     VideoTools,
     VideoHeader,
