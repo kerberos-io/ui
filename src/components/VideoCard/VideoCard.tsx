@@ -52,7 +52,7 @@ export const VideoCard = ({
   return (
     <div className={`${isVideoWall?"videocard-wall":"videocard-embedded"} ${isMediaWall?"videocard-media":""}`}>
       <Block>
-        { headerStatusTitle !== "" && <BlockHeader>
+        { headerStatusTitle && <BlockHeader>
           <VideoHeader statusTitle={headerStatusTitle} status={headerStatus} label={label}/>
         </BlockHeader> }
         {
