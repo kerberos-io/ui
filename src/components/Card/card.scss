@@ -1,111 +1,57 @@
-@import "../../app.scss";
+@import "../../app.variables";
 
-/*
-  ----- BUTTONS -----
-
-  a) <ButtonField text="xxx" action="xxx" type="neutral"></ButtonField>
-  b) <input type="submit" class="input alert button" value="xxx">
-  c) <a class="neutral button"><span class="text">xxx</span></a>
-*/
-// default primary button in Hub color (purple)
-.button {
-  @extend %tfx;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: size(3);
-  background: var(--primary);
-  border: 0;
-  border-bottom: 2px solid var(--primary-darker);
+.card {
+  @extend %box-shadow-bigger;
+  background: var(--bg-white);
   border-radius: var(--radius);
-  cursor: pointer;
-  outline: none;
-  padding: 0 size(1.25);
-  color: var(--bg-white);
-  font-weight: 600;
-  font-size: 14px;
-  .icon {
-    @extend %tfx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .title { // upper, main part (with text & icon or percentage)
+    @extend %card-header-shadow;
+    flex: 1 1 100%;
+    padding: size(2);
     display: flex;
-    opacity: 0.5;
-    position: relative;
-    & + .text { margin-left: 10px; }
-  }
-  .text {
-    @extend %tfx;
-    color: var(--card);
-    position: relative;
-  }
-  // make the button look pressed a bit (move icon and text down) + colorize the same color as button shadow
-  &.active { box-shadow: 0 3px 1px hsla(var(--text-hsl), 0.4) inset; }
-  &:hover, &.active {
-    background: var(--primary-darker);
-    text-decoration: none;
-    .icon { top: 1px; }
-    .text { top: 1px; }
-    &.input { padding-top: 2px; } // fix for input button since it can't have any nested elements inside of it (like the .text needed for the hover/active effect)
-  }
-  // draw semitransparent shadow around the button
-  &:focus {
-    box-shadow: 0 0 0 4px hsla(var(--primary-hsl), 0.25);
-  }
-  &.input { width: auto; } // fix for input buttons
+    justify-content: space-between;
+    align-items: center;
 
-  // button variants
-  &.success { // green, success, OK buttons
-    background: var(--success);
-    border-color: var(--success-darker);
-    &:hover, &.active { background: var(--success-darker); }
-    &:focus { box-shadow: 0 0 0 4px hsla(var(--success-darker-hsl), 0.25); }
-  }
-
-  &.alert { // red, destructive buttons
-    background: var(--alert);
-    border-color: var(--alert-darker);
-    &:hover, &.active { background: var(--alert-darker); }
-    &:focus { box-shadow: 0 0 0 4px hsla(var(--alert-darker-hsl), 0.25); }
-  }
-
-  &.neutral { // secondary actions
-    --neutral-darker: hsl(0, 3%, 48%);
-    --neutral-darker-hsl: 0, 3%, 48%;
-    background: var(--text-light);
-    border-color: var(--neutral-darker);
-    &.active {
-      background: var(--neutral-darker);
+    .description { // text part in header
+      h1 {
+        font-size: 15px;
+        margin: 0 0 8px;
+        &::first-letter { text-transform: capitalize; }
+      }
+      p {
+        font-size: 15px;
+        margin: 0;
+      }
     }
-    &:hover { background: var(--neutral-darker); box-shadow: none; }
-    &:focus { box-shadow: 0 0 0 4px hsla(var(--neutral-darker-hsl), 0.25); }
-  }
 
-  // outlined button - transparent bg with only border
-  &.outlined {
-    $border: 1px;
-    border: $border solid var(--bg-muted);
-    border-radius: var(--radius);
-    background: transparent;
-    font-weight: 500;
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: size(3);
-    display: flex;
-    height: size(3);
-    padding: 0 (size(1) - $border);
-    .text { color: var(--text-muted); }
-    &.active { box-shadow: none; background: hsla(var(--text-light-hsl), 0.2); }
-    &:hover, &.active {
-      border-color: var(--text-light);
-      .icon { top: 0; }
-      .text { top: 0; }
+    .image { // icon
+      margin-left: size(1);
     }
-    &:focus {
-      box-shadow: 0 0 0 4px hsla(var(--bg-muted-hsl), 0.5);
+
+    .percentage {
+      color: var(--text-light);
+      font-size: 26px;
+
+      span {
+        font-size: 46px;
+      }
     }
   }
 
-  &.transparent {
-    opacity: 0.3;
+  .footer { // footer part with desc text
+    background-color: var(--card-muted);
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.07) inset;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: size(2);
+    color: var(--text);
+    border-radius: 0 0 var(--radius) var(--radius);
+    .text {
+      padding: size(1) size(2);
+    }
   }
-
 }
