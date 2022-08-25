@@ -25,7 +25,6 @@ build:
     paths:
       - docs-build
 
-
 docker:
   image: docker:stable
   stage: docker
@@ -55,4 +54,3 @@ kubernetes-production:
     - kubectl patch deployment kerberos-ui --patch="{\"spec\":{\"template\":{\"spec\":{\"containers\":[{\"name\":\"kerberos-ui\",\"image\":\"${REGISTRY}:${CI_VERSION}\"}]}}}}" -n kerberos-ecosystem
   only:
     - main
-

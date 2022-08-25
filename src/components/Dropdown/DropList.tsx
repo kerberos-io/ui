@@ -1,5 +1,5 @@
 import React from "react";
-import ReactTooltip from 'react-tooltip';
+import ReactTooltip from 'react-tooltip-rc';
 import Icon from "../Icon";
 import "./dropdown.scss";
 
