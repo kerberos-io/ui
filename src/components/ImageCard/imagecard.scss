@@ -1,0 +1,202 @@
+@import "../../app.scss";
+
+.videocard-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 size(1.5);
+}
+.videocard-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  position: absolute;
+  margin: 0;
+  .duration{
+    display: none;
+  }
+  .left-tools {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1; // higher than video
+
+    p {
+      color: var(--text );
+      font-size: 14px;
+      margin-left: size(1)-2;
+    }
+  }
+ 
+  .right-tools {
+    z-index: 1;    //higher than video
+    .switcher {
+      button {
+        cursor: pointer;
+
+        &:first-of-type {
+          margin-right: 2px;
+          border-radius: size(1.5) 0px 0px size(1.5);
+          padding: 4px 8px 4px size(1);
+          background-color: #fff;
+          border: none;
+        }
+        &:last-of-type {
+          margin-right: 2px;
+          border-radius: 0px size(1.5) size(1.5) 0px;
+          padding: 4px size(1) 4px 8px;
+          background-color: #fff;
+          border: none;
+        }
+
+        &:hover,&:focus {
+          background-color: hsla(var(--bg-hsl), 0.8);
+          color: var(--text-muted);
+        }
+      }
+    }
+  
+  }
+}
+.videocard-video {
+  height: auto;
+  width:$videocard-desktop;
+  width: 100%;
+  z-index: 0; //lower than .rightand .left-tools
+  // @include break(w){
+  //   width: $videocard-widesreen;
+  // }
+}
+
+.videocard-wall{
+  .block-generic{
+    width: auto;
+  }
+  .block-header{
+    display: none;
+  }
+
+  .block-body{
+    padding: 0;
+    margin: 0;
+    flex-direction: column-reverse;
+    position: relative;
+    .videocard-tools{
+     position: relative; 
+      margin-top: -53px;
+      .right-tools{
+        .duration{
+          display: none;
+        }
+        .switcher{
+          display: none;
+        }
+        .project-status{
+          p{
+            font-size: 14px;
+            color: var(--card);
+            font-weight: 400;
+            span{
+              color: var(--text-muted);
+            }
+          }
+        }
+      }
+      .left-tools{
+        .cam-name{
+          color: var(--card);
+          font-size: 14px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .block-footer{
+    display: none;
+  }
+}
+
+.videocard-embedded{  
+  .block-generic{
+    width: auto;
+  }
+  .block-header {
+    padding: 0;
+    min-height: none;
+  }
+  .block-body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    
+    .videocard-tools{
+      margin: 12px 0;
+    
+      .left-tools{
+        .cam-name{
+          display: none;
+        }
+      }
+      .right-tools{
+        
+        .project-status{
+          display: none;
+        }
+      }
+    }
+  
+  }
+  .block-footer{
+    display: none;
+  }
+}
+.videocard-media{
+  .block-generic{
+    width: auto;
+  }
+  .block-header{
+    display: none;
+  }
+  .block-body{
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    position: relative;
+    .videocard-tools{
+      margin: size(0.5);
+      position: relative;
+      top: -38px;
+      margin-bottom: -25px;
+      .duration{
+        display: block;
+        z-index: 1; //higher than video
+        font-size: size(1);
+        background-color:var(--text);
+        color:var(--card);
+        padding: 3px 5px;
+        border-radius: 2px;
+        // width: fit-content;
+        // height: fit-content;
+      }
+      .right-tools{
+        display: none;
+        
+      }
+      .left-tools{
+        display: none;
+      }
+    }
+  }
+  .block-footer{
+    display: inherit;
+    margin: 0;
+    padding: 0 size(1);
+    .month{
+      color: var(--text-muted);
+    }
+    .hours{
+      color: var(--primary);
+    }
+  }
+}

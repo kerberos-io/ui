@@ -19,6 +19,7 @@ import LandingLayout  from "./components/LandingLayout";
 import TermsOfUse from "./components/TermsOfUse";
 import Card from "./components/Card";
 import {VideoCard, Video, VideoTools,VideoHeader} from "./components/VideoCard";
+import {ImageCard, Image, ImageTools,ImageHeader} from "./components/ImageCard";
 import { Table, TableRow, TableHeader, TableCell,TableBody, CamerasTable, CamerasRow, ConnectionRow} from "./components/Table";
 import Alert from "./components/Alert";
 import SetupBox from "./components/SetupBox";
@@ -68,8 +69,8 @@ export {
     VideoCard,
     VideoTools,
     VideoHeader,
-    SetupBox,
     Video,
+    SetupBox,
     Table,
     TableHeader,
     TableRow,
@@ -99,4 +100,8 @@ export {
     Tabs,
     Tab,
     Grid,
+    ImageCard,
+    ImageTools,
+    ImageHeader,
+    Image,
 };
