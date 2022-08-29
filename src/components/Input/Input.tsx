@@ -15,6 +15,7 @@ export interface InputProps {
     iconleft?: string;
     iconright?: string;
     seperate?: boolean;
+    noPadding?: boolean;
     layout?: "form" | "controlbar";
     type?:string,
     onBlur?: (
@@ -41,6 +42,7 @@ export const Input = ({
                  iconleft,
                  iconright,
                  seperate,
+                 noPadding=false,
                  type,
                  onChange,
                  onClick,
@@ -76,7 +78,7 @@ export const Input = ({
                   { hint !== "" && <p className="hint">{hint}</p> }
               </> }
           </div>
-          <div className={`input-bar ${disabled?"disabled":""} ${!iconright?"fit-right":""} ${layout}`}>
+          <div className={`input-bar ${noPadding?"no-padding":""} ${disabled?"disabled":""} ${!iconright?"fit-right":""} ${layout}`}>
                 <div className={`input-box ${iconleft?"":"come-near"}`}>
                   {iconleft && 
                     <div className="icon-left">

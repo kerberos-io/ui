@@ -175,6 +175,11 @@ input, textarea, select {
     @include break(w) { --columns: 4; }
   }
 
+  &.--eight-columns {
+    @include break(t) { --columns: 8; --gapV: #{size(2)}; }
+    @include break(w) { --columns: 8; }
+  }
+
 } // < .grid-container
 
 

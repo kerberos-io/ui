@@ -87,3 +87,70 @@ export const Buttonize3 = ()=>  <Input
     type="button"
     iconright="arrow-down-sm"
 />
+
+export const MultiButtons = () =><div className="grid-container --eight-columns">
+    <Input 
+    label= "Time 1"
+    iconleft=""
+    placeholder="00:00"
+    value="00:00"
+    type="text"
+    noPadding
+    />
+    <Input 
+    label= "Time 2"
+    iconleft=""
+    placeholder="00:00"
+    value="00:00"
+    type="text"
+    noPadding
+    />
+    <Input 
+    label= "Time 3"
+    iconleft=""
+    placeholder="00:00"
+    value="00:00"
+    type="text"
+    noPadding
+    />
+    <Input 
+    label= "Time 4"
+    iconleft=""
+    placeholder="00:00"
+    value="00:00"
+    type="text"
+    noPadding
+    />
+    <Input 
+    label= "Time 5"
+    iconleft=""
+    placeholder="00:00"
+    value="00:00"
+    type="text"
+    noPadding
+    />
+    <Input 
+    label= "Time 6"
+    iconleft=""
+    placeholder="00:00"
+    value="00:00"
+    type="text"
+    noPadding
+    />
+    <Input 
+    label= "Time 7"
+    iconleft=""
+    placeholder="00:00"
+    value="00:00"
+    type="text"
+    noPadding
+    />
+    <Input 
+    label= "Time 8"
+    iconleft=""
+    placeholder="00:00"
+    value="00:00"
+    type="text"
+    noPadding
+    />
+</div>

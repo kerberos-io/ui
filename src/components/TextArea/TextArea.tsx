@@ -41,7 +41,7 @@ export const TextArea = ({
 }: TextAreaProps) => {
 
   return (
-        <label className={`generic-input ${error && "error"}`}>
+        <label className={`generic-textarea ${error && "error"}`}>
           <div className="input-labels">
               { error === "" && <>
                <p>{label} {label && readonly && readonlyLabel && <i>(readonly)</i>}</p>

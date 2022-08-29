@@ -30,6 +30,7 @@ import Toggle from "./components/Toggle";
 import {Tabs, Tab} from "./components/Tabs";
 import InfoBar from "./components/InfoBar";
 import InfoBox from "./components/InfoBox";
+import Grid from "./components/Grid";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from "./components/Modal";
 
 export {
@@ -97,4 +98,5 @@ export {
     ModalFooter,
     Tabs,
     Tab,
+    Grid,
 };

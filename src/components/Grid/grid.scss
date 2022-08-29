@@ -1,0 +1,24 @@
+@import "../../app.scss";
+
+// Grids
+.grid-container {
+  --columns: 1;
+  --gapH: #{size(1)};
+  --gapV: 0;
+  display: grid;
+  column-gap: var(--gapH);
+  row-gap: var(--gapV);
+  grid-template-columns: repeat(var(--columns), 1fr); // "fr" and fraction of free space, ie. equal spacing
+  @include break(t) { --gapH: #{size(2)}; }
+
+  &.--two-columns {
+    --gapH: #{size(2)};
+    @include break(w) { --columns: 2; }
+  }
+
+  &.--four-columns {
+    @include break(t) { --columns: 2; --gapV: #{size(2)}; }
+    @include break(w) { --columns: 4; }
+  }
+
+} // < .grid-container
