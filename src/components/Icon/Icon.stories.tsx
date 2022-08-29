@@ -66,6 +66,7 @@ export const ArrowSmallDown = () => <Icon label="arrow-small-down" />
 export const Play = () => <Icon label="play" />
 export const Stop = () => <Icon label="stop" />
 export const CrossCircle = () => <Icon label="cross-circle" />
+export const World = () => <Icon label="world" />
 
 export const AllIcons = () => <>
     <Accounts/>&nbsp;&nbsp;<Activity/>&nbsp;&nbsp;<Alerts/>&nbsp;&nbsp;<Camera/>&nbsp;&nbsp;<Channels/><br/>
