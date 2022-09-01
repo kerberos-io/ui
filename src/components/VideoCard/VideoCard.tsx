@@ -68,7 +68,7 @@ export const VideoCard = ({
               )
               :
               (<BlockBody>
-                    <VideoTools camera={camera} duration={duration} status={videoStatus} title={videoStatusTitle} onClickSD={handleClickSD} onClickHD={handleClickHD}  />
+                    { duration !== "" && <VideoTools camera={camera} duration={duration} status={videoStatus} title={videoStatusTitle} onClickSD={handleClickSD} onClickHD={handleClickHD}  /> }
                     <Video poster={isOffline?"/images/noise.png":videoPoster} src={videoSrc}/>
                 </BlockBody>
               )    

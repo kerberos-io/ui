@@ -67,6 +67,7 @@ export const Play = () => <Icon label="play" />
 export const Stop = () => <Icon label="stop" />
 export const CrossCircle = () => <Icon label="cross-circle" />
 export const World = () => <Icon label="world" />
+export const Paint = () => <Icon label="paint" />
 
 export const AllIcons = () => <>
     <Accounts/>&nbsp;&nbsp;<Activity/>&nbsp;&nbsp;<Alerts/>&nbsp;&nbsp;<Camera/>&nbsp;&nbsp;<Channels/><br/>
@@ -78,7 +79,7 @@ export const AllIcons = () => <>
     <Email/>&nbsp;&nbsp;<Locked/>&nbsp;&nbsp;<Trush/>&nbsp;&nbsp;<ArrowUp/>&nbsp;&nbsp;<Location/><br/>
     <Flag/>&nbsp;&nbsp;<List/>&nbsp;&nbsp;<Compass/>&nbsp;&nbsp;<Grid/>&nbsp;&nbsp;<Pencil/><br/>
     <ArrowDown/>&nbsp;&nbsp;<Preferences/>&nbsp;&nbsp;<ArrowRight/>&nbsp;&nbsp;<EyeCrossed/>&nbsp;&nbsp;<Api/><br/>
-    <Book/>&nbsp;&nbsp;<Github/>&nbsp;&nbsp;<GithubNav/>&nbsp;&nbsp;<Lock/>
+    <Book/>&nbsp;&nbsp;<Github/>&nbsp;&nbsp;<GithubNav/>&nbsp;&nbsp;<Lock/>&nbsp;&nbsp;<World/>&nbsp;&nbsp;<Paint/>
 </>
 
 
