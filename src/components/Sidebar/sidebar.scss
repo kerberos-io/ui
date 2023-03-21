@@ -1,5 +1,15 @@
 @import "../../app.scss";
 
+.sidebar-wrapper {
+    position: fixed;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    @include break-from(800px) {
+        position: relative;
+    }
+}
+
 .sidebar {
     box-sizing: border-box;
     width: 280px;
@@ -22,14 +32,84 @@
         }
     }
 }
-.sidebar-panel {
-    min-height: 100vh;
 
+.mobile-view {
+    margin-right: 12px;
+    margin-bottom: 12px;
+    background: white;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    padding: 25px 15px;
+
+    @include break-from(800px) {
+        display: none;
+    }
+
+    .hamburger {
+        margin-right: size(1.5);
+        margin-top: size(0.5);
+        margin-left: 9px;
+        padding: 5px 0;
+        label {
+            display: flex;
+            flex-direction: column;
+            width: 30px;
+            cursor: pointer;
+            justify-content: center;
+            span {
+                background: var(--primary);
+                border-radius: 10px;
+                height: 3px;
+                margin: 3px 0;
+                transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+                &:nth-of-type(1) { width: 50%; }
+                &:nth-of-type(2) { width: 100%; }
+                &:nth-of-type(3) { width: 75%; }
+            }
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+    }
+    
+
+    .brand-logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        img {
+            margin-right: 10px;
+        }
+        .name {
+            color: var(--text);
+            font-weight: 600;
+            font-size: 18px;
+            .version {
+                color: var(--text-light);
+                font-size: 10px;
+                font-weight: 400;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    &.closed {
+        .brand-logo {
+            display: none;
+        }
+    }
+}
+
+.sidebar-panel {
     .hamburger {
         display: block;
         padding-bottom: 10px;
         position: relative;
-        top: -12px;
+        top: 12px;
+        margin-right: size(1);
+        margin-bottom: size(1);
 
         @include break-from(800px) {
             display: none;
@@ -59,6 +139,7 @@
 
     .brand-logo {
         display: flex;
+        display: none;
         justify-content: flex-start;
         align-items: center;
         img {
@@ -76,5 +157,8 @@
             }
         }
 
+        @include break-from(800px) {
+            display: flex;
+        }
     }
 }

@@ -4,7 +4,7 @@
 .grid-container {
   --columns: 1;
   --gapH: #{size(1)};
-  --gapV: 0;
+  --gapV: #{size(1)};
   display: grid;
   column-gap: var(--gapH);
   row-gap: var(--gapV);

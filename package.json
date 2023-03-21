@@ -1,6 +1,6 @@
 {
   "name": "@kerberos-io/ui",
-  "version": "1.70.0",
+  "version": "1.71.0",
   "main": "lib/index.js",
   "repository": "https://github.com/kerberos-io/ui",
   "author": "Kerberos.io <support@kerberos.io>",
@@ -9,10 +9,10 @@
     "storybook": "start-storybook --no-manager-cache -s ./public -p 9001",
     "build-storybook": "build-storybook -s ./public -o docs-build",
     "build": "rollup -c",
-    "build-agent": "rollup -c && cp -r lib/* /Users/cedricverstraeten/Projects/go/src/github.com/kerberos-io/agent/ui/node_modules/@kerberos-io/ui/lib/",
-    "build-factory": "rollup -c && cp -r lib/* /Users/I353408/Projects/go/src/gitlab.com/kerberos-io/factory/frontend/node_modules/@kerberos-io/ui/lib/",
-    "build-vault": "rollup -c && cp -r lib/* /Users/I353408/Projects/go/src/gitlab.com/kerberos-io/vault/frontend/node_modules/@kerberos-io/ui/lib/",
-    "build-glass": "rollup -c && cp -r lib/* /Users/I353408/Projects/go/src/gitlab.com/kerberos-io/glass/frontend/node_modules/@kerberos-io/ui/lib/"
+    "build-agent": "rollup -c && cp -R lib/* /Users/cedricverstraeten/Projects/go/src/github.com/kerberos-io/agent/ui/node_modules/@kerberos-io/ui/lib/ && mv  /Users/cedricverstraeten/Projects/go/src/github.com/kerberos-io/agent/ui/node_modules/@kerberos-io  /Users/cedricverstraeten/Projects/go/src/github.com/kerberos-io/agent/ui/node_modules/@kerberos-io2 && sleep 2 && mv /Users/cedricverstraeten/Projects/go/src/github.com/kerberos-io/agent/ui/node_modules/@kerberos-io2  /Users/cedricverstraeten/Projects/go/src/github.com/kerberos-io/agent/ui/node_modules/@kerberos-io",
+    "build-factory": "rollup -c && cp -R lib/* /Users/I353408/Projects/go/src/gitlab.com/kerberos-io/factory/frontend/node_modules/@kerberos-io/ui/lib/",
+    "build-vault": "rollup -c && cp -R lib/* /Users/I353408/Projects/go/src/gitlab.com/kerberos-io/vault/frontend/node_modules/@kerberos-io/ui/lib/",
+    "build-glass": "rollup -c && cp -R lib/* /Users/I353408/Projects/go/src/gitlab.com/kerberos-io/glass/frontend/node_modules/@kerberos-io/ui/lib/"
   },
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
@@ -30,9 +30,15 @@
     "react-router-dom": "^5.2.0"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.3",
+    "@mui/x-date-pickers": "^5.0.0-beta.7",
     "@svgr/webpack": "^5.5.0",
     "@types/react-router-dom": "^5.1.7",
     "md5": "^2.3.0",
+    "moment": "^2.29.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",

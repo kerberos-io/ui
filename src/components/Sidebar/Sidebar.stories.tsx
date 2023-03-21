@@ -18,7 +18,7 @@ export const Default = Template.bind({});
 Default.args = { title: "Kerberos.io", version: "v1.0" };
 
 export const Version = Template.bind({});
-Version.args = { ...Default.args, version: "v2.0" };
+Version.args = { ...Default.args, title: "Kerberos Agent", version: "v1-beta" };
 
 export const WithProfileBar = () => <Sidebar title="Kerberos.io" version="v3.0">
     <Profilebar
