@@ -48,6 +48,24 @@ object-assign
  * Released under the MIT License.
  */
 
+/**
+ * @license React
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @mui/styled-engine v5.11.11
+ *
+ * @license MIT
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 /** @license React v0.20.2
  * scheduler.production.min.js
  *
@@ -101,6 +119,10 @@ object-assign
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
+//! moment.js
+
+//! moment.js locale configuration
 
 //! stable.js 0.1.8, https://github.com/Two-Screen/stable
 
