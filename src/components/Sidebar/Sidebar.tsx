@@ -58,6 +58,7 @@ const Sidebar = ({
                         <span className="version">{version}</span>
                     </div>
                 </a>
+                <div className="background-black"></div>
             </div> }
             <div className="sidebar closed">
                 <div className="sidebar-panel">

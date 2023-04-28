@@ -2,7 +2,7 @@
 
 .sidebar-wrapper {
     position: fixed;
-    height: 100vh;
+    min-height: 100vh;
     z-index: 9999;
     display: flex;
     @include break-from(800px) {
@@ -70,6 +70,17 @@
         }
         input[type="checkbox"] {
             display: none;
+        }
+
+        .background-black {
+            position: absolute;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            display: block;
+            background: black;
+            opacity: 0.4;
         }
     }
     
