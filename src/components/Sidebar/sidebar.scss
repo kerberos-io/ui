@@ -101,7 +101,7 @@
         top: 0;
         left: 0;
         height: 100vh;
-        display: block;
+        display: none;
         background: black;
         opacity: 0.4;
     }
@@ -109,7 +109,7 @@
 
     &.closed {
         .background-black {
-            display: none;
+            display: block;
         }
         .brand-logo {
             display: none;
