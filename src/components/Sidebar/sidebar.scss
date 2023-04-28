@@ -46,6 +46,17 @@
         display: none;
     }
 
+    .background-black {
+        position: absolute;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        display: block;
+        background: black;
+        opacity: 0.4;
+    }
+
     .hamburger {
         margin-right: size(1.5);
         margin-top: size(0.5);
@@ -70,17 +81,6 @@
         }
         input[type="checkbox"] {
             display: none;
-        }
-
-        .background-black {
-            position: absolute;
-            width: 100vw;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            display: block;
-            background: black;
-            opacity: 0.4;
         }
     }
     
