@@ -89,13 +89,16 @@ export interface LandingLayoutProps{
     children:any,
     title?:string,
     version?:string,
-    description?:string
+    description?:string,
+    hideFooter?:boolean
 }
 const LandingLayout = ({
     children,
     title,
     version,
-    description}:LandingLayoutProps) =>
+    description,
+    hideFooter
+    }:LandingLayoutProps) =>
     <div id="landing-layout">
         <Gradient/>
 
@@ -105,7 +108,7 @@ const LandingLayout = ({
         </header>
 
        {children}
-        <Footer>
+        { !hideFooter && <Footer>
             <FooterCopyright {...Copyright} />
             <FooterList
                 title="Products"
@@ -119,6 +122,6 @@ const LandingLayout = ({
                 title="Company"
                 items={Column4}
             />
-        </Footer>
+        </Footer> }
     </div>
 export default LandingLayout

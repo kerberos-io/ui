@@ -22,3 +22,11 @@ export const WithSignupCard = () =><LandingLayout title="Kerberos Hub" version="
                                             </div>
                                         </LandingLayout>
 
+
+
+export const WithSignupCardWithoutFooter = () =><LandingLayout title="Kerberos Hub" version="v3.0" description="Control panel and management for all Kerberos services" hideFooter={true}>
+                                            <div style={{display:"flex",justifyContent:"center",marginBottom:"120px"}}>
+                                            <SignupCard/>
+                                            </div>
+                                        </LandingLayout>
+
