@@ -23,10 +23,11 @@
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src/index.ts"
   ],
   "exclude": [
     "node_modules",
-    "lib"
+    "lib",
+    "src/**/*.stories.tsx"
   ]
 }
