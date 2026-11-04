@@ -12,12 +12,33 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials"
   ],
+  managerWebpack: async (config) => {
+    config.module.rules.push({
+      test: /\.mjs$/,
+      type: 'javascript/auto',
+    });
+    return config;
+  },
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.
     // 'PRODUCTION' is used when building the static version of storybook.
 
     // Make whatever fine-grained changes you need
+    config.module.rules.push({
+      test: /\.js$/,
+      include: /node_modules\/uuid\//,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: [['@babel/preset-env', { targets: { ie: '11' } }]],
+        },
+      },
+    });
+    config.module.rules.push({
+      test: /\.mjs$/,
+      type: 'javascript/auto',
+    });
     config.module.rules.push({
       test: /\.scss$/,
       use: [
