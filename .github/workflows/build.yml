@@ -13,8 +13,9 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@v1
         with:
-          node-version: 16
+          node-version: 24.22.1
       - name: Install and Build 🔧
         run: | # Install npm packages and build the Storybook files
-          yarn
-          yarn build-storybook
+          npm ci --legacy-peer-deps --no-audit --no-fund
+          npm run build
+          NODE_OPTIONS=--openssl-legacy-provider npm run build-storybook

@@ -17,3 +17,11 @@ We are using Storybook to visualise and interact with the reusable components.
 ## Publish to npm
 
     npm publish --access public
+# Package dependency scope
+
+The published runtime dependencies support consumers of `lib/`. Storybook,
+Rollup, Sass and SVG/Webpack loaders are development dependencies used to build
+the library, not runtime requirements for applications consuming its output.
+The tooltip dependency uses the compatible patched UUID 11 API during library
+builds; consumers using npm should likewise select UUID >=11.1.1 for its UUID
+dependency until the tooltip package updates its declared range.
